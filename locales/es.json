@@ -1,0 +1,429 @@
+{
+  "common": {
+    "bookNow": "Reservar Cita",
+    "findService": "Encontrar Mi Servicio",
+    "learnMore": "Más Información",
+    "startOver": "Comenzar de Nuevo",
+    "back": "Regresar",
+    "noWalkIns": "Se Requiere Cita — Sin Entradas Directas",
+    "mostPopular": "Más Popular",
+    "price": "Precio",
+    "startingAt": "Desde",
+    "callUs": "Llámenos",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "viewAll": "Ver Todo",
+    "required": "Requerido"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "serviceFinder": "Encontrar Mi Servicio",
+    "book": "Reservar Cita",
+    "faq": "Preguntas Frecuentes",
+    "contact": "Contacto",
+    "privacyPolicy": "Política de Privacidad",
+    "terms": "Términos y Condiciones",
+    "servicesDropdown": "Nuestros Servicios"
+  },
+  "header": {
+    "callUs": "Llámenos",
+    "languageToggle": "English",
+    "menuOpen": "Abrir menú de navegación",
+    "menuClose": "Cerrar menú de navegación",
+    "logoAlt": "TruIdentity Screening Solutions"
+  },
+  "footer": {
+    "tagline": "Huellas digitales rápidas y precisas para el Sur de Texas — Antecedentes del FBI, Live Scan, ATF eFile y más.",
+    "quickLinks": "Links Rápidos",
+    "contactUs": "Contáctenos",
+    "hours": "Horario",
+    "copyright": "© {year} TruIdentity Screening Solutions. Todos los derechos reservados.",
+    "googleBusiness": "Ver en Google",
+    "address": "Dirección",
+    "appointmentOnly": "Solo con Cita — Sin Entradas Directas"
+  },
+  "home": {
+    "hero": {
+      "headline": "Sus Huellas Listas Hoy — Resultados en 48 Horas",
+      "subheadline": "Antecedentes del FBI, Live Scan, ATF eFile y más. Atendemos a McAllen y todo el Valle del Río Grande — citas disponibles el mismo día.",
+      "ctaBook": "Reservar Cita",
+      "ctaFinder": "Encontrar Mi Servicio"
+    },
+    "noWalkInsBanner": {
+      "text": "Solo con cita — para que lo atendamos sin esperas al llegar.",
+      "cta": "Reserve en línea en menos de 2 minutos"
+    },
+    "services": {
+      "heading": "Todo el Servicio de Huellas que Necesita",
+      "subheading": "Desde antecedentes del FBI hasta transferencias NFA y huellas móviles — una sola cita en McAllen lo cubre todo."
+    },
+    "pricing": {
+      "heading": "Precios Claros, Sin Sorpresas",
+      "subheading": "Sin cargos ocultos. Sepa exactamente cuánto pagará antes de llegar — desde $49."
+    },
+    "howItWorks": {
+      "heading": "Listo en Tres Pasos",
+      "subheading": "La mayoría de nuestros clientes entran y salen en menos de 15 minutos.",
+      "step1": {
+        "title": "Encuentre Su Servicio",
+        "description": "Seleccione el servicio que su agencia requiere, o use nuestro Buscador de Servicios gratuito — toma unos 30 segundos."
+      },
+      "step2": {
+        "title": "Reserve en Línea",
+        "description": "Elija el horario que le convenga. Hay citas disponibles de lunes a sábado — muchas veces hay lugar el mismo día."
+      },
+      "step3": {
+        "title": "Llegue y Listo",
+        "description": "Traiga su identificación oficial y cualquier formulario de su agencia. Las huellas toman unos 10 minutos — después está libre."
+      }
+    },
+    "reviews": {
+      "heading": "La Confianza del Sur de Texas",
+      "subheading": "Opiniones reales de clientes en todo el Valle del Río Grande"
+    },
+    "faqTeaser": {
+      "heading": "Preguntas Frecuentes",
+      "viewAll": "Ver Todas las Preguntas"
+    },
+    "cta": {
+      "heading": "¿Listo para Tramitarlo?",
+      "subheading": "Hay citas disponibles el mismo día. Reserve en línea en minutos.",
+      "button": "Reservar Cita"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Nosotros | TruIdentity — Huellas en McAllen, TX",
+      "description": "TruIdentity es el servicio de huellas digitales de confianza en McAllen — resultados del FBI en 48 horas, garantía sin rechazo y personal bilingüe."
+    },
+    "heading": "El Servicio de Huellas del Sur de Texas desde [YEAR FOUNDED]",
+    "subheading": "Rápido, preciso y bilingüe — atendiendo a McAllen y el Valle del Río Grande.",
+    "story": {
+      "heading": "Nuestra Historia",
+      "body1": "TruIdentity Screening Solutions fue fundado en [YEAR FOUNDED] por [FOUNDER NAME], originario del Sur de Texas, quien vio de primera mano lo frustrante que puede ser el proceso de huellas digitales — formularios confusos, largas esperas y rechazos que retrasan a los solicitantes por semanas. La meta fue simple: hacer que las huellas digitales profesionales sean rápidas, precisas y sin estrés para toda la gente del Valle.",
+      "body2": "Hoy, TruIdentity atiende desde antecedentes del FBI y envíos ATF eFile hasta Live Scan para distritos escolares y huellas móviles para negocios en todo el Valle. Completamente bilingüe en inglés y español — porque todos en el Sur de Texas merecen un camino claro hacia adelante."
+    },
+    "differentiators": {
+      "heading": "Por Qué TruIdentity",
+      "items": [
+        {
+          "icon": "⚡",
+          "heading": "Resultados del FBI en 48 Horas",
+          "body": "La mayoría de los resultados de antecedentes del FBI llegan en 48 horas — no las semanas que le darían en otro lugar."
+        },
+        {
+          "icon": "✅",
+          "heading": "Garantía Sin Rechazo",
+          "body": "Si el FBI rechaza sus huellas por calidad, las tomamos de nuevo sin costo adicional. Sin excusas."
+        },
+        {
+          "icon": "📅",
+          "heading": "Citas el Mismo Día",
+          "body": "Hay horarios disponibles de lunes a sábado. Muchas veces hay citas el mismo día — reserve en línea cuando guste."
+        },
+        {
+          "icon": "🗣️",
+          "heading": "Completamente Bilingüe",
+          "body": "Todo el servicio está disponible en inglés y español — sin necesidad de intérprete."
+        },
+        {
+          "icon": "🚗",
+          "heading": "Servicio Móvil Disponible",
+          "body": "¿Necesita huellas en su oficina, escuela o instalación? Vamos a donde usted esté en el Sur de Texas."
+        }
+      ]
+    },
+    "mission": {
+      "heading": "Nuestra Misión",
+      "text": "Hacer que las huellas digitales profesionales sean rápidas, precisas y accesibles para toda persona y organización en el Sur de Texas — con servicio bilingüe, precios transparentes y atención personalizada que las agencias del gobierno simplemente no pueden ofrecer."
+    },
+    "serviceArea": {
+      "heading": "Atendemos Todo el Valle del Río Grande",
+      "text": "Con sede en McAllen, TX, atendemos a personas y organizaciones en los condados de Hidalgo, Cameron y Starr — y en todo el Sur de Texas. Nuestro servicio móvil de huellas significa que podemos ir a su ubicación en cualquier parte del Valle."
+    },
+    "certifications": {
+      "heading": "Certificados y Autorizados",
+      "items": [
+        "Agente Autorizado del FBI (FBI Channeler)",
+        "Agente Autorizado ATF eFile",
+        "Proveedor Aprobado de Live Scan por Texas DPS",
+        "Sirviendo al Sur de Texas desde [YEAR FOUNDED]"
+      ]
+    },
+    "cta": {
+      "heading": "Vamos a Tramitarlo",
+      "text": "Reserve su cita en línea — la mayoría de los clientes entran y salen en menos de 15 minutos.",
+      "button": "Reservar Cita"
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Servicios de Huellas en McAllen, TX | TruIdentity",
+      "description": "Antecedentes del FBI en 48 horas, Live Scan, Huellas de Tinta, NFA, ATF eFile, Apostilla del FBI y Huellas Móviles en McAllen, TX."
+    },
+    "heading": "Servicios de Huellas Digitales",
+    "subheading": "Todo lo que su agencia requiere — resultados profesionales, precios claros, disponibilidad el mismo día.",
+    "notSure": "¿No sabe qué servicio necesita?",
+    "useFinder": "Use el Buscador de Servicios Gratuito",
+    "estimator": {
+      "heading": "Consulta Rápida de Precios",
+      "selectLabel": "Seleccione un servicio",
+      "placeholder": "Elija un servicio...",
+      "priceLabel": "Costo del servicio",
+      "includes": "Qué incluye"
+    },
+    "serviceDetail": {
+      "whatItIs": "Qué Es",
+      "whoNeeds": "Quién Necesita Este Servicio",
+      "whatToBring": "Qué Traer",
+      "whatToExpect": "Qué Esperar",
+      "pricing": "Precio",
+      "relatedServices": "Servicios Relacionados",
+      "bookCta": "Reservar Este Servicio",
+      "inSouthTexas": "en el Sur de Texas"
+    }
+  },
+  "book": {
+    "meta": {
+      "title": "Reservar Cita de Huellas | TruIdentity McAllen",
+      "description": "Programe su cita de huellas en McAllen — hay lugar el mismo día. Antecedentes FBI, Live Scan, NFA, ATF eFile y más."
+    },
+    "heading": "Reserve Su Cita",
+    "subheading": "Hay horarios disponibles de lunes a sábado. La mayoría de las citas toman 15 minutos o menos.",
+    "noWalkIns": "Se requiere cita previa — no se aceptan entradas directas. Use el calendario de abajo para elegir su horario.",
+    "whatToBring": {
+      "heading": "Qué Traer",
+      "items": [
+        "Identificación oficial con foto vigente (licencia de conducir, pasaporte o ID estatal)",
+        "Número de Seguro Social (requerido para antecedentes del FBI y servicios Live Scan)",
+        "Número ORI de su agencia (requerido para Live Scan — su empleador o junta de licencias lo provee)",
+        "Formulario ATF 4 o Formulario 1 (requerido para huellas NFA y servicios ATF eFile)",
+        "Cualquier papeleo, formularios o instrucciones que su agencia solicitante le haya dado"
+      ]
+    },
+    "questions": "¿Preguntas antes de reservar?",
+    "contactLink": "Contáctenos — con gusto le ayudamos"
+  },
+  "contact": {
+    "meta": {
+      "title": "Contáctenos | TruIdentity — Huellas en McAllen",
+      "description": "Llame, mande un correo o escriba a TruIdentity en McAllen, TX. Personal bilingüe disponible. ¿No sabe qué servicio necesita? Le orientamos."
+    },
+    "heading": "Contáctenos",
+    "subheading": "¿Preguntas sobre un servicio? ¿No sabe qué necesita? Le orientamos en inglés o español.",
+    "form": {
+      "heading": "Envíenos un Mensaje",
+      "name": "Nombre Completo",
+      "namePlaceholder": "Juan García",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "juan@ejemplo.com",
+      "phone": "Número de Teléfono",
+      "phonePlaceholder": "(956) 000-0000",
+      "service": "Servicio de Interés",
+      "servicePlaceholder": "Seleccione un servicio...",
+      "message": "Mensaje",
+      "messagePlaceholder": "¿En qué podemos ayudarle?",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "Mensaje recibido — le respondemos en un día hábil.",
+      "error": "Algo salió mal. Intente de nuevo o llámenos directamente.",
+      "required": "Este campo es requerido",
+      "invalidEmail": "Por favor ingrese un correo electrónico válido"
+    },
+    "info": {
+      "heading": "Información de Contacto",
+      "phone": "Teléfono",
+      "email": "Correo Electrónico",
+      "address": "Dirección",
+      "hours": "Horario",
+      "directions": "Cómo Llegar",
+      "appointmentNote": "Solo con cita — sin entradas directas"
+    },
+    "map": {
+      "heading": "Nuestra Ubicación",
+      "title": "TruIdentity Screening Solutions — McAllen, TX"
+    }
+  },
+  "faq": {
+    "meta": {
+      "title": "Preguntas Frecuentes | TruIdentity Screening Solutions",
+      "description": "Respuestas a preguntas comunes sobre antecedentes del FBI, Live Scan, huellas NFA, qué traer y cuánto tardan los resultados."
+    },
+    "heading": "Preguntas Frecuentes",
+    "subheading": "Todo lo que necesita saber antes de su cita.",
+    "cta": {
+      "text": "¿No encontró su respuesta?",
+      "button": "Contáctenos"
+    },
+    "items": [
+      {
+        "question": "¿Cuánto tardan en llegar los resultados de antecedentes del FBI?",
+        "answer": "La mayoría de los resultados del FBI llegan en 48 horas — mucho más rápido que las 2 a 4 semanas que citan muchos otros proveedores. Una vez que sus huellas se transmiten, el FBI se encarga del proceso. Nuestro estatus de agente autorizado significa que los envíos llegan al FBI el mismo día."
+      },
+      {
+        "question": "¿Qué pasa si el FBI rechaza mis huellas?",
+        "answer": "Si el FBI rechaza sus huellas por calidad, las tomamos de nuevo sin costo adicional — esa es nuestra garantía sin rechazo. Los rechazos son raros cuando un técnico capacitado toma las huellas con equipo profesional, que es exactamente por eso que importa quién le toma las huellas."
+      },
+      {
+        "question": "¿Qué identificación necesito traer?",
+        "answer": "Traiga una identificación oficial con foto vigente — licencia de conducir, ID estatal, pasaporte de EE. UU. o identificación militar. El nombre en su ID debe coincidir exactamente con el nombre en su solicitud. No se aceptan identificaciones vencidas."
+      },
+      {
+        "question": "¿Aceptan entradas sin cita?",
+        "answer": "No — solo atendemos con cita previa. Esto significa que cuando llega, lo atendemos de inmediato, sin sala de espera ni sorpresas. Reservar tarda menos de 2 minutos en línea, y muchas veces hay citas disponibles el mismo día."
+      },
+      {
+        "question": "¿Cuánto tiempo toma la cita?",
+        "answer": "El proceso de huellas en sí toma unos 10 minutos. Calcule entre 15 y 20 minutos en total incluyendo el registro. Para sesiones de ATF eFile, calcule entre 30 y 45 minutos ya que llenamos todo el formulario de eForms juntos."
+      },
+      {
+        "question": "¿Qué es Live Scan y quién lo necesita?",
+        "answer": "Live Scan captura las huellas electrónicamente y las transmite directamente al FBI o a TX DPS — sin tinta, sin tarjeta física. Es requerido para maestros, empleados escolares, trabajadores de guardería, profesionales de la salud y la mayoría de los que solicitan una licencia estatal en Texas. Su empleador o junta de licencias le dará un número ORI y confirmará que se requiere Live Scan."
+      },
+      {
+        "question": "¿Cuál es la diferencia entre Live Scan y las huellas de tinta?",
+        "answer": "Live Scan envía las huellas electrónicamente a la agencia solicitante — los resultados llegan en 24 a 72 horas. Las huellas de tinta se imprimen en una tarjeta FD-258 física que usted mismo envía por correo — el tiempo de procesamiento depende de la agencia. La mayoría de las agencias en Texas ya requieren Live Scan, pero muchas agencias federales y juntas de licencias de otros estados todavía requieren tarjetas de tinta."
+      },
+      {
+        "question": "¿Qué es el número ORI y cómo lo consigo?",
+        "answer": "El ORI (Identificador de Agencia de Origen) es el código que dirige sus resultados de Live Scan a la agencia correcta. Su empleador, junta de licencias o agencia solicitante le da este número — nosotros no podemos proporcionarlo. Generalmente es una combinación de letras y números (ejemplo: TX123456Z). No reserve una cita de Live Scan hasta tener su ORI."
+      },
+      {
+        "question": "¿Qué necesito para huellas NFA?",
+        "answer": "Traiga una identificación con foto y una copia de su Formulario ATF 4 o Formulario 1 de referencia. Nosotros le proporcionamos dos tarjetas FD-258 completadas según lo requiere la ATF. Si presenta como fideicomiso NFA, traiga los documentos del fideicomiso. También ofrecemos servicio ATF eFile si prefiere envío electrónico — generalmente aprobado en semanas, no meses."
+      },
+      {
+        "question": "¿Qué es una Apostilla del FBI y cuándo la necesito?",
+        "answer": "Una Apostilla del FBI es un documento de antecedentes autenticado para uso internacional bajo la Convención de La Haya. La necesita cuando un gobierno extranjero requiere verificar sus antecedentes de EE. UU. — común para visas de trabajo, solicitudes de residencia, adopción internacional e inmigración. El proceso incluye huellas, procesamiento del FBI y certificación de apostilla — el tiempo total es de 8 a 12 semanas."
+      },
+      {
+        "question": "¿Ofrecen servicio de huellas móvil?",
+        "answer": "Sí. Llevamos equipo profesional de huellas directamente a su oficina, escuela, clínica o instalación en cualquier parte del Sur de Texas. Ideal para empresas que están contratando personal, distritos escolares, organizaciones de salud y organizaciones sin fines de lucro. Contáctenos con anticipación para programar — puede aplicar una tarifa de viaje según la distancia desde McAllen."
+      },
+      {
+        "question": "¿Qué formas de pago aceptan?",
+        "answer": "Aceptamos efectivo, tarjetas de crédito y débito principales (Visa, Mastercard, American Express, Discover), Venmo y Zelle. El pago se cobra al momento del servicio."
+      }
+    ]
+  },
+  "serviceFinder": {
+    "meta": {
+      "title": "¿Qué Servicio de Huellas Necesito? | TruIdentity",
+      "description": "Responda 2 o 3 preguntas rápidas y le diremos exactamente qué servicio de huellas necesita. Toma 30 segundos."
+    },
+    "heading": "¿Qué Servicio Necesita?",
+    "subheading": "Responda un par de preguntas rápidas — le orientamos al servicio correcto en unos 30 segundos.",
+    "startOver": "Comenzar de Nuevo",
+    "back": "Regresar",
+    "bookService": "Reservar Este Servicio",
+    "viewAllServices": "Ver Todos los Servicios",
+    "step": "Paso",
+    "of": "de",
+    "steps": {
+      "purpose": {
+        "question": "¿Por qué necesita tomar sus huellas?",
+        "options": [
+          "Solicitud de trabajo, licencia profesional o antecedentes personales",
+          "Arma de fuego o artículo NFA (supresor, SBR, SBS o ametralladora)",
+          "Docencia, guardería, salud o una licencia estatal de Texas",
+          "Uso internacional — visa, residencia, trabajo en el extranjero o inmigración",
+          "No estoy seguro todavía"
+        ]
+      },
+      "format": {
+        "question": "¿Qué formato requiere su agencia?",
+        "options": [
+          "Envío electrónico directo al FBI (Live Scan)",
+          "Tarjeta de huellas física (rodillo de tinta FD-258) — yo la envío por correo",
+          "No sé — ayúdeme a averiguarlo"
+        ]
+      },
+      "international": {
+        "question": "¿Qué requiere el país o agencia extranjera?",
+        "options": [
+          "Una apostilla en el reporte del FBI (requerida para residencia, visas y migración)",
+          "Solo una verificación estándar del FBI — sin apostilla"
+        ]
+      }
+    },
+    "results": {
+      "recommended": "Lo Que Recomendamos",
+      "price": "Costo del Servicio",
+      "whyThis": "¿Por qué este servicio?",
+      "book": "Reservar Este Servicio",
+      "learnMore": "Más Información"
+    },
+    "allServices": {
+      "heading": "Ver Todos los Servicios",
+      "subheading": "¿No está seguro? Revise todo lo que ofrecemos — o llámenos y le ayudamos."
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Política de Privacidad | TruIdentity Screening Solutions",
+      "description": "Política de privacidad de TruIdentity Screening Solutions — cómo recopilamos, usamos y protegemos su información."
+    },
+    "heading": "Política de Privacidad",
+    "lastUpdated": "Última Actualización: Abril 2026",
+    "intro": "TruIdentity Screening Solutions (\"nosotros\", \"nuestro\" o \"nos\") está comprometido a proteger su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos su información cuando visita nuestro sitio web o usa nuestros servicios.",
+    "sections": [
+      {
+        "heading": "Información que Recopilamos",
+        "content": "Podemos recopilar información personal, incluido su nombre, información de contacto y cualquier detalle que proporcione al reservar una cita o comunicarse con nosotros. También recopilamos datos estándar de analítica web para mejorar nuestro sitio."
+      },
+      {
+        "heading": "Cómo Usamos Su Información",
+        "content": "Usamos la información recopilada para programar y confirmar sus citas, responder a sus preguntas, mejorar nuestros servicios y cumplir con las leyes y regulaciones aplicables."
+      },
+      {
+        "heading": "Compartir Datos",
+        "content": "No vendemos, comercializamos ni rentamos su información personal a terceros. Podemos compartir información con proveedores de servicios (como nuestra plataforma de citas) estrictamente según sea necesario para operar nuestro negocio."
+      },
+      {
+        "heading": "Seguridad de Datos",
+        "content": "Implementamos medidas de seguridad razonables para proteger su información. Sin embargo, ningún método de transmisión por internet es 100% seguro. No podemos garantizar seguridad absoluta."
+      },
+      {
+        "heading": "Contáctenos",
+        "content": "Si tiene preguntas sobre esta Política de Privacidad, comuníquese con nosotros por teléfono o correo electrónico."
+      }
+    ]
+  },
+  "terms": {
+    "meta": {
+      "title": "Términos y Condiciones | TruIdentity Screening Solutions",
+      "description": "Términos y condiciones de los servicios de huellas digitales de TruIdentity Screening Solutions."
+    },
+    "heading": "Términos y Condiciones",
+    "lastUpdated": "Última Actualización: Abril 2026",
+    "intro": "Al usar nuestros servicios o sitio web, usted acepta los siguientes términos y condiciones. Por favor léalos detenidamente.",
+    "sections": [
+      {
+        "heading": "Política de Citas",
+        "content": "Todos los servicios son exclusivamente con cita previa. No se aceptan entradas directas. Las citas deben reservarse en línea a través de nuestro sistema de programación. Nos reservamos el derecho de cancelar o reprogramar citas según sea necesario."
+      },
+      {
+        "heading": "Cancelación y Reprogramación",
+        "content": "Solicitamos al menos 24 horas de anticipación si necesita cancelar o reprogramar su cita. Las ausencias repetidas pueden resultar en restricciones para futuras reservas."
+      },
+      {
+        "heading": "Requisitos de Identificación",
+        "content": "Se requiere una identificación oficial con foto vigente para todos los servicios. Nos reservamos el derecho de negar el servicio si no se puede proporcionar identificación adecuada."
+      },
+      {
+        "heading": "Pago",
+        "content": "El pago se realiza al momento del servicio. Aceptamos efectivo, tarjetas de crédito y débito principales, Venmo y Zelle. Todos los precios están en dólares estadounidenses."
+      },
+      {
+        "heading": "Limitación de Responsabilidad",
+        "content": "TruIdentity Screening Solutions no se responsabiliza por demoras en los tiempos de procesamiento causadas por el FBI, la ATF u otras agencias gubernamentales. Los tiempos de procesamiento están fuera de nuestro control una vez que sus huellas han sido enviadas."
+      },
+      {
+        "heading": "Cambios en los Términos",
+        "content": "Nos reservamos el derecho de actualizar estos Términos y Condiciones en cualquier momento. El uso continuado de nuestros servicios constituye aceptación de los términos actualizados."
+      }
+    ]
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "common": {
+    "bookNow": "Book Appointment",
+    "findService": "Find My Service",
+    "learnMore": "Learn More",
+    "startOver": "Start Over",
+    "back": "Back",
+    "noWalkIns": "Appointment Required — No Walk-Ins",
+    "mostPopular": "Most Popular",
+    "price": "Price",
+    "startingAt": "Starting at",
+    "callUs": "Call Us",
+    "close": "Close",
+    "open": "Open",
+    "viewAll": "View All",
+    "required": "Required"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "serviceFinder": "Find My Service",
+    "book": "Book Appointment",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "servicesDropdown": "Our Services"
+  },
+  "header": {
+    "callUs": "Call Us",
+    "languageToggle": "Español",
+    "menuOpen": "Open navigation menu",
+    "menuClose": "Close navigation menu",
+    "logoAlt": "TruIdentity Screening Solutions"
+  },
+  "footer": {
+    "tagline": "Fast, accurate fingerprinting for South Texas — FBI Background Checks, Live Scan, ATF eFile, and more.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "hours": "Business Hours",
+    "copyright": "© {year} TruIdentity Screening Solutions. All rights reserved.",
+    "googleBusiness": "View on Google",
+    "address": "Address",
+    "appointmentOnly": "Appointment Only — No Walk-Ins"
+  },
+  "home": {
+    "hero": {
+      "headline": "Your Fingerprinting Done Right — Results in 48 Hours",
+      "subheadline": "FBI Background Checks, Live Scan, ATF eFile, and more. Serving McAllen and the entire Rio Grande Valley — same-day appointments available.",
+      "ctaBook": "Book Your Appointment",
+      "ctaFinder": "Find My Service"
+    },
+    "noWalkInsBanner": {
+      "text": "Appointments only — so you're seen promptly with no waiting.",
+      "cta": "Book online in under 2 minutes"
+    },
+    "services": {
+      "heading": "Every Fingerprinting Service You Need",
+      "subheading": "From FBI background checks to NFA transfers and mobile fingerprinting — one appointment in McAllen covers it all."
+    },
+    "pricing": {
+      "heading": "Simple, Transparent Pricing",
+      "subheading": "No hidden fees. Know exactly what you'll pay before you arrive — prices start at $49."
+    },
+    "howItWorks": {
+      "heading": "Done in Three Easy Steps",
+      "subheading": "Most clients are in and out in under 15 minutes.",
+      "step1": {
+        "title": "Find Your Service",
+        "description": "Select the service your agency requires, or use our free Service Finder to get pointed in the right direction — takes about 30 seconds."
+      },
+      "step2": {
+        "title": "Book Online",
+        "description": "Pick a time that works for you. Appointments are available Monday through Saturday — same-day slots often open."
+      },
+      "step3": {
+        "title": "Arrive and You're Done",
+        "description": "Bring your valid photo ID and any agency forms. The fingerprinting itself takes about 10 minutes — then you're on your way."
+      }
+    },
+    "reviews": {
+      "heading": "Trusted by South Texas",
+      "subheading": "Real feedback from real clients across the Rio Grande Valley"
+    },
+    "faqTeaser": {
+      "heading": "Common Questions",
+      "viewAll": "See All FAQs"
+    },
+    "cta": {
+      "heading": "Ready to Get This Done?",
+      "subheading": "Same-day appointments available. Book online in minutes.",
+      "button": "Book Appointment"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About TruIdentity | McAllen Fingerprinting Services",
+      "description": "TruIdentity is McAllen's trusted fingerprinting service — 48-hour FBI results, no-rejection guarantee, bilingual staff, and same-day appointments available."
+    },
+    "heading": "Fingerprinting South Texas Has Trusted Since [YEAR FOUNDED]",
+    "subheading": "Fast, accurate, and bilingual — serving McAllen and the Rio Grande Valley.",
+    "story": {
+      "heading": "Our Story",
+      "body1": "TruIdentity Screening Solutions was founded in [YEAR FOUNDED] by [FOUNDER NAME], a South Texas native who saw how frustrating the fingerprinting process could be — confusing forms, long waits, and rejections that set applicants back weeks. The goal was simple: make professional fingerprinting fast, accurate, and stress-free for everyone in the Rio Grande Valley.",
+      "body2": "Today, TruIdentity handles everything from FBI background checks and ATF eFile submissions to school district Live Scans and mobile fingerprinting for businesses across the Valley. Fully bilingual in English and Spanish — because everyone in South Texas deserves a clear path forward."
+    },
+    "differentiators": {
+      "heading": "Why TruIdentity",
+      "items": [
+        {
+          "icon": "⚡",
+          "heading": "48-Hour FBI Results",
+          "body": "Most FBI background check results arrive within 48 hours of submission — not the weeks you'd wait elsewhere."
+        },
+        {
+          "icon": "✅",
+          "heading": "No-Rejection Guarantee",
+          "body": "If the FBI rejects your fingerprints for quality reasons, we reprint them at no additional charge. Period."
+        },
+        {
+          "icon": "📅",
+          "heading": "Same-Day Appointments",
+          "body": "Slots are available Monday through Saturday. Same-day appointments are often open — book online anytime."
+        },
+        {
+          "icon": "🗣️",
+          "heading": "Fully Bilingual",
+          "body": "Our entire service is available in English and Spanish — no interpreter needed, no language barrier."
+        },
+        {
+          "icon": "🚗",
+          "heading": "Mobile Service Available",
+          "body": "Need fingerprinting at your office, school, or facility? We come to you anywhere in South Texas."
+        }
+      ]
+    },
+    "mission": {
+      "heading": "Our Mission",
+      "text": "To make professional fingerprinting fast, accurate, and accessible for every person and organization in South Texas — with bilingual service, transparent pricing, and personal attention that government agencies simply can't provide."
+    },
+    "serviceArea": {
+      "heading": "Serving the Entire Rio Grande Valley",
+      "text": "Based in McAllen, TX, we serve individuals and organizations across Hidalgo, Cameron, and Starr counties — and throughout South Texas. Our mobile fingerprinting service means we can come to your location anywhere in the Valley."
+    },
+    "certifications": {
+      "heading": "Certified & Authorized",
+      "items": [
+        "FBI Authorized Channeler",
+        "ATF eFile Authorized Agent",
+        "Texas DPS Approved Live Scan Provider",
+        "Serving South Texas Since [YEAR FOUNDED]"
+      ]
+    },
+    "cta": {
+      "heading": "Let's Get You Cleared",
+      "text": "Book your appointment online — most clients are in and out in under 15 minutes.",
+      "button": "Book Appointment"
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Fingerprinting Services in McAllen, TX | TruIdentity",
+      "description": "FBI Background Checks with 48-hour results, Live Scan, Ink Fingerprinting, NFA, ATF eFile, FBI Apostille, and Mobile Fingerprinting in McAllen, TX."
+    },
+    "heading": "Fingerprinting Services",
+    "subheading": "Every service your agency requires — professional results, transparent pricing, same-day availability.",
+    "notSure": "Not sure which service you need?",
+    "useFinder": "Use the Free Service Finder",
+    "estimator": {
+      "heading": "Quick Price Lookup",
+      "selectLabel": "Select a service",
+      "placeholder": "Choose a service...",
+      "priceLabel": "Service fee",
+      "includes": "What's included"
+    },
+    "serviceDetail": {
+      "whatItIs": "What It Is",
+      "whoNeeds": "Who Needs This",
+      "whatToBring": "What to Bring",
+      "whatToExpect": "What to Expect",
+      "pricing": "Pricing",
+      "relatedServices": "Related Services",
+      "bookCta": "Book This Service",
+      "inSouthTexas": "in South Texas"
+    }
+  },
+  "book": {
+    "meta": {
+      "title": "Book a Fingerprinting Appointment | TruIdentity McAllen",
+      "description": "Schedule your fingerprinting appointment in McAllen — same-day slots available. FBI Background Checks, Live Scan, NFA, ATF eFile, and more."
+    },
+    "heading": "Book Your Appointment",
+    "subheading": "Same-day slots available Monday through Saturday. Most appointments take 15 minutes or less.",
+    "noWalkIns": "Appointments are required — walk-ins are not accepted. Use the scheduler below to pick your time.",
+    "whatToBring": {
+      "heading": "What to Bring",
+      "items": [
+        "Valid government-issued photo ID (driver's license, passport, or state ID)",
+        "Social Security Number (required for FBI Background Check and Live Scan services)",
+        "ORI number from your agency (required for Live Scan — your employer or licensing board provides this)",
+        "ATF Form 4 or Form 1 (required for NFA fingerprinting and ATF eFile services)",
+        "Any paperwork, forms, or instructions your requesting agency provided"
+      ]
+    },
+    "questions": "Questions before you book?",
+    "contactLink": "Contact us — we're happy to help"
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact TruIdentity | McAllen Fingerprinting Services",
+      "description": "Call, email, or message TruIdentity in McAllen, TX. Bilingual staff available. Questions about which service you need? We'll help."
+    },
+    "heading": "Get in Touch",
+    "subheading": "Questions about a service? Not sure what you need? We'll point you in the right direction — in English or Spanish.",
+    "form": {
+      "heading": "Send Us a Message",
+      "name": "Full Name",
+      "namePlaceholder": "Jane Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "jane@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "(956) 000-0000",
+      "service": "Service of Interest",
+      "servicePlaceholder": "Select a service...",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message received — we'll get back to you within one business day.",
+      "error": "Something went wrong. Please try again or call us directly.",
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address"
+    },
+    "info": {
+      "heading": "Contact Information",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "hours": "Hours",
+      "directions": "Get Directions",
+      "appointmentNote": "Appointment only — no walk-ins"
+    },
+    "map": {
+      "heading": "Our Location",
+      "title": "TruIdentity Screening Solutions — McAllen, TX"
+    }
+  },
+  "faq": {
+    "meta": {
+      "title": "Fingerprinting FAQ | TruIdentity Screening Solutions",
+      "description": "Answers to common questions about FBI background checks, Live Scan, NFA fingerprinting, what to bring, and how long results take."
+    },
+    "heading": "Frequently Asked Questions",
+    "subheading": "Everything you need to know before your appointment.",
+    "cta": {
+      "text": "Didn't find your answer?",
+      "button": "Contact Us"
+    },
+    "items": [
+      {
+        "question": "How fast do FBI background check results arrive?",
+        "answer": "Most FBI Identity History Summary results arrive within 48 hours of submission — significantly faster than the 2–4 week window quoted by many providers. Once your fingerprints are transmitted, processing is handled entirely by the FBI. Our authorized channeler status means submissions reach the FBI the same day."
+      },
+      {
+        "question": "What happens if my fingerprints are rejected?",
+        "answer": "If the FBI rejects your fingerprints due to print quality, we reprint them at no additional charge — that's our no-rejection guarantee. Rejections are rare when prints are taken by a trained technician using professional equipment, which is exactly why it matters who takes your fingerprints."
+      },
+      {
+        "question": "What ID do I need to bring?",
+        "answer": "Bring a valid, government-issued photo ID — a driver's license, state ID, U.S. passport, or military ID. The name on your ID must match the name on your application exactly. Expired IDs are not accepted."
+      },
+      {
+        "question": "Do you accept walk-ins?",
+        "answer": "No — we're appointment-only. This means you're seen promptly when you arrive, with no waiting room and no surprises. Booking takes under 2 minutes online, and same-day slots are often available."
+      },
+      {
+        "question": "How long does the appointment take?",
+        "answer": "The fingerprinting process takes about 10 minutes. Plan for 15–20 minutes total including check-in. For ATF eFile sessions, allow 30–45 minutes as we walk through the full eForms submission together."
+      },
+      {
+        "question": "What is Live Scan fingerprinting and who needs it?",
+        "answer": "Live Scan captures fingerprints electronically and transmits them directly to the FBI or TX DPS — no ink, no physical card. It's required for teachers, school employees, childcare workers, healthcare professionals, and most Texas state license applicants. Your employer or licensing board will give you an ORI number and confirm that Live Scan is required."
+      },
+      {
+        "question": "What is the difference between Live Scan and ink fingerprinting?",
+        "answer": "Live Scan transmits fingerprints electronically to the requesting agency — results typically arrive within 24–72 hours. Ink fingerprinting rolls your prints onto a physical FD-258 card that you mail yourself to the agency — processing time depends on the agency. Most Texas agencies now require Live Scan, but many federal agencies and out-of-state licensing boards still require physical ink cards."
+      },
+      {
+        "question": "What is an ORI number and where do I get it?",
+        "answer": "An ORI (Originating Agency Identifier) is the code that routes your Live Scan results to the correct agency. Your employer, licensing board, or requesting agency provides this number — we cannot supply it. It typically looks like a combination of letters and numbers (example: TX123456Z). Do not book a Live Scan appointment until you have your ORI."
+      },
+      {
+        "question": "What do I need for NFA fingerprinting?",
+        "answer": "Bring a valid photo ID and a copy of your ATF Form 4 or Form 1 for reference. We provide two completed FD-258 fingerprint cards as required by the ATF. If you're filing as an NFA trust, bring your trust documents. We also offer ATF eFile services if you'd prefer electronic submission for faster approval — often weeks instead of months."
+      },
+      {
+        "question": "What is an FBI Apostille and when do I need one?",
+        "answer": "An FBI Apostille is an FBI background check authenticated for international use under the Hague Convention. It's required when a foreign government needs to verify a U.S. background check — common for work visas, residency applications, international adoption, and immigration. The process includes fingerprinting, FBI processing, and apostille certification — total turnaround is typically 8–12 weeks."
+      },
+      {
+        "question": "Do you offer mobile fingerprinting?",
+        "answer": "Yes. We bring professional fingerprinting equipment directly to your office, school, clinic, or facility anywhere in South Texas. Ideal for employers onboarding multiple staff, school districts, healthcare organizations, and nonprofits. Contact us in advance to schedule — a travel fee may apply based on distance from McAllen."
+      },
+      {
+        "question": "What forms of payment do you accept?",
+        "answer": "We accept cash, major credit and debit cards (Visa, Mastercard, American Express, Discover), Venmo, and Zelle. Payment is collected at the time of service."
+      }
+    ]
+  },
+  "serviceFinder": {
+    "meta": {
+      "title": "Which Fingerprinting Service Do I Need? | TruIdentity",
+      "description": "Answer 2–3 quick questions and we'll tell you exactly which fingerprinting service you need. Takes 30 seconds."
+    },
+    "heading": "Which Service Do You Need?",
+    "subheading": "Answer a couple of quick questions — we'll point you to the right service in about 30 seconds.",
+    "startOver": "Start Over",
+    "back": "Back",
+    "bookService": "Book This Service",
+    "viewAllServices": "Browse All Services",
+    "step": "Step",
+    "of": "of",
+    "steps": {
+      "purpose": {
+        "question": "Why do you need fingerprinting?",
+        "options": [
+          "Job application, professional license, or personal background check",
+          "Firearm or NFA item (suppressor, SBR, SBS, or machine gun)",
+          "Teaching, childcare, healthcare, or a Texas state license",
+          "International use — visa, residency, work abroad, or immigration",
+          "I'm not sure yet"
+        ]
+      },
+      "format": {
+        "question": "What format does your agency require?",
+        "options": [
+          "Electronic submission directly to the FBI (Live Scan)",
+          "Physical fingerprint card (ink-rolled FD-258) — I mail it myself",
+          "I'm not sure — help me figure it out"
+        ]
+      },
+      "international": {
+        "question": "What does the foreign country or agency require?",
+        "options": [
+          "An apostille on the FBI report (required for residency, work visas, and immigration)",
+          "A standard FBI background check — no apostille needed"
+        ]
+      }
+    },
+    "results": {
+      "recommended": "Recommended for You",
+      "price": "Service Fee",
+      "whyThis": "Why this service?",
+      "book": "Book This Service",
+      "learnMore": "Learn More"
+    },
+    "allServices": {
+      "heading": "Browse All Services",
+      "subheading": "Not sure? Take a look at everything available — or call us and we'll help."
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy | TruIdentity Screening Solutions",
+      "description": "Privacy policy for TruIdentity Screening Solutions — how we collect, use, and protect your information."
+    },
+    "heading": "Privacy Policy",
+    "lastUpdated": "Last Updated: April 2026",
+    "intro": "TruIdentity Screening Solutions (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or use our services.",
+    "sections": [
+      {
+        "heading": "Information We Collect",
+        "content": "We may collect personal information including your name, contact information, and any details you provide when booking an appointment or contacting us. We also collect standard web analytics data (page views, referral sources) to improve our website."
+      },
+      {
+        "heading": "How We Use Your Information",
+        "content": "We use the information we collect to schedule and confirm your appointments, respond to your inquiries, improve our services, and comply with applicable laws and regulations."
+      },
+      {
+        "heading": "Data Sharing",
+        "content": "We do not sell, trade, or rent your personal information to third parties. We may share information with service providers (such as our scheduling platform) strictly as necessary to operate our business."
+      },
+      {
+        "heading": "Data Security",
+        "content": "We implement reasonable security measures to protect your information. However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security."
+      },
+      {
+        "heading": "Contact Us",
+        "content": "If you have any questions about this Privacy Policy, please contact us by phone or email."
+      }
+    ]
+  },
+  "terms": {
+    "meta": {
+      "title": "Terms & Conditions | TruIdentity Screening Solutions",
+      "description": "Terms and conditions for TruIdentity Screening Solutions fingerprinting services."
+    },
+    "heading": "Terms & Conditions",
+    "lastUpdated": "Last Updated: April 2026",
+    "intro": "By using our services or website, you agree to the following terms and conditions. Please read them carefully.",
+    "sections": [
+      {
+        "heading": "Appointment Policy",
+        "content": "All services are by appointment only. Walk-in appointments are not accepted. Appointments must be booked online through our scheduling system. We reserve the right to cancel or reschedule appointments as necessary."
+      },
+      {
+        "heading": "Cancellation & Rescheduling",
+        "content": "We request at least 24 hours notice if you need to cancel or reschedule your appointment. Repeated no-shows may result in restrictions on future bookings."
+      },
+      {
+        "heading": "Identification Requirements",
+        "content": "A valid, government-issued photo ID is required for all services. We reserve the right to refuse service if proper identification cannot be provided."
+      },
+      {
+        "heading": "Payment",
+        "content": "Payment is due at the time of service. We accept cash, major credit and debit cards, Venmo, and Zelle. All prices are listed in U.S. dollars."
+      },
+      {
+        "heading": "Limitation of Liability",
+        "content": "TruIdentity Screening Solutions is not responsible for delays in processing times caused by the FBI, ATF, or other government agencies. Processing times are outside of our control once your fingerprints have been submitted."
+      },
+      {
+        "heading": "Changes to Terms",
+        "content": "We reserve the right to update these Terms & Conditions at any time. Continued use of our services constitutes acceptance of the updated terms."
+      }
+    ]
+  }
+}
