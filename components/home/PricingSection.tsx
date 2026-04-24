@@ -9,6 +9,7 @@ interface PricingSectionProps {
 export async function PricingSection({ locale }: PricingSectionProps) {
   const t = await getTranslations({ locale, namespace: 'home.pricing' })
   const tc = await getTranslations({ locale, namespace: 'common' })
+  const ts = await getTranslations({ locale, namespace: 'serviceItems' })
 
   return (
     <section className="py-16 lg:py-24 bg-white" aria-labelledby="pricing-heading">
@@ -21,19 +22,22 @@ export async function PricingSection({ locale }: PricingSectionProps) {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {services.map((service) => (
-            <PricingCard
-              key={service.slug}
-              name={service.name}
-              price={service.price}
-              priceNote={service.priceNote}
-              bullets={service.whoNeeds.slice(0, 3)}
-              href={`/${locale}/book`}
-              bookLabel={tc('bookNow')}
-              popular={service.popular}
-              popularLabel={tc('mostPopular')}
-            />
-          ))}
+          {services.map((service) => {
+            const bullets = ts.raw(`${service.slug}.pricingBullets`) as string[]
+            return (
+              <PricingCard
+                key={service.slug}
+                name={ts(`${service.slug}.name`)}
+                price={service.price}
+                priceNote={service.priceNote}
+                bullets={bullets.slice(0, 3)}
+                href={`/${locale}/book`}
+                bookLabel={tc('bookNow')}
+                popular={service.popular}
+                popularLabel={tc('mostPopular')}
+              />
+            )
+          })}
         </div>
       </div>
     </section>

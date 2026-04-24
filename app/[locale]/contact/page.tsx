@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
+import Image from 'next/image'
+import { Accessibility, ParkingSquare } from 'lucide-react'
 import { ContactForm } from '@/components/contact/ContactForm'
 import { siteConfig } from '@/config/site'
 
@@ -21,11 +23,6 @@ export default async function ContactPage({ params }: ContactPageProps) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'contact' })
 
-  const mapsUrl =
-    siteConfig.googleMapsEmbedUrl !== 'GOOGLE_MAPS_EMBED_URL'
-      ? siteConfig.googleMapsEmbedUrl
-      : null
-
   return (
     <div className="py-12 lg:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +40,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
             <ContactForm />
           </section>
 
-          {/* Contact info */}
+          {/* Contact info + map */}
           <aside>
             <h2 className="text-2xl font-bold text-navy mb-6">{t('info.heading')}</h2>
 
@@ -110,30 +107,46 @@ export default async function ContactPage({ params }: ContactPageProps) {
               </div>
             </div>
 
+            {/* Accessibility */}
+            <div className="mb-8">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">
+                {t('accessibility.heading')}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-blue/10 text-accent-blue text-xs font-semibold">
+                  <Accessibility className="w-3.5 h-3.5" aria-hidden="true" />
+                  {t('accessibility.entrance')}
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-blue/10 text-accent-blue text-xs font-semibold">
+                  <ParkingSquare className="w-3.5 h-3.5" aria-hidden="true" />
+                  {t('accessibility.parking')}
+                </span>
+              </div>
+            </div>
+
             {/* Map */}
-            <section aria-labelledby="map-heading">
-              <h3 id="map-heading" className="text-lg font-bold text-navy mb-3">{t('map.heading')}</h3>
-              {mapsUrl ? (
-                <iframe
-                  src={mapsUrl}
-                  title={t('map.title')}
-                  width="100%"
-                  height="300"
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-xl border border-gray-200 w-full"
-                />
-              ) : (
-                <div className="rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 h-52 flex items-center justify-center text-center px-4">
-                  <div>
-                    <p className="text-sm font-medium text-gray-500">Map Placeholder</p>
-                    <p className="text-xs text-gray-400 mt-1">
-                      Set <code className="bg-gray-200 px-1 rounded">GOOGLE_MAPS_EMBED_URL</code> in config/site.ts
-                    </p>
-                  </div>
-                </div>
-              )}
+            <section aria-labelledby="map-heading" className="space-y-4">
+              <h3 id="map-heading" className="text-lg font-bold text-navy">{t('map.heading')}</h3>
+
+              <iframe
+                src={siteConfig.googleMapsEmbedUrl}
+                title={t('map.title')}
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-xl w-full"
+              />
+
+              <Image
+                src="/images/location/building.jpg"
+                alt={t('map.buildingAlt')}
+                width={800}
+                height={1027}
+                className="rounded-xl w-full object-cover"
+              />
             </section>
           </aside>
         </div>

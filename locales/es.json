@@ -13,7 +13,9 @@
     "close": "Cerrar",
     "open": "Abrir",
     "viewAll": "Ver Todo",
-    "required": "Requerido"
+    "required": "Requerido",
+    "skipToContent": "Ir al contenido principal",
+    "menuLabel": "Menú"
   },
   "nav": {
     "home": "Inicio",
@@ -49,7 +51,8 @@
       "headline": "Sus Huellas Listas Hoy — Resultados en 48 Horas",
       "subheadline": "Antecedentes del FBI, Live Scan, ATF eFile y más. Atendemos a McAllen y todo el Valle del Río Grande — citas disponibles el mismo día.",
       "ctaBook": "Reservar Cita",
-      "ctaFinder": "Encontrar Mi Servicio"
+      "ctaFinder": "Encontrar Mi Servicio",
+      "trustBadge": "Agente Autorizado del FBI · Sur de Texas"
     },
     "noWalkInsBanner": {
       "text": "Solo con cita — para que lo atendamos sin esperas al llegar.",
@@ -57,7 +60,12 @@
     },
     "services": {
       "heading": "Todo el Servicio de Huellas que Necesita",
-      "subheading": "Desde antecedentes del FBI hasta transferencias NFA y huellas móviles — una sola cita en McAllen lo cubre todo."
+      "subheading": "Desde antecedentes del FBI hasta transferencias NFA y huellas móviles — una sola cita en McAllen lo cubre todo.",
+      "finderCta": {
+        "heading": "¿No sabe qué servicio necesita?",
+        "subtext": "Responda unas preguntas rápidas y le orientamos al servicio correcto.",
+        "button": "Encontrar Mi Servicio"
+      }
     },
     "pricing": {
       "heading": "Precios Claros, Sin Sorpresas",
@@ -80,8 +88,13 @@
       }
     },
     "reviews": {
-      "heading": "La Confianza del Sur de Texas",
-      "subheading": "Opiniones reales de clientes en todo el Valle del Río Grande"
+      "heading": "Lo Que Dicen Nuestros Clientes",
+      "subheading": "La confianza de residentes y profesionales del sur de Texas",
+      "starsAriaLabel": "5 de 5 estrellas de promedio",
+      "aggregate": "{count} reseñas en Google",
+      "seeAll": "Ver las {count} reseñas en Google →",
+      "postedOn": "Publicado en Google",
+      "readMore": "leer más"
     },
     "faqTeaser": {
       "heading": "Preguntas Frecuentes",
@@ -98,38 +111,44 @@
       "title": "Nosotros | TruIdentity — Huellas en McAllen, TX",
       "description": "TruIdentity es el servicio de huellas digitales de confianza en McAllen — resultados del FBI en 48 horas, garantía sin rechazo y personal bilingüe."
     },
-    "heading": "El Servicio de Huellas del Sur de Texas desde [YEAR FOUNDED]",
-    "subheading": "Rápido, preciso y bilingüe — atendiendo a McAllen y el Valle del Río Grande.",
+    "heading": "Las Huellas Dactilares en las que el Sur de Texas Confía",
+    "subheading": "Rápido, preciso y bilingüe — sirviendo a McAllen y el Valle del Río Grande.",
     "story": {
       "heading": "Nuestra Historia",
-      "body1": "TruIdentity Screening Solutions fue fundado en [YEAR FOUNDED] por [FOUNDER NAME], originario del Sur de Texas, quien vio de primera mano lo frustrante que puede ser el proceso de huellas digitales — formularios confusos, largas esperas y rechazos que retrasan a los solicitantes por semanas. La meta fue simple: hacer que las huellas digitales profesionales sean rápidas, precisas y sin estrés para toda la gente del Valle.",
-      "body2": "Hoy, TruIdentity atiende desde antecedentes del FBI y envíos ATF eFile hasta Live Scan para distritos escolares y huellas móviles para negocios en todo el Valle. Completamente bilingüe en inglés y español — porque todos en el Sur de Texas merecen un camino claro hacia adelante."
+      "body1": "TruIdentity Screening Solutions fue fundada en 2024 por Bill Hawkins, un nativo del sur de Texas que vio lo frustrante que podía ser el proceso de huellas dactilares — formularios confusos, largas esperas y rechazos que retrasaban a los solicitantes por semanas. El objetivo era simple: hacer que las huellas dactilares profesionales fueran rápidas, precisas y sin estrés para todos en el Valle del Río Grande.",
+      "body2": "Solo en nuestro primer año, hemos ganado 56 reseñas de cinco estrellas de clientes en todo el Valle — enfermeras, maestros, dueños de armas, padres adoptivos y personas en búsqueda de empleo que necesitaban que todo saliera bien a la primera. Ese historial habla por sí solo.",
+      "body3": "Hoy, TruIdentity maneja todo, desde verificaciones de antecedentes del FBI y envíos de ATF eFile hasta Live Scans para distritos escolares y huellas dactilares móviles para empresas en todo el Valle. Completamente bilingüe en inglés y español — porque todos en el sur de Texas merecen un camino claro hacia adelante."
+    },
+    "office": {
+      "heading": "Nuestra Oficina",
+      "alt1": "Interior de la oficina de TruIdentity, McAllen TX",
+      "alt2": "Oficina de TruIdentity, 813 N. Main St McAllen TX"
     },
     "differentiators": {
       "heading": "Por Qué TruIdentity",
       "items": [
         {
-          "icon": "⚡",
+          "icon": "clock",
           "heading": "Resultados del FBI en 48 Horas",
           "body": "La mayoría de los resultados de antecedentes del FBI llegan en 48 horas — no las semanas que le darían en otro lugar."
         },
         {
-          "icon": "✅",
+          "icon": "shield-check",
           "heading": "Garantía Sin Rechazo",
           "body": "Si el FBI rechaza sus huellas por calidad, las tomamos de nuevo sin costo adicional. Sin excusas."
         },
         {
-          "icon": "📅",
+          "icon": "zap",
           "heading": "Citas el Mismo Día",
           "body": "Hay horarios disponibles de lunes a sábado. Muchas veces hay citas el mismo día — reserve en línea cuando guste."
         },
         {
-          "icon": "🗣️",
+          "icon": "languages",
           "heading": "Completamente Bilingüe",
           "body": "Todo el servicio está disponible en inglés y español — sin necesidad de intérprete."
         },
         {
-          "icon": "🚗",
+          "icon": "car",
           "heading": "Servicio Móvil Disponible",
           "body": "¿Necesita huellas en su oficina, escuela o instalación? Vamos a donde usted esté en el Sur de Texas."
         }
@@ -149,7 +168,7 @@
         "Agente Autorizado del FBI (FBI Channeler)",
         "Agente Autorizado ATF eFile",
         "Proveedor Aprobado de Live Scan por Texas DPS",
-        "Sirviendo al Sur de Texas desde [YEAR FOUNDED]"
+        "Sirviendo al Sur de Texas desde 2024"
       ]
     },
     "cta": {
@@ -220,7 +239,7 @@
       "email": "Correo Electrónico",
       "emailPlaceholder": "juan@ejemplo.com",
       "phone": "Número de Teléfono",
-      "phonePlaceholder": "(956) 000-0000",
+      "phonePlaceholder": "(956) 670-6144",
       "service": "Servicio de Interés",
       "servicePlaceholder": "Seleccione un servicio...",
       "message": "Mensaje",
@@ -243,7 +262,13 @@
     },
     "map": {
       "heading": "Nuestra Ubicación",
-      "title": "TruIdentity Screening Solutions — McAllen, TX"
+      "title": "TruIdentity Screening Solutions — McAllen, TX",
+      "buildingAlt": "Edificio de oficinas de TruIdentity Screening Solutions en 813 N. Main St, McAllen, TX"
+    },
+    "accessibility": {
+      "heading": "Accesibilidad",
+      "entrance": "Entrada accesible para sillas de ruedas",
+      "parking": "Estacionamiento accesible para sillas de ruedas"
     }
   },
   "faq": {
@@ -390,6 +415,71 @@
         "content": "Si tiene preguntas sobre esta Política de Privacidad, comuníquese con nosotros por teléfono o correo electrónico."
       }
     ]
+  },
+  "serviceItems": {
+    "fbi-background-checks": {
+      "name": "Verificación de Antecedentes del FBI",
+      "shortDescription": "Resumen oficial del historial del FBI — resultados en tan solo 48 horas.",
+      "pricingBullets": [
+        "Solicitantes de empleo que requieren verificación federal",
+        "Profesionales de salud, educación y finanzas",
+        "Organizaciones sin fines de lucro con requisitos de verificación"
+      ]
+    },
+    "fbi-apostille": {
+      "name": "Apostilla del FBI",
+      "shortDescription": "Verificación de antecedentes autenticada para uso internacional — visas, residencia e inmigración.",
+      "pricingBullets": [
+        "Solicitantes de visa de trabajo internacional",
+        "Personas que buscan residencia o ciudadanía en el extranjero",
+        "Solicitantes de adopción internacional"
+      ]
+    },
+    "ink-fingerprinting": {
+      "name": "Huellas Digitales de Tinta",
+      "shortDescription": "Tarjetas FD-258 con tinta tradicional — completadas el mismo día, listas para enviar.",
+      "pricingBullets": [
+        "Solicitantes de agencias federales que requieren tarjetas físicas",
+        "Solicitantes de juntas de licencias fuera de Texas",
+        "Solicitantes de notaría, proceso legal y bienes raíces"
+      ]
+    },
+    "live-scan-fingerprinting": {
+      "name": "Live Scan",
+      "shortDescription": "Captura electrónica transmitida al FBI o TX DPS — sin tinta, resultados en 24–72 horas.",
+      "pricingBullets": [
+        "Maestros y empleados de distritos escolares",
+        "Trabajadores de guarderías y profesionales de la salud",
+        "Solicitantes de licencia estatal de Texas (TX DPS)"
+      ]
+    },
+    "nfa-fingerprinting": {
+      "name": "Huellas para NFA",
+      "shortDescription": "Dos tarjetas FD-258 para el Formulario ATF 4 o 1 — completadas en 10 minutos.",
+      "pricingBullets": [
+        "Personas comprando supresores o silenciadores",
+        "Solicitantes de rifle de cañón corto (SBR) y escopeta (SBS)",
+        "Solicitantes del Formulario ATF 4 o Formulario 1"
+      ]
+    },
+    "atf-efile-services": {
+      "name": "ATF eFile",
+      "shortDescription": "Solicitud NFA electrónica vía ATF eForms — semanas más rápido que en papel.",
+      "pricingBullets": [
+        "Solicitantes del Formulario ATF 4 que buscan aprobación rápida",
+        "Personas que presentan el Formulario ATF 1",
+        "Solicitantes individuales, de fideicomiso o corporativos"
+      ]
+    },
+    "mobile-fingerprinting": {
+      "name": "Huellas Móviles",
+      "shortDescription": "Huellas profesionales en su ubicación — oficinas, escuelas e instalaciones en el Sur de Texas.",
+      "pricingBullets": [
+        "Empresas con múltiples empleados nuevos",
+        "Escuelas e instituciones educativas",
+        "Organizaciones de salud y sin fines de lucro"
+      ]
+    }
   },
   "terms": {
     "meta": {

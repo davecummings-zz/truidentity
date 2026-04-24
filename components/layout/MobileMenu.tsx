@@ -12,6 +12,8 @@ export function MobileMenu() {
   const locale = useLocale()
   const t = useTranslations('nav')
   const th = useTranslations('header')
+  const tc = useTranslations('common')
+  const ts = useTranslations('serviceItems')
 
   const close = () => {
     setOpen(false)
@@ -50,7 +52,7 @@ export function MobileMenu() {
           {/* Drawer */}
           <nav className="absolute top-0 right-0 w-80 max-w-full h-full bg-white shadow-xl flex flex-col overflow-y-auto">
             <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-              <span className="font-semibold text-navy">Menu</span>
+              <span className="font-semibold text-navy">{tc('menuLabel')}</span>
               <button
                 onClick={close}
                 className="p-2 rounded text-navy hover:bg-navy/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue"
@@ -110,7 +112,7 @@ export function MobileMenu() {
                     {services.map((s) => (
                       <li key={s.slug}>
                         <Link href={`/${locale}/services/${s.slug}`} onClick={close} className="block px-3 py-2 rounded-lg text-sm text-navy/80 hover:bg-navy/5 transition-colors">
-                          {s.name}
+                          {ts(`${s.slug}.name`)}
                         </Link>
                       </li>
                     ))}

@@ -35,7 +35,7 @@ export async function Footer({ locale }: FooterProps) {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href={`/${locale}`} className="inline-block mb-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white rounded">
-              <TruidentityLogo className="h-9 w-auto brightness-0 invert" />
+              <TruidentityLogo className="h-9 w-auto" variant="white" />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-4">{t('tagline')}</p>
             {siteConfig.googleBusinessUrl !== 'GOOGLE_BUSINESS_URL' && (
@@ -52,7 +52,7 @@ export async function Footer({ locale }: FooterProps) {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">{t('quickLinks')}</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -66,7 +66,7 @@ export async function Footer({ locale }: FooterProps) {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">{t('contactUs')}</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">{t('contactUs')}</h3>
             <ul className="space-y-3 text-sm text-white/80">
               <li>
                 <a href={`tel:${siteConfig.phone.replace(/\D/g, '')}`} className="flex items-center gap-2 hover:text-white transition-colors">
@@ -96,7 +96,7 @@ export async function Footer({ locale }: FooterProps) {
 
           {/* Hours */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">{t('hours')}</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">{t('hours')}</h3>
             <ul className="space-y-2">
               {siteConfig.hoursStructured.map((h) => (
                 <li key={h.days} className="text-sm">

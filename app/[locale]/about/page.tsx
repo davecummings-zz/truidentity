@@ -1,6 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
+import {
+  Clock,
+  ShieldCheck,
+  Zap,
+  Languages,
+  Car,
+  MapPin,
+  CalendarDays,
+  type LucideIcon,
+} from 'lucide-react'
 import { siteConfig } from '@/config/site'
 
 interface AboutPageProps {
@@ -22,6 +33,14 @@ interface Differentiator {
   icon: string
   heading: string
   body: string
+}
+
+const DIFF_ICONS: Record<string, LucideIcon> = {
+  clock: Clock,
+  'shield-check': ShieldCheck,
+  zap: Zap,
+  languages: Languages,
+  car: Car,
 }
 
 export default async function AboutPage({ params }: AboutPageProps) {
@@ -47,6 +66,32 @@ export default async function AboutPage({ params }: AboutPageProps) {
           <div className="space-y-4 text-gray-600 leading-relaxed">
             <p>{t('story.body1')}</p>
             <p>{t('story.body2')}</p>
+            <p>{t('story.body3')}</p>
+          </div>
+        </section>
+
+        {/* Office photos */}
+        <section className="mb-12" aria-labelledby="office-heading">
+          <h2 id="office-heading" className="text-2xl font-bold text-navy mb-6">{t('office.heading')}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="relative h-60 lg:h-80 rounded-xl shadow-md overflow-hidden">
+              <Image
+                src="/images/location/office1.webp"
+                alt={t('office.alt1')}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
+            <div className="relative h-60 lg:h-80 rounded-xl shadow-md overflow-hidden">
+              <Image
+                src="/images/location/office2.webp"
+                alt={t('office.alt2')}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </section>
 
@@ -54,15 +99,20 @@ export default async function AboutPage({ params }: AboutPageProps) {
         <section className="mb-12" aria-labelledby="diff-heading">
           <h2 id="diff-heading" className="text-2xl font-bold text-navy mb-6">{t('differentiators.heading')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {differentiators.map((item) => (
-              <div key={item.heading} className="flex items-start gap-4 p-5 rounded-xl border border-gray-200 bg-white">
-                <span className="text-2xl flex-shrink-0" aria-hidden="true">{item.icon}</span>
-                <div>
-                  <h3 className="font-bold text-navy text-sm mb-1">{item.heading}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.body}</p>
+            {differentiators.map((item) => {
+              const Icon: LucideIcon = DIFF_ICONS[item.icon] ?? ShieldCheck
+              return (
+                <div key={item.heading} className="flex items-start gap-4 p-5 rounded-xl border border-gray-200 bg-white">
+                  <div className="p-2 rounded-lg bg-blue-50 inline-flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                    <Icon className="size-6 text-accent-blue" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-navy text-sm mb-1">{item.heading}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.body}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </section>
 
@@ -75,7 +125,9 @@ export default async function AboutPage({ params }: AboutPageProps) {
         {/* Service area */}
         <section className="mb-12 p-6 rounded-2xl bg-navy/5 border border-navy/10" aria-labelledby="area-heading">
           <div className="flex items-start gap-4">
-            <span className="text-3xl flex-shrink-0" aria-hidden="true">📍</span>
+            <div className="p-2 rounded-lg bg-blue-50 inline-flex items-center justify-center flex-shrink-0" aria-hidden="true">
+              <MapPin className="size-6 text-accent-blue" />
+            </div>
             <div>
               <h2 id="area-heading" className="text-2xl font-bold text-navy mb-3">{t('serviceArea.heading')}</h2>
               <p className="text-gray-600 leading-relaxed">{t('serviceArea.text')}</p>
@@ -98,14 +150,6 @@ export default async function AboutPage({ params }: AboutPageProps) {
           </ul>
         </section>
 
-        {/* Placeholder photo */}
-        <section className="mb-12 rounded-2xl bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center h-56 text-gray-400">
-          <div className="text-center">
-            <p className="text-sm font-medium">Team / Office Photo</p>
-            <p className="text-xs mt-1">Placeholder — replace with real photography</p>
-          </div>
-        </section>
-
         {/* CTA */}
         <section className="rounded-2xl bg-gradient-to-r from-navy to-accent-blue p-8 text-center" aria-labelledby="about-cta">
           <h2 id="about-cta" className="text-2xl font-bold text-white mb-2">{t('cta.heading')}</h2>
@@ -114,7 +158,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
             href={`/${locale}/book`}
             className="inline-flex items-center gap-2 px-7 py-3.5 bg-accent-orange text-white font-bold rounded-xl hover:bg-accent-orange/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
           >
-            📅 {t('cta.button')}
+            <CalendarDays className="size-5" aria-hidden="true" />
+            {t('cta.button')}
           </Link>
         </section>
       </div>

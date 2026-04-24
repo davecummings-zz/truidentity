@@ -38,6 +38,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   const t = await getTranslations({ locale, namespace: 'services.serviceDetail' })
   const tc = await getTranslations({ locale, namespace: 'common' })
+  const tn = await getTranslations({ locale, namespace: 'nav' })
   const related = getRelatedServices(service.relatedSlugs)
 
   return (
@@ -49,9 +50,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
-            <Link href={`/${locale}`} className="hover:text-navy transition-colors">Home</Link>
+            <Link href={`/${locale}`} className="hover:text-navy transition-colors">{tn('home')}</Link>
             <span aria-hidden="true">›</span>
-            <Link href={`/${locale}/services`} className="hover:text-navy transition-colors">Services</Link>
+            <Link href={`/${locale}/services`} className="hover:text-navy transition-colors">{tn('services')}</Link>
             <span aria-hidden="true">›</span>
             <span className="text-navy font-medium" aria-current="page">{service.name}</span>
           </nav>

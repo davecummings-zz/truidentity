@@ -1,18 +1,19 @@
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 
 interface ServiceCardProps {
-  emoji: string
+  icon: ReactNode
   name: string
   description: string
   href: string
   learnMoreLabel: string
 }
 
-export function ServiceCard({ emoji, name, description, href, learnMoreLabel }: ServiceCardProps) {
+export function ServiceCard({ icon, name, description, href, learnMoreLabel }: ServiceCardProps) {
   return (
     <div className="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-card hover:shadow-card-hover hover:border-accent-blue/40 transition-all">
-      <div className="mb-4">
-        <span className="text-3xl" role="img" aria-hidden="true">{emoji}</span>
+      <div className="mb-4 w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center flex-shrink-0">
+        {icon}
       </div>
       <h3 className="text-base font-bold text-navy mb-2">{name}</h3>
       <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-5">{description}</p>

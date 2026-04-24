@@ -1,14 +1,36 @@
 import { getTranslations } from 'next-intl/server'
 import { services } from '@/config/services'
 import { ServiceCard } from '@/components/ui/ServiceCard'
+import {
+  ShieldCheck,
+  Stamp,
+  Fingerprint,
+  ScanLine,
+  ClipboardList,
+  Upload,
+  MapPin,
+} from 'lucide-react'
+import type { LucideProps } from 'lucide-react'
+import type { FC } from 'react'
 
 interface ServicesGridProps {
   locale: string
 }
 
+const serviceIcons: Record<string, FC<LucideProps>> = {
+  'fbi-background-checks': ShieldCheck,
+  'fbi-apostille': Stamp,
+  'ink-fingerprinting': Fingerprint,
+  'live-scan-fingerprinting': ScanLine,
+  'nfa-fingerprinting': ClipboardList,
+  'atf-efile-services': Upload,
+  'mobile-fingerprinting': MapPin,
+}
+
 export async function ServicesGrid({ locale }: ServicesGridProps) {
   const t = await getTranslations({ locale, namespace: 'home.services' })
   const tc = await getTranslations({ locale, namespace: 'common' })
+  const ts = await getTranslations({ locale, namespace: 'serviceItems' })
 
   return (
     <section className="py-16 lg:py-24 bg-gray-50" aria-labelledby="services-heading">
@@ -23,16 +45,19 @@ export async function ServicesGrid({ locale }: ServicesGridProps) {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((service) => (
-            <ServiceCard
-              key={service.slug}
-              emoji={service.emoji}
-              name={service.name}
-              description={service.shortDescription}
-              href={`/${locale}/services/${service.slug}`}
-              learnMoreLabel={tc('learnMore')}
-            />
-          ))}
+          {services.map((service) => {
+            const Icon = serviceIcons[service.slug]
+            return (
+              <ServiceCard
+                key={service.slug}
+                icon={Icon ? <Icon size={32} className="text-accent-blue" aria-hidden="true" /> : null}
+                name={ts(`${service.slug}.name`)}
+                description={ts(`${service.slug}.shortDescription`)}
+                href={`/${locale}/services/${service.slug}`}
+                learnMoreLabel={tc('learnMore')}
+              />
+            )
+          })}
         </div>
       </div>
     </section>

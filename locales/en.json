@@ -13,7 +13,9 @@
     "close": "Close",
     "open": "Open",
     "viewAll": "View All",
-    "required": "Required"
+    "required": "Required",
+    "skipToContent": "Skip to main content",
+    "menuLabel": "Menu"
   },
   "nav": {
     "home": "Home",
@@ -49,7 +51,8 @@
       "headline": "Your Fingerprinting Done Right — Results in 48 Hours",
       "subheadline": "FBI Background Checks, Live Scan, ATF eFile, and more. Serving McAllen and the entire Rio Grande Valley — same-day appointments available.",
       "ctaBook": "Book Your Appointment",
-      "ctaFinder": "Find My Service"
+      "ctaFinder": "Find My Service",
+      "trustBadge": "FBI Authorized Channeler · South Texas"
     },
     "noWalkInsBanner": {
       "text": "Appointments only — so you're seen promptly with no waiting.",
@@ -57,7 +60,12 @@
     },
     "services": {
       "heading": "Every Fingerprinting Service You Need",
-      "subheading": "From FBI background checks to NFA transfers and mobile fingerprinting — one appointment in McAllen covers it all."
+      "subheading": "From FBI background checks to NFA transfers and mobile fingerprinting — one appointment in McAllen covers it all.",
+      "finderCta": {
+        "heading": "Not sure which service you need?",
+        "subtext": "Answer a few quick questions and we'll point you to the right one.",
+        "button": "Find My Service"
+      }
     },
     "pricing": {
       "heading": "Simple, Transparent Pricing",
@@ -80,8 +88,13 @@
       }
     },
     "reviews": {
-      "heading": "Trusted by South Texas",
-      "subheading": "Real feedback from real clients across the Rio Grande Valley"
+      "heading": "What Our Clients Say",
+      "subheading": "Trusted by South Texas residents and professionals",
+      "starsAriaLabel": "5 out of 5 stars average",
+      "aggregate": "{count} Google Reviews",
+      "seeAll": "See all {count} reviews on Google →",
+      "postedOn": "Posted on Google",
+      "readMore": "read more"
     },
     "faqTeaser": {
       "heading": "Common Questions",
@@ -98,38 +111,44 @@
       "title": "About TruIdentity | McAllen Fingerprinting Services",
       "description": "TruIdentity is McAllen's trusted fingerprinting service — 48-hour FBI results, no-rejection guarantee, bilingual staff, and same-day appointments available."
     },
-    "heading": "Fingerprinting South Texas Has Trusted Since [YEAR FOUNDED]",
+    "heading": "Fingerprinting South Texas Has Trusted Since Day One",
     "subheading": "Fast, accurate, and bilingual — serving McAllen and the Rio Grande Valley.",
     "story": {
       "heading": "Our Story",
-      "body1": "TruIdentity Screening Solutions was founded in [YEAR FOUNDED] by [FOUNDER NAME], a South Texas native who saw how frustrating the fingerprinting process could be — confusing forms, long waits, and rejections that set applicants back weeks. The goal was simple: make professional fingerprinting fast, accurate, and stress-free for everyone in the Rio Grande Valley.",
-      "body2": "Today, TruIdentity handles everything from FBI background checks and ATF eFile submissions to school district Live Scans and mobile fingerprinting for businesses across the Valley. Fully bilingual in English and Spanish — because everyone in South Texas deserves a clear path forward."
+      "body1": "TruIdentity Screening Solutions was founded in 2024 by Bill Hawkins, a South Texas native who saw how frustrating the fingerprinting process could be — confusing forms, long waits, and rejections that set applicants back weeks. The goal was simple: make professional fingerprinting fast, accurate, and stress-free for everyone in the Rio Grande Valley.",
+      "body2": "In our first year alone, we've earned 56 five-star reviews from clients across the Valley — nurses, teachers, gun owners, adoptive parents, and job seekers who needed it done right the first time. That track record speaks for itself.",
+      "body3": "Today, TruIdentity handles everything from FBI background checks and ATF eFile submissions to school district Live Scans and mobile fingerprinting for businesses across the Valley. Fully bilingual in English and Spanish — because everyone in South Texas deserves a clear path forward."
+    },
+    "office": {
+      "heading": "Our Office",
+      "alt1": "TruIdentity Screening Solutions office interior, McAllen TX",
+      "alt2": "TruIdentity Screening Solutions office, 813 N. Main St McAllen TX"
     },
     "differentiators": {
       "heading": "Why TruIdentity",
       "items": [
         {
-          "icon": "⚡",
+          "icon": "clock",
           "heading": "48-Hour FBI Results",
           "body": "Most FBI background check results arrive within 48 hours of submission — not the weeks you'd wait elsewhere."
         },
         {
-          "icon": "✅",
+          "icon": "shield-check",
           "heading": "No-Rejection Guarantee",
           "body": "If the FBI rejects your fingerprints for quality reasons, we reprint them at no additional charge. Period."
         },
         {
-          "icon": "📅",
+          "icon": "zap",
           "heading": "Same-Day Appointments",
           "body": "Slots are available Monday through Saturday. Same-day appointments are often open — book online anytime."
         },
         {
-          "icon": "🗣️",
+          "icon": "languages",
           "heading": "Fully Bilingual",
           "body": "Our entire service is available in English and Spanish — no interpreter needed, no language barrier."
         },
         {
-          "icon": "🚗",
+          "icon": "car",
           "heading": "Mobile Service Available",
           "body": "Need fingerprinting at your office, school, or facility? We come to you anywhere in South Texas."
         }
@@ -149,7 +168,7 @@
         "FBI Authorized Channeler",
         "ATF eFile Authorized Agent",
         "Texas DPS Approved Live Scan Provider",
-        "Serving South Texas Since [YEAR FOUNDED]"
+        "Serving South Texas Since 2024"
       ]
     },
     "cta": {
@@ -220,7 +239,7 @@
       "email": "Email Address",
       "emailPlaceholder": "jane@example.com",
       "phone": "Phone Number",
-      "phonePlaceholder": "(956) 000-0000",
+      "phonePlaceholder": "(956) 670-6144",
       "service": "Service of Interest",
       "servicePlaceholder": "Select a service...",
       "message": "Message",
@@ -243,7 +262,13 @@
     },
     "map": {
       "heading": "Our Location",
-      "title": "TruIdentity Screening Solutions — McAllen, TX"
+      "title": "TruIdentity Screening Solutions — McAllen, TX",
+      "buildingAlt": "TruIdentity Screening Solutions office building at 813 N. Main St, McAllen, TX"
+    },
+    "accessibility": {
+      "heading": "Accessibility",
+      "entrance": "Wheelchair accessible entrance",
+      "parking": "Wheelchair accessible parking lot"
     }
   },
   "faq": {
@@ -390,6 +415,71 @@
         "content": "If you have any questions about this Privacy Policy, please contact us by phone or email."
       }
     ]
+  },
+  "serviceItems": {
+    "fbi-background-checks": {
+      "name": "FBI Background Checks",
+      "shortDescription": "Official FBI Identity History Summary — results in as little as 48 hours.",
+      "pricingBullets": [
+        "Job applicants requiring a federal background check",
+        "Healthcare, education, and finance professionals",
+        "Volunteer organizations and nonprofits"
+      ]
+    },
+    "fbi-apostille": {
+      "name": "FBI Apostille",
+      "shortDescription": "FBI background check authenticated for international use — required for work visas, residency, and immigration.",
+      "pricingBullets": [
+        "Individuals applying for international work visas",
+        "Those seeking residency or citizenship abroad",
+        "International adoption applicants"
+      ]
+    },
+    "ink-fingerprinting": {
+      "name": "Ink Fingerprinting",
+      "shortDescription": "Traditional ink-rolled FD-258 fingerprint cards — completed same day, ready to mail.",
+      "pricingBullets": [
+        "Federal agency applicants requiring physical cards",
+        "Out-of-state licensing board applicants",
+        "Notary, process server, and real estate applicants"
+      ]
+    },
+    "live-scan-fingerprinting": {
+      "name": "Live Scan Fingerprinting",
+      "shortDescription": "Electronic fingerprint capture transmitted directly to the FBI or TX DPS — no ink, results in 24–72 hours.",
+      "pricingBullets": [
+        "Teachers and school district employees",
+        "Childcare and healthcare professionals",
+        "Texas state license applicants (TX DPS)"
+      ]
+    },
+    "nfa-fingerprinting": {
+      "name": "NFA Fingerprinting",
+      "shortDescription": "Two FD-258 fingerprint cards for ATF Form 4 or Form 1 NFA transfers — completed in 10 minutes.",
+      "pricingBullets": [
+        "Individuals purchasing suppressors or silencers",
+        "Short-barreled rifle (SBR) and shotgun (SBS) applicants",
+        "ATF Form 4 or Form 1 applicants"
+      ]
+    },
+    "atf-efile-services": {
+      "name": "ATF eFile Services",
+      "shortDescription": "Electronic NFA application through the ATF eForms system — weeks faster than paper filing.",
+      "pricingBullets": [
+        "ATF Form 4 applicants seeking faster approval",
+        "ATF Form 1 (Make and Register) applicants",
+        "Trust, corporation, or individual applicants"
+      ]
+    },
+    "mobile-fingerprinting": {
+      "name": "Mobile Fingerprinting",
+      "shortDescription": "Professional fingerprinting at your location — offices, schools, and facilities throughout South Texas.",
+      "pricingBullets": [
+        "Employers with multiple new hires requiring fingerprinting",
+        "Schools and educational institutions",
+        "Healthcare facilities and nonprofits"
+      ]
+    }
   },
   "terms": {
     "meta": {

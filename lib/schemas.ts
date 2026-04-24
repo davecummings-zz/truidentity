@@ -31,14 +31,20 @@ export function localBusinessSchema() {
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '09:00',
-        closes: '17:00',
+        opens: '08:30',
+        closes: '18:00',
+      },
+    ],
+    amenityFeature: [
+      {
+        '@type': 'LocationFeatureSpecification',
+        name: 'Wheelchair accessible entrance',
+        value: true,
       },
       {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Saturday',
-        opens: '10:00',
-        closes: '14:00',
+        '@type': 'LocationFeatureSpecification',
+        name: 'Wheelchair accessible parking lot',
+        value: true,
       },
     ],
     priceRange: '$49–$220',

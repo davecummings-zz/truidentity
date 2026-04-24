@@ -13,6 +13,7 @@ interface HeaderProps {
 export async function Header({ locale }: HeaderProps) {
   const t = await getTranslations({ locale, namespace: 'nav' })
   const th = await getTranslations({ locale, namespace: 'header' })
+  const ts = await getTranslations({ locale, namespace: 'serviceItems' })
 
   return (
     <header className="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
@@ -21,7 +22,7 @@ export async function Header({ locale }: HeaderProps) {
 
           {/* Logo */}
           <Link href={`/${locale}`} className="flex-shrink-0 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue rounded">
-            <TruidentityLogo className="h-9 w-auto" />
+            <TruidentityLogo className="h-12 w-auto" />
             <span className="sr-only">{th('logoAlt')}</span>
           </Link>
 
@@ -49,7 +50,7 @@ export async function Header({ locale }: HeaderProps) {
                   </Link>
                   {services.map((s) => (
                     <Link key={s.slug} href={`/${locale}/services/${s.slug}`} className="block px-4 py-2 text-sm text-navy/80 hover:bg-navy/5 hover:text-navy transition-colors">
-                      {s.name}
+                      {ts(`${s.slug}.name`)}
                     </Link>
                   ))}
                 </div>

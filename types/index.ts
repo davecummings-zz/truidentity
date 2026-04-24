@@ -1,10 +1,10 @@
 export type Locale = 'en' | 'es'
 
 export interface Review {
-  author: string
+  authorName: string
   rating: number
-  date: string
   text: string
+  relativePublishTime: string
   avatarInitials: string
 }
 

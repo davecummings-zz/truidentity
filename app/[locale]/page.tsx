@@ -3,12 +3,16 @@ import { getTranslations } from 'next-intl/server'
 import { HeroSection } from '@/components/home/HeroSection'
 import { NoWalkInsBanner } from '@/components/ui/NoWalkInsBanner'
 import { ServicesGrid } from '@/components/home/ServicesGrid'
+import { ServiceFinderCTA } from '@/components/home/ServiceFinderCTA'
 import { PricingSection } from '@/components/home/PricingSection'
 import { HowItWorks } from '@/components/home/HowItWorks'
 import { ReviewsSection } from '@/components/home/ReviewsSection'
 import { FaqTeaser } from '@/components/home/FaqTeaser'
 import { BottomCTA } from '@/components/home/BottomCTA'
 import { siteConfig } from '@/config/site'
+import { fetchGoogleReviews } from '@/lib/reviews'
+
+export const revalidate = 604800
 
 interface HomePageProps {
   params: Promise<{ locale: string }>
@@ -35,15 +39,21 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params
+  const reviewsData = await fetchGoogleReviews()
   return (
     <>
-      <a href="#main-content" className="skip-link">Skip to main content</a>
       <HeroSection locale={locale} />
       <NoWalkInsBanner locale={locale} />
       <ServicesGrid locale={locale} />
+      <ServiceFinderCTA locale={locale} />
       <PricingSection locale={locale} />
       <HowItWorks locale={locale} />
-      <ReviewsSection locale={locale} />
+      <ReviewsSection
+        locale={locale}
+        rating={reviewsData.rating}
+        totalReviews={reviewsData.totalReviews}
+        reviews={reviewsData.reviews}
+      />
       <FaqTeaser locale={locale} />
       <BottomCTA locale={locale} />
     </>

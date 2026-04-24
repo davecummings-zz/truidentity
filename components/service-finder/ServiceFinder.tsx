@@ -19,6 +19,7 @@ export function ServiceFinder() {
   const locale = useLocale()
   const t = useTranslations('serviceFinder')
   const tc = useTranslations('common')
+  const ts = useTranslations('serviceItems')
   const [state, setState] = useState<State>(INITIAL_STATE)
 
   const push = (next: Step, result: Service | null = null) => {
@@ -144,10 +145,10 @@ export function ServiceFinder() {
           <p className="text-xs font-bold uppercase tracking-wider text-accent-blue mb-2">{t('results.recommended')}</p>
           <div className="flex items-center gap-3 mb-4">
             <span className="text-4xl" role="img" aria-hidden="true">{state.result.emoji}</span>
-            <h2 className="text-2xl font-extrabold text-navy">{state.result.name}</h2>
+            <h2 className="text-2xl font-extrabold text-navy">{ts(`${state.result.slug}.name`)}</h2>
           </div>
 
-          <p className="text-gray-600 text-sm leading-relaxed mb-5">{state.result.shortDescription}</p>
+          <p className="text-gray-600 text-sm leading-relaxed mb-5">{ts(`${state.result.slug}.shortDescription`)}</p>
 
           <div className="flex items-baseline gap-2 mb-5">
             <span className="text-sm text-gray-500">{t('results.price')}:</span>
@@ -190,8 +191,8 @@ export function ServiceFinder() {
                 >
                   <span className="text-2xl flex-shrink-0" role="img" aria-hidden="true">{s.emoji}</span>
                   <div className="min-w-0">
-                    <p className="text-sm font-bold text-navy">{s.name}</p>
-                    <p className="text-xs text-gray-500 truncate">{s.shortDescription}</p>
+                    <p className="text-sm font-bold text-navy">{ts(`${s.slug}.name`)}</p>
+                    <p className="text-xs text-gray-500 truncate">{ts(`${s.slug}.shortDescription`)}</p>
                   </div>
                   <span className="ml-auto text-sm font-bold text-navy flex-shrink-0">{s.price}</span>
                 </Link>

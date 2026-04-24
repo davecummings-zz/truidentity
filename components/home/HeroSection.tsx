@@ -27,7 +27,7 @@ export async function HeroSection({ locale }: HeroSectionProps) {
           {/* Trust badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs font-medium mb-6">
             <span aria-hidden="true">🛡</span>
-            <span>FBI Authorized Channeler · South Texas</span>
+            <span>{t('trustBadge')}</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
