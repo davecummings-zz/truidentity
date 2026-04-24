@@ -1,10 +1,30 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
+import {
+  ShieldCheck,
+  Stamp,
+  Fingerprint,
+  ScanLine,
+  ClipboardList,
+  Upload,
+  MapPin,
+  type LucideIcon,
+} from 'lucide-react'
 import { services } from '@/config/services'
 import { PricingCard } from '@/components/ui/PricingCard'
 import { PriceEstimator } from '@/components/ui/PriceEstimator'
 import { siteConfig } from '@/config/site'
+
+const serviceIcons: Record<string, LucideIcon> = {
+  'fbi-background-checks': ShieldCheck,
+  'fbi-apostille': Stamp,
+  'ink-fingerprinting': Fingerprint,
+  'live-scan-fingerprinting': ScanLine,
+  'nfa-fingerprinting': ClipboardList,
+  'atf-efile-services': Upload,
+  'mobile-fingerprinting': MapPin,
+}
 
 interface ServicesPageProps {
   params: Promise<{ locale: string }>
@@ -56,10 +76,14 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
           </aside>
 
           <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-            {services.map((service) => (
+            {services.map((service) => {
+              const Icon = serviceIcons[service.slug]
+              return (
               <div key={service.slug} className="flex flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-card hover:shadow-card-hover transition-shadow">
                 <div className="flex items-start gap-3 mb-3">
-                  <span className="text-2xl" aria-hidden="true">{service.emoji}</span>
+                  <div className="w-10 h-10 rounded-xl bg-accent-blue/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                    {Icon && <Icon size={20} className="text-accent-blue" />}
+                  </div>
                   <div>
                     <h2 className="text-base font-bold text-navy leading-tight">{service.name}</h2>
                     <span className="text-lg font-extrabold text-accent-blue">{service.price}</span>
@@ -84,7 +108,8 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                   </Link>
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </div>
