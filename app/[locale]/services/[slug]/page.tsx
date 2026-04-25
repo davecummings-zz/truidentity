@@ -2,10 +2,31 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
+import {
+  ShieldCheck,
+  Stamp,
+  Fingerprint,
+  ScanLine,
+  ClipboardList,
+  Upload,
+  MapPin,
+  CalendarDays,
+  type LucideIcon,
+} from 'lucide-react'
 import { services, getServiceBySlug, getRelatedServices } from '@/config/services'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { serviceSchema, localBusinessSchema } from '@/lib/schemas'
 import { siteConfig } from '@/config/site'
+
+const serviceIcons: Record<string, LucideIcon> = {
+  'fbi-background-checks': ShieldCheck,
+  'fbi-apostille': Stamp,
+  'ink-fingerprinting': Fingerprint,
+  'live-scan-fingerprinting': ScanLine,
+  'nfa-fingerprinting': ClipboardList,
+  'atf-efile-services': Upload,
+  'mobile-fingerprinting': MapPin,
+}
 
 interface ServicePageProps {
   params: Promise<{ locale: string; slug: string }>
@@ -40,6 +61,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const tc = await getTranslations({ locale, namespace: 'common' })
   const tn = await getTranslations({ locale, namespace: 'nav' })
   const related = getRelatedServices(service.relatedSlugs)
+  const Icon: LucideIcon = serviceIcons[service.slug] ?? ShieldCheck
 
   return (
     <>
@@ -59,7 +81,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
           {/* Header */}
           <div className="flex items-start gap-4 mb-6">
-            <span className="text-5xl flex-shrink-0" role="img" aria-hidden="true">{service.emoji}</span>
+            <div className="w-16 h-16 rounded-2xl bg-accent-blue/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+              <Icon size={32} className="text-accent-blue" />
+            </div>
             <div>
               <h1 className="text-3xl lg:text-4xl font-extrabold text-navy leading-tight">
                 {service.name} <span className="text-accent-blue">{t('inSouthTexas')}</span>
@@ -118,19 +142,24 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 <section aria-labelledby="related-services">
                   <h2 id="related-services" className="text-xl font-bold text-navy mb-4">{t('relatedServices')}</h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {related.map((rel) => (
-                      <Link
-                        key={rel.slug}
-                        href={`/${locale}/services/${rel.slug}`}
-                        className="flex items-center gap-3 px-4 py-3 rounded-xl border border-gray-200 hover:border-accent-blue/40 hover:bg-accent-blue/5 transition-colors"
-                      >
-                        <span className="text-xl" aria-hidden="true">{rel.emoji}</span>
-                        <span className="text-sm font-semibold text-navy">{rel.name}</span>
-                        <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    ))}
+                    {related.map((rel) => {
+                      const RelIcon = serviceIcons[rel.slug] ?? ShieldCheck
+                      return (
+                        <Link
+                          key={rel.slug}
+                          href={`/${locale}/services/${rel.slug}`}
+                          className="flex items-center gap-3 px-4 py-3 rounded-xl border border-gray-200 hover:border-accent-blue/40 hover:bg-accent-blue/5 transition-colors"
+                        >
+                          <div className="w-8 h-8 rounded-lg bg-accent-blue/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                            <RelIcon size={16} className="text-accent-blue" />
+                          </div>
+                          <span className="text-sm font-semibold text-navy">{rel.name}</span>
+                          <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
+                      )
+                    })}
                   </div>
                 </section>
               )}
@@ -150,7 +179,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
                   href={`/${locale}/book`}
                   className="flex items-center justify-center gap-2 w-full px-5 py-3.5 bg-navy text-white font-bold rounded-xl hover:bg-navy-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 mb-3"
                 >
-                  📅 {t('bookCta')}
+                  <CalendarDays size={18} aria-hidden="true" />
+                  {t('bookCta')}
                 </Link>
                 <p className="text-xs text-gray-500 text-center">
                   {siteConfig.noWalkIns && tc('noWalkIns')}
