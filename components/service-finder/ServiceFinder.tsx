@@ -3,7 +3,37 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
+import {
+  ShieldCheck,
+  Stamp,
+  Fingerprint,
+  ScanLine,
+  ClipboardList,
+  Upload,
+  MapPin,
+  CalendarDays,
+  type LucideIcon,
+} from 'lucide-react'
 import { services, type Service } from '@/config/services'
+
+const serviceIcons: Record<string, LucideIcon> = {
+  'fbi-background-checks': ShieldCheck,
+  'fbi-apostille': Stamp,
+  'ink-fingerprinting': Fingerprint,
+  'live-scan-fingerprinting': ScanLine,
+  'nfa-fingerprinting': ClipboardList,
+  'atf-efile-services': Upload,
+  'mobile-fingerprinting': MapPin,
+}
+
+function ServiceIcon({ slug, size, containerClass }: { slug: string; size: number; containerClass: string }) {
+  const Icon = serviceIcons[slug] ?? ShieldCheck
+  return (
+    <div className={containerClass} aria-hidden="true">
+      <Icon size={size} className="text-accent-blue" />
+    </div>
+  )
+}
 
 type Step = 'purpose' | 'format' | 'international' | 'result' | 'all'
 
@@ -144,7 +174,7 @@ export function ServiceFinder() {
         <div className="rounded-2xl border-2 border-accent-blue/40 bg-white p-6 shadow-card">
           <p className="text-xs font-bold uppercase tracking-wider text-accent-blue mb-2">{t('results.recommended')}</p>
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-4xl" role="img" aria-hidden="true">{state.result.emoji}</span>
+            <ServiceIcon slug={state.result.slug} size={24} containerClass="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center flex-shrink-0" />
             <h2 className="text-2xl font-extrabold text-navy">{ts(`${state.result.slug}.name`)}</h2>
           </div>
 
@@ -163,7 +193,8 @@ export function ServiceFinder() {
               href={`/${locale}/book`}
               className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-navy text-white font-bold rounded-xl hover:bg-navy-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
             >
-              📅 {t('bookService')}
+              <CalendarDays size={18} aria-hidden="true" />
+              {t('bookService')}
             </Link>
             <Link
               href={`/${locale}/services/${state.result.slug}`}
@@ -189,7 +220,7 @@ export function ServiceFinder() {
                   href={`/${locale}/services/${s.slug}`}
                   className="flex items-center gap-4 px-5 py-4 rounded-xl border-2 border-gray-200 bg-white hover:border-accent-blue hover:bg-accent-blue/5 transition-colors"
                 >
-                  <span className="text-2xl flex-shrink-0" role="img" aria-hidden="true">{s.emoji}</span>
+                  <ServiceIcon slug={s.slug} size={18} containerClass="w-9 h-9 rounded-lg bg-accent-blue/10 flex items-center justify-center flex-shrink-0" />
                   <div className="min-w-0">
                     <p className="text-sm font-bold text-navy">{ts(`${s.slug}.name`)}</p>
                     <p className="text-xs text-gray-500 truncate">{ts(`${s.slug}.shortDescription`)}</p>
