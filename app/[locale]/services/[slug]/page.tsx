@@ -43,12 +43,15 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   const service = getServiceBySlug(slug)
   if (!service) return {}
   const t = await getTranslations({ locale, namespace: 'services.serviceDetail' })
-  const title = `${service.name} ${t('inSouthTexas')} | ${siteConfig.name}`
+  const ts = await getTranslations({ locale, namespace: 'serviceItems' })
+  const name = ts(`${slug}.name`)
+  const description = ts(`${slug}.shortDescription`)
+  const title = `${name} ${t('inSouthTexas')} | ${siteConfig.name}`
   return {
     title,
-    description: service.shortDescription,
+    description,
     alternates: { canonical: `${siteConfig.siteUrl}/${locale}/services/${slug}` },
-    openGraph: { url: `${siteConfig.siteUrl}/${locale}/services/${slug}`, title, description: service.shortDescription },
+    openGraph: { url: `${siteConfig.siteUrl}/${locale}/services/${slug}`, title, description },
   }
 }
 
@@ -60,8 +63,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const t = await getTranslations({ locale, namespace: 'services.serviceDetail' })
   const tc = await getTranslations({ locale, namespace: 'common' })
   const tn = await getTranslations({ locale, namespace: 'nav' })
+  const ts = await getTranslations({ locale, namespace: 'serviceItems' })
   const related = getRelatedServices(service.relatedSlugs)
   const Icon: LucideIcon = serviceIcons[service.slug] ?? ShieldCheck
+
+  const name = ts(`${slug}.name`)
+  const whoNeeds = ts.raw(`${slug}.whoNeeds`) as string[]
+  const whatToBring = ts.raw(`${slug}.whatToBring`) as string[]
 
   return (
     <>
@@ -76,7 +84,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <span aria-hidden="true">›</span>
             <Link href={`/${locale}/services`} className="hover:text-navy transition-colors">{tn('services')}</Link>
             <span aria-hidden="true">›</span>
-            <span className="text-navy font-medium" aria-current="page">{service.name}</span>
+            <span className="text-navy font-medium" aria-current="page">{name}</span>
           </nav>
 
           {/* Header */}
@@ -86,15 +94,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
             <div>
               <h1 className="text-3xl lg:text-4xl font-extrabold text-navy leading-tight">
-                {service.name} <span className="text-accent-blue">{t('inSouthTexas')}</span>
+                {name} <span className="text-accent-blue">{t('inSouthTexas')}</span>
               </h1>
-              <p className="text-gray-600 mt-2 text-lg">{service.shortDescription}</p>
+              <p className="text-gray-600 mt-2 text-lg">{ts(`${slug}.shortDescription`)}</p>
             </div>
           </div>
 
           {/* Trust line */}
           <div className="mb-8 px-4 py-3 rounded-xl bg-accent-blue/5 border border-accent-blue/20">
-            <p className="text-sm font-semibold text-accent-blue">{service.trustLine}</p>
+            <p className="text-sm font-semibold text-accent-blue">{ts(`${slug}.trustLine`)}</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -103,13 +111,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
               <section aria-labelledby="what-it-is">
                 <h2 id="what-it-is" className="text-xl font-bold text-navy mb-3">{t('whatItIs')}</h2>
-                <p className="text-gray-600 leading-relaxed">{service.whatItIs}</p>
+                <p className="text-gray-600 leading-relaxed">{ts(`${slug}.whatItIs`)}</p>
               </section>
 
               <section aria-labelledby="who-needs">
                 <h2 id="who-needs" className="text-xl font-bold text-navy mb-3">{t('whoNeeds')}</h2>
                 <ul className="space-y-2">
-                  {service.whoNeeds.map((item) => (
+                  {whoNeeds.map((item) => (
                     <li key={item} className="flex items-start gap-2.5 text-gray-600 text-sm">
                       <svg className="w-4 h-4 text-accent-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
@@ -123,7 +131,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               <section aria-labelledby="what-to-bring">
                 <h2 id="what-to-bring" className="text-xl font-bold text-navy mb-3">{t('whatToBring')}</h2>
                 <ul className="space-y-2">
-                  {service.whatToBring.map((item) => (
+                  {whatToBring.map((item) => (
                     <li key={item} className="flex items-start gap-2.5 text-sm">
                       <span className="text-accent-orange font-bold flex-shrink-0">•</span>
                       <span className="text-gray-600">{item}</span>
@@ -134,7 +142,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
               <section aria-labelledby="what-to-expect">
                 <h2 id="what-to-expect" className="text-xl font-bold text-navy mb-3">{t('whatToExpect')}</h2>
-                <p className="text-gray-600 leading-relaxed">{service.whatToExpect}</p>
+                <p className="text-gray-600 leading-relaxed">{ts(`${slug}.whatToExpect`)}</p>
               </section>
 
               {/* Related */}
@@ -153,7 +161,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                           <div className="w-8 h-8 rounded-lg bg-accent-blue/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                             <RelIcon size={16} className="text-accent-blue" />
                           </div>
-                          <span className="text-sm font-semibold text-navy">{rel.name}</span>
+                          <span className="text-sm font-semibold text-navy">{ts(`${rel.slug}.name`)}</span>
                           <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>

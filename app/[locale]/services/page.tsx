@@ -45,6 +45,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'services' })
   const tc = await getTranslations({ locale, namespace: 'common' })
+  const ts = await getTranslations({ locale, namespace: 'serviceItems' })
 
   return (
     <div className="py-16 lg:py-24">
@@ -85,14 +86,14 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                     {Icon && <Icon size={20} className="text-accent-blue" />}
                   </div>
                   <div>
-                    <h2 className="text-base font-bold text-navy leading-tight">{service.name}</h2>
+                    <h2 className="text-base font-bold text-navy leading-tight">{ts(`${service.slug}.name`)}</h2>
                     <span className="text-lg font-extrabold text-accent-blue">{service.price}</span>
                     {service.popular && (
                       <span className="ml-2 inline-flex text-xs font-bold text-accent-orange">★ {tc('mostPopular')}</span>
                     )}
                   </div>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-4">{service.shortDescription}</p>
+                <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-4">{ts(`${service.slug}.shortDescription`)}</p>
                 <div className="flex gap-2">
                   <Link
                     href={`/${locale}/services/${service.slug}`}

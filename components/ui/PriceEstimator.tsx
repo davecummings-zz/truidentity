@@ -10,6 +10,7 @@ interface PriceEstimatorProps {
 
 export function PriceEstimator({ services }: PriceEstimatorProps) {
   const t = useTranslations('services.estimator')
+  const ts = useTranslations('serviceItems')
   const [selected, setSelected] = useState<Service | null>(null)
 
   return (
@@ -31,7 +32,7 @@ export function PriceEstimator({ services }: PriceEstimatorProps) {
         <option value="">{t('placeholder')}</option>
         {services.map((s) => (
           <option key={s.slug} value={s.slug}>
-            {s.name}
+            {ts(`${s.slug}.name`)}
           </option>
         ))}
       </select>
@@ -48,7 +49,7 @@ export function PriceEstimator({ services }: PriceEstimatorProps) {
           <div>
             <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">{t('includes')}</p>
             <ul className="space-y-1.5">
-              {selected.whatToBring.slice(0, 3).map((item) => (
+              {(ts.raw(`${selected.slug}.whatToBring`) as string[]).slice(0, 3).map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
                   <svg className="w-4 h-4 text-accent-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />

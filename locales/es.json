@@ -420,6 +420,21 @@
     "fbi-background-checks": {
       "name": "Verificación de Antecedentes del FBI",
       "shortDescription": "Resumen oficial del historial del FBI — resultados en tan solo 48 horas.",
+      "trustLine": "Resultados en 48 horas. Garantía sin rechazo. Entregados directamente del FBI.",
+      "whatItIs": "Una Verificación de Antecedentes del FBI — oficialmente llamada Resumen de Historial de Identidad — es un registro oficial de su historial criminal según lo mantiene el FBI. Es requerida para muchos puestos de trabajo, licencias profesionales, roles de voluntariado y solicitudes de record personal. Los resultados se devuelven directamente del FBI, generalmente en 48 horas después del envío a través de nuestro canal autorizado.",
+      "whoNeeds": [
+        "Solicitantes de empleo que requieren una verificación federal",
+        "Profesionales de salud, educación y finanzas que buscan licencias",
+        "Organizaciones de voluntarios y sin fines de lucro con requisitos de verificación",
+        "Personas que solicitan su propio record personal",
+        "Propietarios y administradores de propiedades"
+      ],
+      "whatToBring": [
+        "Identificación oficial con foto vigente (licencia de conducir o pasaporte)",
+        "Número de Seguro Social",
+        "Tarjeta de huellas FD-258 si su agencia le proporcionó una (también tenemos disponibles en el local)"
+      ],
+      "whatToExpect": "El proceso de toma de huellas toma unos 10 minutos. Los resultados se devuelven directamente del FBI — la mayoría llega en 48 horas. Si sus huellas son rechazadas por cuestiones de calidad, las tomamos de nuevo sin costo adicional.",
       "pricingBullets": [
         "Solicitantes de empleo que requieren verificación federal",
         "Profesionales de salud, educación y finanzas",
@@ -429,6 +444,21 @@
     "fbi-apostille": {
       "name": "Apostilla del FBI",
       "shortDescription": "Verificación de antecedentes autenticada para uso internacional — visas, residencia e inmigración.",
+      "trustLine": "Servicio completo — toma de huellas, procesamiento del FBI y autenticación de apostilla, todo en una cita.",
+      "whatItIs": "Una Apostilla del FBI es un Resumen de Historial de Identidad del FBI autenticado con un certificado de apostilla, lo que lo hace legalmente válido en los países miembros de la Convención de La Haya. Es requerida para empleo internacional, solicitudes de inmigración, residencia permanente y adopción internacional. Manejamos el proceso completo — toma de huellas, envío al FBI y certificación de apostilla — en una sola cita.",
+      "whoNeeds": [
+        "Personas que solicitan visas de trabajo internacionales",
+        "Quienes buscan residencia permanente o ciudadanía en el extranjero",
+        "Solicitantes de adopción internacional",
+        "Personas que emigran y necesitan verificación de antecedentes de EE. UU.",
+        "Cualquier persona cuyo país de destino requiera apostilla bajo la Convención de La Haya"
+      ],
+      "whatToBring": [
+        "Identificación oficial con foto vigente",
+        "Número de Seguro Social",
+        "Nombre del país de destino y cualquier instrucción específica de la autoridad extranjera solicitante"
+      ],
+      "whatToExpect": "Una cita cubre todo — toma de huellas, envío de antecedentes al FBI y coordinación del proceso de autenticación de la apostilla. El tiempo total es generalmente de 8 a 12 semanas, determinado por los tiempos de procesamiento del FBI y el Departamento de Estado de EE. UU.",
       "pricingBullets": [
         "Solicitantes de visa de trabajo internacional",
         "Personas que buscan residencia o ciudadanía en el extranjero",
@@ -436,8 +466,21 @@
       ]
     },
     "ink-fingerprinting": {
-      "name": "Huellas Digitales de Tinta",
+      "name": "Huellas Dactilares en Tinta",
       "shortDescription": "Tarjetas FD-258 con tinta tradicional — completadas el mismo día, listas para enviar.",
+      "trustLine": "Tarjetas completadas el mismo día — sin esperas ni demoras de envío de nuestra parte.",
+      "whatItIs": "Las huellas dactilares en tinta utilizan tinta tradicional para imprimir sus huellas en tarjetas estándar FD-258. Muchas agencias federales, juntas de licencias de otros estados y ciertos proveedores de verificación de antecedentes todavía requieren tarjetas físicas en lugar de envío electrónico. Las tarjetas se preparan y están listas para enviar el mismo día.",
+      "whoNeeds": [
+        "Solicitantes de agencias federales que deben entregar tarjetas físicas de huellas",
+        "Solicitantes de juntas de licencias fuera de Texas (notaría, gestor de procesos, bienes raíces, etc.)",
+        "Cualquier persona cuya agencia requiera específicamente tarjetas FD-258 en tinta",
+        "Personas cuyos envíos electrónicos fueron rechazados y necesitan una copia física"
+      ],
+      "whatToBring": [
+        "Identificación oficial con foto vigente",
+        "Tarjeta de huellas si su agencia le proporcionó una (también tenemos tarjetas FD-258 estándar disponibles)"
+      ],
+      "whatToExpect": "El proceso toma unos 10 minutos. Se va con tarjetas de huellas completas y legibles — listas para enviar a su agencia solicitante. Sin demoras de nuestra parte.",
       "pricingBullets": [
         "Solicitantes de agencias federales que requieren tarjetas físicas",
         "Solicitantes de juntas de licencias fuera de Texas",
@@ -445,8 +488,23 @@
       ]
     },
     "live-scan-fingerprinting": {
-      "name": "Live Scan",
+      "name": "Huellas Dactilares Live Scan",
       "shortDescription": "Captura electrónica transmitida al FBI o TX DPS — sin tinta, resultados en 24–72 horas.",
+      "trustLine": "Sin tinta. Sin tarjetas. Resultados transmitidos directamente a su agencia — generalmente en 24 a 72 horas.",
+      "whatItIs": "Live Scan captura sus huellas dactilares electrónicamente con un escáner digital de alta resolución y las transmite directamente a la agencia solicitante — sin tinta, sin tarjeta física, sin envío por correo. Este es el método requerido para la mayoría de las juntas de licencias del estado de Texas, maestros, trabajadores de guardería, profesionales de la salud y solicitantes de adopción en Texas.",
+      "whoNeeds": [
+        "Maestros y empleados de distritos escolares (TEA, SBEC)",
+        "Trabajadores de guarderías y centros de cuidado infantil",
+        "Profesionales de la salud que buscan licencia en Texas",
+        "Solicitantes de licencia estatal de Texas a través de TX DPS",
+        "Solicitantes de adopción y padres de crianza"
+      ],
+      "whatToBring": [
+        "Identificación oficial con foto vigente",
+        "Número ORI (Identificador de Agencia de Origen) — proporcionado por su empleador o junta de licencias",
+        "Formulario de solicitud de su agencia, si aplica"
+      ],
+      "whatToExpect": "La captura electrónica toma unos 10 minutos. Los resultados se transmiten directamente a su agencia solicitante — generalmente en 24 a 72 horas. No necesita enviar nada por correo. Traiga su número ORI; sin él no podemos completar su envío de Live Scan.",
       "pricingBullets": [
         "Maestros y empleados de distritos escolares",
         "Trabajadores de guarderías y profesionales de la salud",
@@ -454,8 +512,23 @@
       ]
     },
     "nfa-fingerprinting": {
-      "name": "Huellas para NFA",
+      "name": "Huellas Dactilares para NFA",
       "shortDescription": "Dos tarjetas FD-258 para el Formulario ATF 4 o 1 — completadas en 10 minutos.",
+      "trustLine": "Tarjetas FD-258 correctamente completadas para su Formulario 4 o 1 — bien hechas desde la primera vez.",
+      "whatItIs": "Las Huellas Dactilares para NFA (Ley Nacional de Armas de Fuego) producen los dos juegos completos de tarjetas FD-258 que requiere la ATF al comprar o transferir artículos regulados por NFA — supresores, rifles de cañón corto (SBR), escopetas de cañón corto (SBS) y ametralladoras. Las tarjetas correctamente completadas son fundamentales; los errores pueden retrasar su aprobación por meses.",
+      "whoNeeds": [
+        "Personas que compran supresores o silenciadores",
+        "Solicitantes de rifle de cañón corto (SBR) y escopeta de cañón corto (SBS)",
+        "Solicitantes del Formulario ATF 4 (Transferencia con Impuesto Pagado)",
+        "Solicitantes del Formulario ATF 1 (Fabricación y Registro)",
+        "Personas responsables de fideicomisos NFA"
+      ],
+      "whatToBring": [
+        "Identificación oficial con foto vigente",
+        "Copia de su Formulario ATF 4 o Formulario 1 para referencia",
+        "Documentos del fideicomiso NFA, si aplica"
+      ],
+      "whatToExpect": "Producimos dos juegos de tarjetas FD-258 completas y legibles según lo requiere la ATF. El proceso toma de 10 a 15 minutos. Las tarjetas están listas de inmediato — entréguelas junto con sus documentos NFA. También pregunte sobre nuestro servicio ATF eFile para una aprobación significativamente más rápida.",
       "pricingBullets": [
         "Personas comprando supresores o silenciadores",
         "Solicitantes de rifle de cañón corto (SBR) y escopeta (SBS)",
@@ -463,8 +536,24 @@
       ]
     },
     "atf-efile-services": {
-      "name": "ATF eFile",
+      "name": "Servicios ATF eFile",
       "shortDescription": "Solicitud NFA electrónica vía ATF eForms — semanas más rápido que en papel.",
+      "trustLine": "Le guiamos en cada campo — aprobaciones en semanas, no meses.",
+      "whatItIs": "Los Servicios ATF eFile le guían en el proceso de enviar su solicitud NFA electrónicamente a través del sistema ATF eForms. Los envíos electrónicos se procesan significativamente más rápido que el papel — muchas veces se aprueban en semanas en lugar de meses. Nos encargamos de la toma de huellas, lo guiamos en cada campo del formulario y enviamos su solicitud completa.",
+      "whoNeeds": [
+        "Cualquier persona que llene el Formulario ATF 4 (Transferencia con Impuesto Pagado) para supresor, SBR, SBS o ametralladora",
+        "Personas que llenan el Formulario ATF 1 (Fabricación y Registro)",
+        "Solicitantes individuales, de fideicomiso o corporativos que buscan aprobación más rápida",
+        "Compradores NFA por primera vez que desean asistencia personalizada"
+      ],
+      "whatToBring": [
+        "Identificación oficial con foto vigente",
+        "Número de serie y descripción del artículo NFA",
+        "Nombre del distribuidor, dirección e información FFL/SOT",
+        "Información de la persona responsable (nombre, fecha de nacimiento, dirección)",
+        "Documentos del fideicomiso o corporación, si aplica"
+      ],
+      "whatToExpect": "Tomamos sus huellas, fotografía y firma, y lo guiamos en el proceso completo de envío de ATF eForms — cada campo, cada documento adjunto. Su solicitud se envía antes de que se vaya. Las aprobaciones por eFile generalmente se reciben en semanas. Los envíos en papel pueden tardar muchos meses.",
       "pricingBullets": [
         "Solicitantes del Formulario ATF 4 que buscan aprobación rápida",
         "Personas que presentan el Formulario ATF 1",
@@ -472,8 +561,23 @@
       ]
     },
     "mobile-fingerprinting": {
-      "name": "Huellas Móviles",
+      "name": "Huellas Dactilares a Domicilio",
       "shortDescription": "Huellas profesionales en su ubicación — oficinas, escuelas e instalaciones en el Sur de Texas.",
+      "trustLine": "Vamos a donde usted esté — en cualquier parte del Sur de Texas, todo el equipo incluido.",
+      "whatItIs": "Las Huellas Dactilares a Domicilio llevan equipo de toma de huellas de nivel profesional directamente a su oficina, escuela, clínica o instalación — sin necesidad de que su personal o grupo tenga que viajar. Ideal para empleadores que están contratando a varios empleados, distritos escolares, organizaciones de salud, organizaciones sin fines de lucro y agencias de gobierno en todo el Sur de Texas.",
+      "whoNeeds": [
+        "Empleadores con múltiples empleados nuevos que requieren huellas",
+        "Escuelas e instituciones educativas para su personal",
+        "Instalaciones y clínicas de salud",
+        "Organizaciones sin fines de lucro y agencias de gobierno",
+        "Cualquier organización que necesite toma de huellas grupal en su sede"
+      ],
+      "whatToBring": [
+        "Identificación oficial con foto vigente (cada participante)",
+        "Números ORI o formularios de agencia requeridos para cada participante",
+        "Un área de mesa o escritorio despejada en su ubicación"
+      ],
+      "whatToExpect": "Contáctenos con anticipación para confirmar las necesidades específicas de su grupo, ubicación y horario. Llevamos todo el equipo necesario y nos encargamos de todo en el lugar — Live Scan, tarjetas de tinta o ambos. Puede aplicar un mínimo de participantes. La tarifa de viaje se basa en la distancia desde nuestra ubicación en McAllen.",
       "pricingBullets": [
         "Empresas con múltiples empleados nuevos",
         "Escuelas e instituciones educativas",
