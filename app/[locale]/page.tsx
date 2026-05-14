@@ -28,11 +28,11 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
     },
     description: siteConfig.description,
     alternates: {
-      canonical: `${siteConfig.siteUrl}/${locale}`,
-      languages: { en: `${siteConfig.siteUrl}/en`, es: `${siteConfig.siteUrl}/es` },
+      canonical: locale === 'en' ? siteConfig.siteUrl : `${siteConfig.siteUrl}/${locale}`,
+      languages: { en: siteConfig.siteUrl, es: `${siteConfig.siteUrl}/es` },
     },
     openGraph: {
-      url: `${siteConfig.siteUrl}/${locale}`,
+      url: locale === 'en' ? siteConfig.siteUrl : `${siteConfig.siteUrl}/${locale}`,
       title: `${siteConfig.name} — Professional Fingerprinting in South Texas`,
       description: siteConfig.description,
     },

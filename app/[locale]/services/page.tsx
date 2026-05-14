@@ -80,14 +80,14 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
             aria-label={`${tc('learnMore')} — ${ts(`${service.slug}.name`)}`}
             className="flex-1 text-center text-xs font-semibold border border-navy text-navy rounded-lg py-2.5 hover:bg-navy hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"
           >
-            {tc('learnMore')}
+            {tc('learnMore')}<span className="sr-only"> — {ts(`${service.slug}.name`)}</span>
           </Link>
           <Link
             href={`/${locale}/book`}
             aria-label={`${tc('bookNow')} — ${ts(`${service.slug}.name`)}`}
             className="flex-1 text-center text-xs font-semibold bg-navy text-white rounded-lg py-2.5 hover:bg-navy-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"
           >
-            {tc('bookNow')}
+            {tc('bookNow')}<span className="sr-only"> — {ts(`${service.slug}.name`)}</span>
           </Link>
         </div>
       </div>

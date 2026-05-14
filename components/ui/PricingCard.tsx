@@ -68,7 +68,7 @@ export function PricingCard({
             : 'border-2 border-navy text-navy hover:bg-navy hover:text-white focus-visible:ring-navy',
         )}
       >
-        {bookLabel}
+        {bookLabel}<span className="sr-only"> — {name}</span>
       </Link>
     </div>
   )

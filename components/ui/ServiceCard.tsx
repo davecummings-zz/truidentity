@@ -22,7 +22,7 @@ export function ServiceCard({ icon, name, description, href, learnMoreLabel }: S
         aria-label={`${learnMoreLabel} — ${name}`}
         className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-navy transition-colors group-hover:gap-2.5"
       >
-        {learnMoreLabel}
+        {learnMoreLabel}<span className="sr-only"> — {name}</span>
         <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>

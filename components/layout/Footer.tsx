@@ -118,7 +118,7 @@ export async function Footer({ locale }: FooterProps) {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/70">
           <span>{t('copyright', { year })}</span>
           <nav className="flex items-center gap-4" aria-label="Legal links">
             {legalLinks.map((link) => (
