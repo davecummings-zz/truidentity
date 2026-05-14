@@ -57,7 +57,7 @@ export async function Footer({ locale }: FooterProps) {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <nav aria-label={t('quickLinks')}>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
@@ -68,7 +68,7 @@ export async function Footer({ locale }: FooterProps) {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Contact */}
           <div>
@@ -111,7 +111,7 @@ export async function Footer({ locale }: FooterProps) {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-xs text-accent-orange font-medium">{t('appointmentOnly')}</p>
+            <p className="mt-4 text-xs text-white/80 font-medium">{t('appointmentOnly')}</p>
           </div>
         </div>
       </div>

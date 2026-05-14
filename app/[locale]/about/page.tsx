@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbSchema } from '@/lib/schemas'
 import {
   Clock,
   ShieldCheck,
@@ -47,11 +49,12 @@ export default async function AboutPage({ params }: AboutPageProps) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'about' })
 
-  const certifications = t.raw('certifications.items') as string[]
   const differentiators = t.raw('differentiators.items') as Differentiator[]
 
   return (
-    <div className="py-16 lg:py-24">
+    <>
+      <JsonLd data={breadcrumbSchema(locale, [{ key: 'about', url: `${siteConfig.siteUrl}/${locale}/about` }])} />
+      <div className="py-16 lg:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -135,21 +138,6 @@ export default async function AboutPage({ params }: AboutPageProps) {
           </div>
         </section>
 
-        {/* Certifications */}
-        <section className="mb-12" aria-labelledby="cert-heading">
-          <h2 id="cert-heading" className="text-2xl font-bold text-navy mb-5">{t('certifications.heading')}</h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {certifications.map((item) => (
-              <li key={item} className="flex items-center gap-3 px-4 py-3 rounded-xl border border-gray-200 bg-white">
-                <svg className="w-5 h-5 text-accent-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-sm font-medium text-navy">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
         {/* CTA */}
         <section className="rounded-2xl bg-gradient-to-r from-navy to-accent-blue p-8 text-center" aria-labelledby="about-cta">
           <h2 id="about-cta" className="text-2xl font-bold text-white mb-2">{t('cta.heading')}</h2>
@@ -164,5 +152,6 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </section>
       </div>
     </div>
+    </>
   )
 }

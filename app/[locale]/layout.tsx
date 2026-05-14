@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
@@ -18,6 +18,11 @@ const inter = Inter({
 
 const locales = ['en', 'es']
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
@@ -28,15 +33,29 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: siteConfig.name,
-    images: [{ url: siteConfig.ogImage }],
+    images: [{
+      url: `${siteConfig.siteUrl}/og-image.png`,
+      width: 1200,
+      height: 630,
+      alt: 'TruIdentity Screening Solutions — McAllen, TX',
+    }],
   },
   twitter: {
     card: 'summary_large_image',
-    creator: siteConfig.twitterHandle,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.siteUrl}/og-image.png`],
   },
   icons: {
-    icon: '/favicon.svg',
-    apple: '/images/logo-b.png',
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico' },
+    ],
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
+    other: [
+      { rel: 'manifest', url: '/site.webmanifest' },
+    ],
   },
 }
 

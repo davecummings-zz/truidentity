@@ -17,6 +17,8 @@ import {
 import { services } from '@/config/services'
 import { PriceEstimator } from '@/components/ui/PriceEstimator'
 import { siteConfig } from '@/config/site'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbSchema } from '@/lib/schemas'
 
 const serviceIcons: Record<string, LucideIcon> = {
   'fbi-background-checks': ShieldCheck,
@@ -64,7 +66,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
             {Icon && <Icon size={20} className="text-accent-blue" />}
           </div>
           <div>
-            <h2 className="text-base font-bold text-navy leading-tight">{ts(`${service.slug}.name`)}</h2>
+            <h3 className="text-base font-bold text-navy leading-tight">{ts(`${service.slug}.name`)}</h3>
             <span className="text-lg font-extrabold text-accent-blue">{service.price}</span>
             {service.popular && (
               <span className="ml-2 inline-flex text-xs font-bold text-accent-orange">★ {tc('mostPopular')}</span>
@@ -75,13 +77,15 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
         <div className="flex gap-2">
           <Link
             href={`/${locale}/services/${service.slug}`}
-            className="flex-1 text-center text-xs font-semibold border border-navy text-navy rounded-lg py-2 hover:bg-navy hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"
+            aria-label={`${tc('learnMore')} — ${ts(`${service.slug}.name`)}`}
+            className="flex-1 text-center text-xs font-semibold border border-navy text-navy rounded-lg py-2.5 hover:bg-navy hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"
           >
             {tc('learnMore')}
           </Link>
           <Link
             href={`/${locale}/book`}
-            className="flex-1 text-center text-xs font-semibold bg-navy text-white rounded-lg py-2 hover:bg-navy-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"
+            aria-label={`${tc('bookNow')} — ${ts(`${service.slug}.name`)}`}
+            className="flex-1 text-center text-xs font-semibold bg-navy text-white rounded-lg py-2.5 hover:bg-navy-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"
           >
             {tc('bookNow')}
           </Link>
@@ -91,7 +95,9 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
   }
 
   return (
-    <div className="py-16 lg:py-24">
+    <>
+      <JsonLd data={breadcrumbSchema(locale, [{ key: 'services', url: `${siteConfig.siteUrl}/${locale}/services` }])} />
+      <div className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -139,5 +145,6 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
         </div>
       </div>
     </div>
+    </>
   )
 }

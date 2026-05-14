@@ -15,7 +15,7 @@ const base =
 
 const variants = {
   primary: 'bg-navy text-white hover:bg-navy-600 focus-visible:ring-navy',
-  secondary: 'bg-accent-orange text-white hover:bg-accent-orange/90 focus-visible:ring-accent-orange',
+  secondary: 'bg-accent-orange text-navy hover:bg-accent-orange/90 focus-visible:ring-accent-orange',
   outline: 'border-2 border-navy text-navy hover:bg-navy hover:text-white focus-visible:ring-navy',
   ghost: 'text-navy hover:bg-navy/5 focus-visible:ring-navy',
 }

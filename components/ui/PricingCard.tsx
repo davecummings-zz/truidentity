@@ -33,15 +33,17 @@ export function PricingCard({
       )}
     >
       {popular && (
-        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-accent-orange text-white whitespace-nowrap">
+        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-accent-orange text-navy whitespace-nowrap">
           ★ {popularLabel}
         </span>
       )}
 
       <div className="mb-4">
         <h3 className="text-lg font-bold text-navy">{name}</h3>
-        <div className="mt-3 flex items-baseline gap-1">
-          <span className="text-4xl font-extrabold text-navy">{price}</span>
+        <div className="mt-3 flex items-baseline gap-1 flex-wrap">
+          <span className={price.startsWith('$') ? 'text-4xl font-extrabold text-navy' : 'text-lg font-bold text-navy'}>
+            {price}
+          </span>
           {priceNote && <span className="text-sm text-gray-500">{priceNote}</span>}
         </div>
       </div>
@@ -60,7 +62,7 @@ export function PricingCard({
       <Link
         href={href}
         className={cn(
-          'flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+          'flex items-center justify-center px-5 py-3 rounded-lg text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
           popular
             ? 'bg-navy text-white hover:bg-navy-600 focus-visible:ring-navy'
             : 'border-2 border-navy text-navy hover:bg-navy hover:text-white focus-visible:ring-navy',

@@ -49,7 +49,7 @@
   "home": {
     "hero": {
       "headline": "Your Fingerprinting Done Right — Results in 24 Hours",
-      "subheadline": "FBI Background Checks, Live Scan, ATF eFile, and more. Serving McAllen and the entire Rio Grande Valley — same-day appointments available Monday–Friday.",
+      "subheadline": "TruIdentity Screening Solutions offers FBI Background Checks, Live Scan, ATF eFile, and more in McAllen and the entire Rio Grande Valley — same-day appointments available Monday–Friday.",
       "ctaBook": "Book Your Appointment",
       "ctaFinder": "Find My Service"
     },
@@ -108,14 +108,14 @@
   "about": {
     "meta": {
       "title": "About TruIdentity | McAllen Fingerprinting Services",
-      "description": "TruIdentity is McAllen's trusted fingerprinting service — 24-hour FBI results, no-rejection guarantee, bilingual staff, and same-day appointments available Monday–Friday."
+      "description": "TruIdentity is McAllen's fingerprinting and background check service — 24-hour FBI results, bilingual staff, and same-day appointments Monday–Friday."
     },
     "heading": "Fingerprinting South Texas Has Trusted Since Day One",
     "subheading": "Fast, accurate, and bilingual — serving McAllen and the Rio Grande Valley.",
     "story": {
       "heading": "Our Story",
       "body1": "TruIdentity Screening Solutions was founded in 2024 by Bill Hawkins, a former Texas law enforcement officer with extensive investigative experience who set out to make professional fingerprinting fast, accurate, and stress-free for everyone in the Rio Grande Valley.",
-      "body2": "In our first year alone, we've earned 56 five-star reviews from clients across the Valley — nurses, teachers, gun owners, adoptive parents, and job seekers who needed it done right the first time. That track record speaks for itself.",
+      "body2": "We've earned over 56 five-star reviews from clients across the Valley — nurses, teachers, gun owners, adoptive parents, and job seekers who needed it done right the first time. That track record speaks for itself.",
       "body3": "Today, TruIdentity handles everything from FBI background checks and ATF eFile submissions to school district Live Scans and mobile fingerprinting for businesses across the Valley. Fully bilingual in English and Spanish — because everyone in South Texas deserves a clear path forward."
     },
     "office": {
@@ -161,13 +161,6 @@
       "heading": "Serving the Entire Rio Grande Valley",
       "text": "Based in McAllen, TX, we serve individuals and organizations across Hidalgo, Cameron, and Starr counties — and throughout South Texas. Our mobile fingerprinting service means we can come to your location anywhere in the Valley."
     },
-    "certifications": {
-      "heading": "Certified & Authorized",
-      "items": [
-        "ATF eFile Authorized Agent",
-        "Serving South Texas Since 2024"
-      ]
-    },
     "cta": {
       "heading": "Let's Get You Cleared",
       "text": "Book your appointment online — most clients are in and out in under 15 minutes.",
@@ -179,7 +172,7 @@
       "title": "Fingerprinting Services in McAllen, TX | TruIdentity",
       "description": "FBI Background Checks with 24-hour results, Live Scan, Ink Fingerprinting, NFA, ATF eFile, FBI Apostille, and Mobile Fingerprinting in McAllen, TX."
     },
-    "heading": "Fingerprinting Services",
+    "heading": "Fingerprinting & Background Check Services",
     "subheading": "Every service your agency requires — professional results, transparent pricing, same-day availability.",
     "notSure": "Not sure which service you need?",
     "useFinder": "Use the Free Service Finder",
@@ -238,7 +231,7 @@
       "name": "Full Name",
       "namePlaceholder": "Jane Doe",
       "email": "Email Address",
-      "emailPlaceholder": "jane@example.com",
+      "emailPlaceholder": "you@email.com",
       "phone": "Phone Number",
       "phonePlaceholder": "(956) 670-6144",
       "service": "Service of Interest",
@@ -341,7 +334,7 @@
   "serviceFinder": {
     "meta": {
       "title": "Which Fingerprinting Service Do I Need? | TruIdentity",
-      "description": "Answer 2–3 quick questions and we'll tell you exactly which fingerprinting service you need. Takes 30 seconds."
+      "description": "Answer 2–3 quick questions and we'll tell you exactly which fingerprinting or background check service you need in McAllen, TX. Takes about a minute."
     },
     "heading": "Which Service Do You Need?",
     "subheading": "Answer a couple of quick questions — we'll point you to the right service in about 30 seconds.",
@@ -406,8 +399,8 @@
   },
   "privacy": {
     "meta": {
-      "title": "Privacy Policy | TruIdentity Screening Solutions",
-      "description": "Privacy policy for TruIdentity Screening Solutions — how we collect, use, and protect your information."
+      "title": "Privacy Policy | TruIdentity McAllen Fingerprinting",
+      "description": "Read TruIdentity's privacy policy to learn how we collect, use, and protect your personal information when you use our fingerprinting services in McAllen."
     },
     "heading": "Privacy Policy",
     "lastUpdated": "Last Updated: April 2026",
@@ -606,7 +599,7 @@
       "name": "Criminal Background Check",
       "shortDescription": "Accurate criminal history report for individuals and organizations — contact us for current pricing.",
       "trustLine": "Contact us for pricing — (956) 670-6144",
-      "whatItIs": "A Criminal Background Check searches public criminal records to identify any prior convictions, arrests, or charges. Commonly required by employers, landlords, and organizations to verify an individual's criminal history.",
+      "whatItIs": "A Criminal Background Check searches public criminal records — including county court records, statewide criminal databases, and national registries — to identify any prior convictions, arrests, charges, or sex offender registrations. The scope of the search depends on what the requesting party requires. Results can include felony and misdemeanor records at the county, state, and federal level. Criminal background checks are one of the most common tools used by employers, property managers, and organizations to make safe, informed decisions before extending offers of employment, rental agreements, or volunteer roles. TruIdentity offers criminal background checks for individuals, employers, landlords, and organizations throughout McAllen and South Texas.",
       "whoNeeds": [
         "Individuals needing a personal criminal record check",
         "Employers screening job applicants",
@@ -617,7 +610,7 @@
         "Valid government-issued photo ID",
         "Social Security Number"
       ],
-      "whatToExpect": "Contact us at (956) 670-6144 for current pricing and turnaround times. We'll guide you through the process and confirm which type of background check best meets your needs.",
+      "whatToExpect": "Call us at (956) 670-6144 before your appointment to confirm pricing and turnaround time — both vary depending on the scope of search required. During the process, the subject of the check must provide a valid government-issued photo ID and Social Security Number. Where legally required, a FCRA-compliant authorization form — provided by the requesting employer or organization — must also be signed before the search can run. Most standard criminal background checks are returned within 1–3 business days. We'll walk you through every step and confirm which documents are needed before you arrive.",
       "pricingBullets": [
         "Employers screening job applicants",
         "Organizations requiring criminal history reviews",
@@ -628,7 +621,7 @@
       "name": "Pre-Employment Screening",
       "shortDescription": "Comprehensive background screening for employers — contact us for current pricing.",
       "trustLine": "Contact us for pricing — (956) 670-6144",
-      "whatItIs": "Pre-Employment Screening provides employers with a thorough background check on job applicants — covering criminal history and more — to help make confident, informed hiring decisions.",
+      "whatItIs": "Pre-Employment Screening provides employers with a comprehensive background check on job applicants — covering criminal history and, depending on the package, additional checks such as employment or identity verification. Background screening before hiring is standard practice in regulated industries including healthcare, education, childcare, finance, transportation, and government contracting. Under the Fair Credit Reporting Act (FCRA) and applicable Texas state law, background checks require written authorization from the applicant before they can be run. TruIdentity provides the background check component; the employer is responsible for providing a compliant authorization form and following adverse action procedures if a check affects a hiring decision. We serve employers of all sizes throughout McAllen and South Texas.",
       "whoNeeds": [
         "Employers hiring new staff requiring background checks",
         "HR departments managing onboarding compliance",
@@ -640,7 +633,7 @@
         "Social Security Number",
         "Applicant's signed authorization (provided by employer)"
       ],
-      "whatToExpect": "Contact us at (956) 670-6144 for current pricing and turnaround times. We work with employers to determine the right screening package for their industry and hiring requirements.",
+      "whatToExpect": "Call us at (956) 670-6144 before scheduling to discuss your industry and the type of screening required — pricing and turnaround time vary by package. Each applicant must bring a valid government-issued photo ID and Social Security Number, plus a signed FCRA-compliant authorization form from your organization. Most criminal background check components are returned within 1–3 business days. Employers with high-volume onboarding needs can also ask about our mobile fingerprinting service, which brings professional equipment directly to your facility anywhere in South Texas.",
       "pricingBullets": [
         "Employers hiring new staff",
         "HR departments managing compliance",
@@ -651,7 +644,7 @@
       "name": "Tenant Screening",
       "shortDescription": "Criminal background check for landlords and property managers — contact us for current pricing.",
       "trustLine": "Contact us for pricing — (956) 670-6144",
-      "whatItIs": "Tenant Screening provides landlords and property managers with a criminal background check on prospective tenants, helping protect your property and other residents.",
+      "whatItIs": "Tenant Screening provides landlords and property managers with a criminal background check on prospective tenants, helping protect your property, existing residents, and rental business from avoidable risk. A criminal background check reveals any prior convictions, arrests, or charges that a prospective tenant may have on record. Texas law permits landlords to use criminal history as a factor in rental decisions, provided that criteria are applied consistently and in compliance with applicable fair housing regulations. Tenant screening is typically used alongside credit checks and rental history verification as part of a comprehensive applicant review process. TruIdentity provides tenant background check services for landlords and property managers throughout McAllen and South Texas.",
       "whoNeeds": [
         "Landlords screening prospective tenants",
         "Property management companies",
@@ -663,7 +656,7 @@
         "Social Security Number",
         "Tenant's signed authorization"
       ],
-      "whatToExpect": "Contact us at (956) 670-6144 for current pricing and turnaround times. We'll confirm what information is needed and walk you through the process.",
+      "whatToExpect": "Call us at (956) 670-6144 to confirm pricing and turnaround before scheduling — both vary based on the scope of search required. The prospective tenant must provide a valid government-issued photo ID and Social Security Number, and sign an authorization form before the check can run. Landlords should provide a FCRA-compliant authorization form for the tenant to sign; we can advise on what's needed during your inquiry call. Most tenant screening background checks are returned within 1–3 business days. Property managers or landlords with frequent screening needs are encouraged to contact us to discuss volume options.",
       "pricingBullets": [
         "Landlords and property managers",
         "Property management companies",
@@ -674,7 +667,7 @@
   "terms": {
     "meta": {
       "title": "Terms & Conditions | TruIdentity Screening Solutions",
-      "description": "Terms and conditions for TruIdentity Screening Solutions fingerprinting services."
+      "description": "Read the terms and conditions governing your use of TruIdentity Screening Solutions' fingerprinting and background check services in McAllen, TX."
     },
     "heading": "Terms & Conditions",
     "lastUpdated": "Last Updated: April 2026",

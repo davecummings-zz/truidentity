@@ -1,8 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44">
-  <rect width="44" height="44" rx="8" fill="#1B3A5C"/>
-  <path d="M6 9L22 5L38 9V21C38 30 30 37 22 41C14 37 6 30 6 21V9Z" fill="#2E75B6"/>
-  <path d="M6 9L22 5L38 9V21C38 30 30 37 22 41C14 37 6 30 6 21V9Z" fill="#1B3A5C" opacity="0.4"/>
-  <path d="M15 22C15 18.134 18.134 15 22 15C25.866 15 29 18.134 29 22" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <path d="M12 22C12 16.477 16.477 12 22 12C27.523 12 32 16.477 32 22" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
-  <path d="M18 24C18 21.791 19.791 20 22 20C24.209 20 26 21.791 26 24" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="80" fill="#1B3A5C"/>
+  <defs>
+    <linearGradient id="shieldGrad" x1="4" y1="2" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e8f0fa"/>
+      <stop offset="1" stop-color="#c8d8f0"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield centered: translate(256,256) scale(11) translate(-22,-21) -->
+  <g transform="translate(256,256) scale(11) translate(-22,-21)">
+    <path d="M4 6L22 2L40 6V18C40 28 32 36 22 40C12 36 4 28 4 18V6Z" fill="white"/>
+    <path d="M4 6L22 2L40 6V18C40 28 32 36 22 40C12 36 4 28 4 18V6Z" fill="url(#shieldGrad)" opacity="0.3"/>
+    <path d="M16 20C16 16.686 18.686 14 22 14C25.314 14 28 16.686 28 20"
+      stroke="#1B3A5C" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+    <path d="M13 20C13 15.029 17.029 11 22 11C26.971 11 31 15.029 31 20"
+      stroke="#1B3A5C" stroke-width="1.1" stroke-linecap="round" fill="none" opacity="0.7"/>
+    <path d="M19 22C19 20.343 20.343 19 22 19C23.657 19 25 20.343 25 22C25 23.657 23.657 25 22 25"
+      stroke="#1B3A5C" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+  </g>
 </svg>

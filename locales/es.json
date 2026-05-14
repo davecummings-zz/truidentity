@@ -49,7 +49,7 @@
   "home": {
     "hero": {
       "headline": "Sus Huellas Listas Hoy — Resultados en 24 Horas",
-      "subheadline": "Antecedentes del FBI, Live Scan, ATF eFile y más. Atendemos a McAllen y todo el Valle del Río Grande — citas disponibles el mismo día de lunes a viernes.",
+      "subheadline": "TruIdentity Screening Solutions ofrece antecedentes del FBI, Live Scan, ATF eFile y más en McAllen y todo el Valle del Río Grande — citas disponibles el mismo día de lunes a viernes.",
       "ctaBook": "Reservar Cita",
       "ctaFinder": "Encontrar Mi Servicio"
     },
@@ -108,14 +108,14 @@
   "about": {
     "meta": {
       "title": "Nosotros | TruIdentity — Huellas en McAllen, TX",
-      "description": "TruIdentity es el servicio de huellas digitales de confianza en McAllen — resultados del FBI en 24 horas, garantía sin rechazo, personal bilingüe y citas el mismo día de lunes a viernes."
+      "description": "TruIdentity es el servicio de huellas y antecedentes de confianza en McAllen — resultados del FBI en 24 horas, personal bilingüe, citas de lunes a viernes."
     },
     "heading": "Las Huellas Dactilares en las que el Sur de Texas Confía",
     "subheading": "Rápido, preciso y bilingüe — sirviendo a McAllen y el Valle del Río Grande.",
     "story": {
       "heading": "Nuestra Historia",
       "body1": "TruIdentity Screening Solutions fue fundada en 2024 por Bill Hawkins, un exoficial de las fuerzas del orden de Texas con amplia experiencia investigativa, decidido a hacer que las huellas dactilares profesionales fueran rápidas, precisas y sin estrés para todos en el Valle del Río Grande.",
-      "body2": "Solo en nuestro primer año, hemos ganado 56 reseñas de cinco estrellas de clientes en todo el Valle — enfermeras, maestros, dueños de armas, padres adoptivos y personas en búsqueda de empleo que necesitaban que todo saliera bien a la primera. Ese historial habla por sí solo.",
+      "body2": "Hemos ganado más de 56 reseñas de cinco estrellas de clientes en todo el Valle — enfermeras, maestros, dueños de armas, padres adoptivos y personas en búsqueda de empleo que necesitaban que todo saliera bien a la primera. Ese historial habla por sí solo.",
       "body3": "Hoy, TruIdentity maneja todo, desde verificaciones de antecedentes del FBI y envíos de ATF eFile hasta Live Scans para distritos escolares y huellas dactilares móviles para empresas en todo el Valle. Completamente bilingüe en inglés y español — porque todos en el sur de Texas merecen un camino claro hacia adelante."
     },
     "office": {
@@ -161,13 +161,6 @@
       "heading": "Atendemos Todo el Valle del Río Grande",
       "text": "Con sede en McAllen, TX, atendemos a personas y organizaciones en los condados de Hidalgo, Cameron y Starr — y en todo el Sur de Texas. Nuestro servicio móvil de huellas significa que podemos ir a su ubicación en cualquier parte del Valle."
     },
-    "certifications": {
-      "heading": "Certificados y Autorizados",
-      "items": [
-        "Agente Autorizado ATF eFile",
-        "Sirviendo al Sur de Texas desde 2024"
-      ]
-    },
     "cta": {
       "heading": "Vamos a Tramitarlo",
       "text": "Reserve su cita en línea — la mayoría de los clientes entran y salen en menos de 15 minutos.",
@@ -179,7 +172,7 @@
       "title": "Servicios de Huellas en McAllen, TX | TruIdentity",
       "description": "Antecedentes del FBI en 24 horas, Live Scan, Huellas de Tinta, NFA, ATF eFile, Apostilla del FBI y Huellas Móviles en McAllen, TX."
     },
-    "heading": "Servicios de Huellas Digitales",
+    "heading": "Servicios de Huellas y Verificación de Antecedentes",
     "subheading": "Todo lo que su agencia requiere — resultados profesionales, precios claros, disponibilidad el mismo día.",
     "notSure": "¿No sabe qué servicio necesita?",
     "useFinder": "Use el Buscador de Servicios Gratuito",
@@ -238,7 +231,7 @@
       "name": "Nombre Completo",
       "namePlaceholder": "Juan García",
       "email": "Correo Electrónico",
-      "emailPlaceholder": "juan@ejemplo.com",
+      "emailPlaceholder": "tu@correo.com",
       "phone": "Número de Teléfono",
       "phonePlaceholder": "(956) 670-6144",
       "service": "Servicio de Interés",
@@ -340,8 +333,8 @@
   },
   "serviceFinder": {
     "meta": {
-      "title": "¿Qué Servicio de Huellas Necesito? | TruIdentity",
-      "description": "Responda 2 o 3 preguntas rápidas y le diremos exactamente qué servicio de huellas necesita. Toma 30 segundos."
+      "title": "¿Qué Servicio de Huellas Necesito? | TruIdentity McAllen",
+      "description": "Responda 2 o 3 preguntas rápidas y le diremos qué servicio de huellas o antecedentes necesita en McAllen, TX. Toma menos de un minuto."
     },
     "heading": "¿Qué Servicio Necesita?",
     "subheading": "Responda un par de preguntas rápidas — le orientamos al servicio correcto en unos 30 segundos.",
@@ -407,7 +400,7 @@
   "privacy": {
     "meta": {
       "title": "Política de Privacidad | TruIdentity Screening Solutions",
-      "description": "Política de privacidad de TruIdentity Screening Solutions — cómo recopilamos, usamos y protegemos su información."
+      "description": "Conozca la política de privacidad de TruIdentity — cómo recopilamos, usamos y protegemos su información personal al usar nuestros servicios de huellas."
     },
     "heading": "Política de Privacidad",
     "lastUpdated": "Última Actualización: Abril 2026",
@@ -606,7 +599,7 @@
       "name": "Verificación de Antecedentes Penales",
       "shortDescription": "Reporte preciso de antecedentes penales para personas y organizaciones — contáctenos para precios.",
       "trustLine": "Contáctenos para más información — (956) 670-6144",
-      "whatItIs": "Una Verificación de Antecedentes Penales busca registros criminales públicos para identificar condenas, arrestos o cargos previos. Comúnmente requerida por empleadores, propietarios y organizaciones para verificar el historial criminal de una persona.",
+      "whatItIs": "Una Verificación de Antecedentes Penales busca registros criminales públicos — incluyendo registros judiciales del condado, bases de datos estatales y registros nacionales — para identificar condenas, arrestos, cargos previos o registros en el registro de delincuentes sexuales. El alcance de la búsqueda depende de lo que requiera quien la solicita (empleador, propietario u organización). Los resultados pueden incluir antecedentes de delitos graves y menores a nivel local, estatal y federal. Las verificaciones de antecedentes penales son una de las herramientas más comunes que utilizan empleadores, administradores de propiedades y organizaciones para tomar decisiones informadas antes de ofrecer empleo, contratos de arrendamiento o roles de voluntariado. TruIdentity ofrece verificaciones de antecedentes penales para personas, empleadores, propietarios y organizaciones en McAllen y el Sur de Texas.",
       "whoNeeds": [
         "Personas que necesitan verificar su propio historial criminal",
         "Empleadores que evalúan candidatos laborales",
@@ -617,7 +610,7 @@
         "Identificación oficial con foto vigente",
         "Número de Seguro Social"
       ],
-      "whatToExpect": "Contáctenos al (956) 670-6144 para conocer los precios actuales y tiempos de entrega. Le orientaremos en el proceso y confirmaremos qué tipo de verificación cumple mejor con sus necesidades.",
+      "whatToExpect": "Llámenos al (956) 670-6144 antes de su cita para confirmar el precio y tiempo de entrega — ambos varían según el alcance de la búsqueda. La persona sujeta a la verificación debe presentar una identificación oficial con foto vigente y su Número de Seguro Social. Cuando la ley lo exija, también debe firmar un formulario de autorización conforme a la FCRA proporcionado por el empleador u organización solicitante. La mayoría de las verificaciones penales estándar se entregan en 1 a 3 días hábiles. Le orientaremos en cada paso y confirmaremos qué documentos necesita antes de su llegada.",
       "pricingBullets": [
         "Empleadores que evalúan candidatos",
         "Organizaciones que requieren revisiones de historial",
@@ -628,7 +621,7 @@
       "name": "Evaluación Previa al Empleo",
       "shortDescription": "Evaluación completa de antecedentes para empleadores — contáctenos para precios.",
       "trustLine": "Contáctenos para más información — (956) 670-6144",
-      "whatItIs": "La Evaluación Previa al Empleo proporciona a los empleadores una verificación exhaustiva de antecedentes de los candidatos laborales — incluyendo historial criminal — para tomar decisiones de contratación informadas y seguras.",
+      "whatItIs": "La Evaluación Previa al Empleo proporciona a los empleadores una verificación integral de antecedentes de los candidatos laborales — incluyendo historial criminal y, según el paquete, otras verificaciones como historial laboral o de identidad. La verificación de antecedentes antes de contratar es práctica estándar en industrias reguladas como salud, educación, cuidado infantil, finanzas, transporte y contratos gubernamentales. Bajo la Ley de Informes Crediticios Justos (FCRA) y las leyes de Texas aplicables, las verificaciones de antecedentes requieren autorización escrita del candidato antes de realizarse. TruIdentity proporciona el componente de verificación de antecedentes; el empleador es responsable de facilitar el formulario de autorización y seguir los procedimientos legales correspondientes. Atendemos a empleadores de todos los tamaños en McAllen y el Sur de Texas.",
       "whoNeeds": [
         "Empleadores que contratan nuevo personal con requisitos de verificación",
         "Departamentos de Recursos Humanos que gestionan el cumplimiento de incorporación",
@@ -640,7 +633,7 @@
         "Número de Seguro Social",
         "Autorización firmada del solicitante (proporcionada por el empleador)"
       ],
-      "whatToExpect": "Contáctenos al (956) 670-6144 para conocer los precios actuales y tiempos de entrega. Trabajamos con empleadores para determinar el paquete de evaluación adecuado según su industria y requisitos de contratación.",
+      "whatToExpect": "Llámenos al (956) 670-6144 antes de agendar para hablar sobre su industria y el tipo de evaluación requerida — el precio y el tiempo de entrega varían según el paquete. Cada candidato debe traer una identificación oficial con foto vigente, su Número de Seguro Social y un formulario de autorización firmado conforme a la FCRA proporcionado por su organización. La mayoría de las verificaciones penales se entregan en 1 a 3 días hábiles. Empleadores con alta rotación de personal también pueden preguntar por nuestro servicio de toma de huellas móvil, que lleva equipo profesional a su instalación en cualquier parte del Sur de Texas.",
       "pricingBullets": [
         "Empleadores que contratan nuevo personal",
         "Departamentos de RR. HH. que gestionan el cumplimiento",
@@ -651,7 +644,7 @@
       "name": "Evaluación de Inquilinos",
       "shortDescription": "Verificación de antecedentes penales para propietarios y administradores — contáctenos para precios.",
       "trustLine": "Contáctenos para más información — (956) 670-6144",
-      "whatItIs": "La Evaluación de Inquilinos proporciona a propietarios y administradores de propiedades una verificación de antecedentes penales de posibles inquilinos, ayudando a proteger su propiedad y a otros residentes.",
+      "whatItIs": "La Evaluación de Inquilinos proporciona a propietarios y administradores de propiedades una verificación de antecedentes penales de posibles inquilinos, ayudando a proteger su propiedad, a los residentes existentes y a su negocio de renta de riesgos evitables. Una verificación de antecedentes penales revela cualquier condena, arresto o cargo previo que el posible inquilino pueda tener en su historial. La ley de Texas permite a los propietarios usar el historial criminal como factor en las decisiones de arrendamiento, siempre que los criterios se apliquen de manera consistente y conforme a las regulaciones de vivienda justa. La evaluación de inquilinos generalmente se usa junto con verificaciones de crédito e historial de arrendamiento como parte de un proceso integral de revisión de solicitantes. TruIdentity ofrece verificaciones de antecedentes para propietarios y administradores en McAllen y el Sur de Texas.",
       "whoNeeds": [
         "Propietarios que evalúan posibles inquilinos",
         "Empresas de administración de propiedades",
@@ -663,7 +656,7 @@
         "Número de Seguro Social",
         "Autorización firmada del inquilino"
       ],
-      "whatToExpect": "Contáctenos al (956) 670-6144 para conocer los precios actuales y tiempos de entrega. Le confirmaremos qué información se necesita y le guiaremos en el proceso.",
+      "whatToExpect": "Llámenos al (956) 670-6144 para confirmar el precio y el tiempo de entrega antes de agendar — ambos varían según el alcance de la búsqueda. El posible inquilino debe presentar una identificación oficial con foto vigente, su Número de Seguro Social y firmar un formulario de autorización antes de realizar la verificación. Los propietarios deben facilitar un formulario de autorización conforme a la FCRA; podemos orientarle sobre lo necesario durante su llamada de consulta. La mayoría de las verificaciones se entregan en 1 a 3 días hábiles. Administradores de propiedades o propietarios con necesidades frecuentes de evaluación pueden contactarnos para hablar sobre opciones de volumen.",
       "pricingBullets": [
         "Propietarios y administradores de propiedades",
         "Empresas de administración de propiedades",
@@ -674,7 +667,7 @@
   "terms": {
     "meta": {
       "title": "Términos y Condiciones | TruIdentity Screening Solutions",
-      "description": "Términos y condiciones de los servicios de huellas digitales de TruIdentity Screening Solutions."
+      "description": "Lea los términos y condiciones que rigen el uso de los servicios de huellas digitales y verificación de antecedentes de TruIdentity en McAllen, TX."
     },
     "heading": "Términos y Condiciones",
     "lastUpdated": "Última Actualización: Abril 2026",

@@ -16,6 +16,7 @@ export function ContactForm() {
     phone: '',
     service: '',
     message: '',
+    website: '', // honeypot — bots fill this, humans don't
   })
 
   const validate = () => {
@@ -38,15 +39,18 @@ export function ContactForm() {
     const newErrors = validate()
     if (Object.keys(newErrors).length > 0) { setErrors(newErrors); return }
 
+    if (form.website) return // honeypot triggered — silently discard
+
     setStatus('sending')
     try {
       // Replace with your Formspree endpoint or other form handler
       const endpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? ''
       if (endpoint) {
+        const { website: _hp, ...payload } = form
         const res = await fetch(endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(form),
+          body: JSON.stringify(payload),
         })
         if (!res.ok) throw new Error('Failed')
       } else {
@@ -54,7 +58,7 @@ export function ContactForm() {
         await new Promise((r) => setTimeout(r, 800))
       }
       setStatus('success')
-      setForm({ name: '', email: '', phone: '', service: '', message: '' })
+      setForm({ name: '', email: '', phone: '', service: '', message: '', website: '' })
     } catch {
       setStatus('error')
     }
@@ -62,8 +66,8 @@ export function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="rounded-2xl border border-green-200 bg-green-50 p-8 text-center">
-        <div className="text-4xl mb-3">✓</div>
+      <div className="rounded-2xl border border-green-200 bg-green-50 p-8 text-center" role="status">
+        <div className="text-4xl mb-3" aria-hidden="true">✓</div>
         <p className="font-semibold text-green-800">{t('success')}</p>
       </div>
     )
@@ -71,15 +75,25 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
+      {/* Honeypot — visually hidden, must stay empty */}
+      <div aria-hidden="true" className="hidden" tabIndex={-1}>
+        <label htmlFor="website">Leave this blank</label>
+        <input
+          id="website" name="website" type="text" autoComplete="off"
+          tabIndex={-1} value={form.website} onChange={handleChange}
+        />
+      </div>
+
       {/* Name */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">
           {t('name')} <span className="text-red-500" aria-hidden="true">*</span>
         </label>
         <input
-          id="name" name="name" type="text" autoComplete="name" required
+          id="name" name="name" type="text" autoComplete="name" required aria-required="true"
           placeholder={t('namePlaceholder')} value={form.name} onChange={handleChange}
           aria-invalid={!!errors.name} aria-describedby={errors.name ? 'name-error' : undefined}
+          maxLength={100}
           className="w-full rounded-lg border border-gray-300 px-3.5 py-2.5 text-sm text-navy placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent disabled:opacity-50"
           disabled={status === 'sending'}
         />
@@ -93,9 +107,10 @@ export function ContactForm() {
             {t('email')} <span className="text-red-500" aria-hidden="true">*</span>
           </label>
           <input
-            id="email" name="email" type="email" autoComplete="email" required
+            id="email" name="email" type="email" autoComplete="email" required aria-required="true"
             placeholder={t('emailPlaceholder')} value={form.email} onChange={handleChange}
             aria-invalid={!!errors.email} aria-describedby={errors.email ? 'email-error' : undefined}
+            maxLength={254}
             className="w-full rounded-lg border border-gray-300 px-3.5 py-2.5 text-sm text-navy placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent disabled:opacity-50"
             disabled={status === 'sending'}
           />
@@ -110,6 +125,7 @@ export function ContactForm() {
           <input
             id="phone" name="phone" type="tel" autoComplete="tel"
             placeholder={t('phonePlaceholder')} value={form.phone} onChange={handleChange}
+            maxLength={20}
             className="w-full rounded-lg border border-gray-300 px-3.5 py-2.5 text-sm text-navy placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent disabled:opacity-50"
             disabled={status === 'sending'}
           />
@@ -140,9 +156,10 @@ export function ContactForm() {
           {t('message')} <span className="text-red-500" aria-hidden="true">*</span>
         </label>
         <textarea
-          id="message" name="message" rows={4} required
+          id="message" name="message" rows={4} required aria-required="true"
           placeholder={t('messagePlaceholder')} value={form.message} onChange={handleChange}
           aria-invalid={!!errors.message} aria-describedby={errors.message ? 'message-error' : undefined}
+          maxLength={2000}
           className="w-full rounded-lg border border-gray-300 px-3.5 py-2.5 text-sm text-navy placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent resize-none disabled:opacity-50"
           disabled={status === 'sending'}
         />

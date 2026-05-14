@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { Accessibility, ParkingSquare } from 'lucide-react'
 import { ContactForm } from '@/components/contact/ContactForm'
 import { siteConfig } from '@/config/site'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbSchema } from '@/lib/schemas'
 
 interface ContactPageProps {
   params: Promise<{ locale: string }>
@@ -16,6 +18,7 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
     title: t('title'),
     description: t('description'),
     alternates: { canonical: `${siteConfig.siteUrl}/${locale}/contact` },
+    openGraph: { url: `${siteConfig.siteUrl}/${locale}/contact`, title: t('title'), description: t('description') },
   }
 }
 
@@ -24,7 +27,9 @@ export default async function ContactPage({ params }: ContactPageProps) {
   const t = await getTranslations({ locale, namespace: 'contact' })
 
   return (
-    <div className="py-12 lg:py-20">
+    <>
+      <JsonLd data={breadcrumbSchema(locale, [{ key: 'contact', url: `${siteConfig.siteUrl}/${locale}/contact` }])} />
+      <div className="py-12 lg:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="mb-10">
@@ -145,6 +150,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
                 alt={t('map.buildingAlt')}
                 width={800}
                 height={1027}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="rounded-xl w-full object-cover"
               />
             </section>
@@ -152,5 +158,6 @@ export default async function ContactPage({ params }: ContactPageProps) {
         </div>
       </div>
     </div>
+    </>
   )
 }

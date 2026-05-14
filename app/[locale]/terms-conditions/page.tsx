@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { siteConfig } from '@/config/site'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbSchema } from '@/lib/schemas'
 
 interface TermsPageProps {
   params: Promise<{ locale: string }>
@@ -13,6 +15,7 @@ export async function generateMetadata({ params }: TermsPageProps): Promise<Meta
     title: t('title'),
     description: t('description'),
     alternates: { canonical: `${siteConfig.siteUrl}/${locale}/terms-conditions` },
+    openGraph: { url: `${siteConfig.siteUrl}/${locale}/terms-conditions`, title: t('title'), description: t('description') },
   }
 }
 
@@ -22,7 +25,9 @@ export default async function TermsPage({ params }: TermsPageProps) {
   const sections = t.raw('sections') as { heading: string; content: string }[]
 
   return (
-    <div className="py-12 lg:py-20">
+    <>
+      <JsonLd data={breadcrumbSchema(locale, [{ key: 'terms-conditions', url: `${siteConfig.siteUrl}/${locale}/terms-conditions` }])} />
+      <div className="py-12 lg:py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-extrabold text-navy mb-2">{t('heading')}</h1>
         <p className="text-sm text-gray-500 mb-8">{t('lastUpdated')}</p>
@@ -37,5 +42,6 @@ export default async function TermsPage({ params }: TermsPageProps) {
         </div>
       </div>
     </div>
+    </>
   )
 }

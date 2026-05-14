@@ -19,6 +19,7 @@ export function ServiceCard({ icon, name, description, href, learnMoreLabel }: S
       <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-5">{description}</p>
       <Link
         href={href}
+        aria-label={`${learnMoreLabel} — ${name}`}
         className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-navy transition-colors group-hover:gap-2.5"
       >
         {learnMoreLabel}

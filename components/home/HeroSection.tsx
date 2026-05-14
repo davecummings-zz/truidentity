@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 
@@ -9,20 +10,23 @@ export async function HeroSection({ locale }: HeroSectionProps) {
   const t = await getTranslations({ locale, namespace: 'home.hero' })
 
   return (
-    <section className="relative bg-gradient-to-br from-navy via-navy-500 to-accent-blue overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="hero-grid" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
-              <path d="M0 48V0h48" fill="none" stroke="white" strokeWidth="1" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#hero-grid)" />
-        </svg>
-      </div>
+    <section className="relative overflow-hidden">
+      {/* Background image */}
+      <Image
+        src="/images/bg_truidentity.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover object-center z-0"
+        priority
+        quality={85}
+      />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      {/* Navy overlay */}
+      <div className="absolute inset-0 bg-[#1B3A5C]/75 z-[1]" aria-hidden="true" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
             {t('headline')}
@@ -35,9 +39,9 @@ export async function HeroSection({ locale }: HeroSectionProps) {
           <div className="flex flex-col sm:flex-row gap-3">
             <Link
               href={`/${locale}/book`}
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent-orange text-white font-bold rounded-xl hover:bg-accent-orange/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-navy text-base"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent-orange text-navy font-bold rounded-xl hover:bg-accent-orange/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-navy text-base"
             >
-              📅 {t('ctaBook')}
+              <span aria-hidden="true">📅</span> {t('ctaBook')}
             </Link>
             <Link
               href={`/${locale}/service-finder`}

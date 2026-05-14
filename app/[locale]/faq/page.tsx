@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { Accordion } from '@/components/ui/Accordion'
 import { JsonLd } from '@/components/seo/JsonLd'
-import { faqPageSchema } from '@/lib/schemas'
+import { faqPageSchema, breadcrumbSchema } from '@/lib/schemas'
 import { siteConfig } from '@/config/site'
 import { faqItemCount } from '@/config/faq'
 
@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: FaqPageProps): Promise<Metada
     title: t('title'),
     description: t('description'),
     alternates: { canonical: `${siteConfig.siteUrl}/${locale}/faq` },
+    openGraph: { url: `${siteConfig.siteUrl}/${locale}/faq`, title: t('title'), description: t('description') },
   }
 }
 
@@ -32,7 +33,7 @@ export default async function FaqPage({ params }: FaqPageProps) {
 
   return (
     <>
-      <JsonLd data={faqPageSchema(items)} />
+      <JsonLd data={[faqPageSchema(items), breadcrumbSchema(locale, [{ key: 'faq', url: `${siteConfig.siteUrl}/${locale}/faq` }])]} />
 
       <div className="py-12 lg:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

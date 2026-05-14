@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { ServiceFinder } from '@/components/service-finder/ServiceFinder'
 import { siteConfig } from '@/config/site'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbSchema } from '@/lib/schemas'
 
 interface ServiceFinderPageProps {
   params: Promise<{ locale: string }>
@@ -14,6 +16,7 @@ export async function generateMetadata({ params }: ServiceFinderPageProps): Prom
     title: t('title'),
     description: t('description'),
     alternates: { canonical: `${siteConfig.siteUrl}/${locale}/service-finder` },
+    openGraph: { url: `${siteConfig.siteUrl}/${locale}/service-finder`, title: t('title'), description: t('description') },
   }
 }
 
@@ -22,7 +25,9 @@ export default async function ServiceFinderPage({ params }: ServiceFinderPagePro
   const t = await getTranslations({ locale, namespace: 'serviceFinder' })
 
   return (
-    <div className="py-12 lg:py-20">
+    <>
+      <JsonLd data={breadcrumbSchema(locale, [{ key: 'service-finder', url: `${siteConfig.siteUrl}/${locale}/service-finder` }])} />
+      <div className="py-12 lg:py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="mb-10 text-center">
@@ -35,5 +40,6 @@ export default async function ServiceFinderPage({ params }: ServiceFinderPagePro
         </div>
       </div>
     </div>
+    </>
   )
 }

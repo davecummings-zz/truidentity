@@ -20,7 +20,7 @@ export function LanguageToggle() {
   return (
     <button
       onClick={switchLocale}
-      className="text-sm font-medium text-navy hover:text-accent-blue transition-colors border border-navy/30 rounded px-2.5 py-1 hover:border-accent-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue"
+      className="text-sm font-medium text-navy hover:text-accent-blue transition-colors border border-navy/30 rounded px-2.5 py-2 hover:border-accent-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue min-h-[44px] inline-flex items-center"
       aria-label={`Switch to ${otherLocale === 'en' ? 'English' : 'Spanish'}`}
     >
       {t('languageToggle')}

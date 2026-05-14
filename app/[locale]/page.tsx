@@ -11,6 +11,8 @@ import { FaqTeaser } from '@/components/home/FaqTeaser'
 import { BottomCTA } from '@/components/home/BottomCTA'
 import { siteConfig } from '@/config/site'
 import { fetchGoogleReviews } from '@/lib/reviews'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { webSiteSchema } from '@/lib/schemas'
 
 export const revalidate = 604800
 
@@ -42,6 +44,7 @@ export default async function HomePage({ params }: HomePageProps) {
   const reviewsData = await fetchGoogleReviews()
   return (
     <>
+      <JsonLd data={webSiteSchema()} />
       <HeroSection locale={locale} />
       <NoWalkInsBanner locale={locale} />
       <ServicesGrid locale={locale} />

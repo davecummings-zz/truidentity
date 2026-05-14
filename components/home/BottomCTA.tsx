@@ -17,9 +17,9 @@ export async function BottomCTA({ locale }: BottomCTAProps) {
         <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">{t('subheading')}</p>
         <Link
           href={`/${locale}/book`}
-          className="inline-flex items-center gap-2 px-8 py-4 bg-accent-orange text-white font-bold text-lg rounded-xl hover:bg-accent-orange/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+          className="inline-flex items-center gap-2 px-8 py-4 bg-accent-orange text-navy font-bold text-lg rounded-xl hover:bg-accent-orange/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
         >
-          📅 {t('button')}
+          <span aria-hidden="true">📅</span> {t('button')}
         </Link>
       </div>
     </section>

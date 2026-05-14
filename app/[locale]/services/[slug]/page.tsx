@@ -18,7 +18,7 @@ import {
 } from 'lucide-react'
 import { services, getServiceBySlug, getRelatedServices } from '@/config/services'
 import { JsonLd } from '@/components/seo/JsonLd'
-import { serviceSchema, localBusinessSchema } from '@/lib/schemas'
+import { serviceSchema, breadcrumbSchema } from '@/lib/schemas'
 import { siteConfig } from '@/config/site'
 
 const serviceIcons: Record<string, LucideIcon> = {
@@ -79,7 +79,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <>
-      <JsonLd data={[serviceSchema(service, locale), localBusinessSchema()]} />
+      <JsonLd data={[
+        serviceSchema(service, locale),
+        breadcrumbSchema(locale, [
+          { key: 'services', url: `${siteConfig.siteUrl}/${locale}/services` },
+          { name, url: `${siteConfig.siteUrl}/${locale}/services/${slug}` },
+        ]),
+      ]} />
 
       <div className="py-12 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,7 +145,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 <ul className="space-y-2">
                   {whatToBring.map((item) => (
                     <li key={item} className="flex items-start gap-2.5 text-sm">
-                      <span className="text-accent-orange font-bold flex-shrink-0">•</span>
+                      <span className="text-accent-orange font-bold flex-shrink-0" aria-hidden="true">•</span>
                       <span className="text-gray-600">{item}</span>
                     </li>
                   ))}
@@ -183,8 +189,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <aside className="lg:col-span-1">
               <div className="sticky top-24 rounded-2xl border-2 border-accent-blue/30 bg-white p-6 shadow-card">
                 <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">{t('pricing')}</p>
-                <div className="flex items-baseline gap-1 mb-1">
-                  <span className="text-4xl font-extrabold text-navy">{service.price}</span>
+                <div className="flex items-baseline gap-1 mb-1 flex-wrap">
+                  <span className={service.price.startsWith('$') ? 'text-4xl font-extrabold text-navy' : 'text-xl font-bold text-navy'}>
+                    {service.price}
+                  </span>
                 </div>
                 {service.priceNote && (
                   <p className="text-xs text-gray-500 mb-4">{service.priceNote}</p>

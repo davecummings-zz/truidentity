@@ -48,7 +48,7 @@ export async function HowItWorks({ locale }: HowItWorksProps) {
                 <div className="w-16 h-16 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-white">
                   {stepIcons[i]}
                 </div>
-                <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-accent-orange text-white text-xs font-bold flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-accent-orange text-white text-xs font-bold flex items-center justify-center" aria-hidden="true">
                   {i + 1}
                 </span>
               </div>

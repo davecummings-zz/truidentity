@@ -39,9 +39,11 @@ export function PriceEstimator({ services }: PriceEstimatorProps) {
 
       {selected && (
         <div className="mt-5 space-y-3">
-          <div className="flex items-baseline gap-2">
+          <div className="flex items-baseline gap-2 flex-wrap">
             <span className="text-sm text-gray-500">{t('priceLabel')}:</span>
-            <span className="text-3xl font-extrabold text-navy">{selected.price}</span>
+            <span className={selected.price.startsWith('$') ? 'text-3xl font-extrabold text-navy' : 'text-base font-bold text-navy'}>
+              {selected.price}
+            </span>
             {selected.priceNote && (
               <span className="text-xs text-gray-500">{selected.priceNote}</span>
             )}

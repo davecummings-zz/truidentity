@@ -1,3 +1,5 @@
+import { siteConfig } from '@/config/site'
+
 export interface Service {
   slug: string
   name: string
@@ -213,10 +215,10 @@ export const services: Service[] = [
     shortDescription:
       'Accurate criminal history report for individuals and organizations — contact us for current pricing.',
     price: 'Contact for pricing',
-    priceNote: '(956) 670-6144',
+    priceNote: siteConfig.phone,
     emoji: '🔎',
     category: 'background-checks',
-    trustLine: 'Contact us for pricing — (956) 670-6144',
+    trustLine: `Contact us for pricing — ${siteConfig.phone}`,
     whatItIs:
       'A Criminal Background Check searches public criminal records to identify any prior convictions, arrests, or charges. Commonly required by employers, landlords, and organizations to verify an individual\'s criminal history.',
     whoNeeds: [
@@ -230,7 +232,7 @@ export const services: Service[] = [
       'Social Security Number',
     ],
     whatToExpect:
-      'Contact us at (956) 670-6144 for current pricing and turnaround times. We\'ll guide you through the process and confirm which type of background check best meets your needs.',
+      `Contact us at ${siteConfig.phone} for current pricing and turnaround times. We'll guide you through the process and confirm which type of background check best meets your needs.`,
     relatedSlugs: ['pre-employment-screening', 'tenant-screening', 'fbi-background-checks'],
   },
   {
@@ -239,10 +241,10 @@ export const services: Service[] = [
     shortDescription:
       'Comprehensive background screening for employers — contact us for current pricing.',
     price: 'Contact for pricing',
-    priceNote: '(956) 670-6144',
+    priceNote: siteConfig.phone,
     emoji: '💼',
     category: 'background-checks',
-    trustLine: 'Contact us for pricing — (956) 670-6144',
+    trustLine: `Contact us for pricing — ${siteConfig.phone}`,
     whatItIs:
       'Pre-Employment Screening provides employers with a thorough background check on job applicants — covering criminal history and more — to help make confident, informed hiring decisions.',
     whoNeeds: [
@@ -257,7 +259,7 @@ export const services: Service[] = [
       'Applicant\'s signed authorization (provided by employer)',
     ],
     whatToExpect:
-      'Contact us at (956) 670-6144 for current pricing and turnaround times. We work with employers to determine the right screening package for their industry and hiring requirements.',
+      `Contact us at ${siteConfig.phone} for current pricing and turnaround times. We work with employers to determine the right screening package for their industry and hiring requirements.`,
     relatedSlugs: ['criminal-background-check', 'tenant-screening', 'fbi-background-checks'],
   },
   {
@@ -266,10 +268,10 @@ export const services: Service[] = [
     shortDescription:
       'Criminal background check for landlords and property managers — contact us for current pricing.',
     price: 'Contact for pricing',
-    priceNote: '(956) 670-6144',
+    priceNote: siteConfig.phone,
     emoji: '🏠',
     category: 'background-checks',
-    trustLine: 'Contact us for pricing — (956) 670-6144',
+    trustLine: `Contact us for pricing — ${siteConfig.phone}`,
     whatItIs:
       'Tenant Screening provides landlords and property managers with a criminal background check on prospective tenants, helping protect your property and other residents.',
     whoNeeds: [
@@ -284,7 +286,7 @@ export const services: Service[] = [
       'Tenant\'s signed authorization',
     ],
     whatToExpect:
-      'Contact us at (956) 670-6144 for current pricing and turnaround times. We\'ll confirm what information is needed and walk you through the process.',
+      `Contact us at ${siteConfig.phone} for current pricing and turnaround times. We'll confirm what information is needed and walk you through the process.`,
     relatedSlugs: ['criminal-background-check', 'pre-employment-screening', 'fbi-background-checks'],
   },
 ]

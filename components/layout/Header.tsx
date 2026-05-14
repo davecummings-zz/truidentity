@@ -5,6 +5,7 @@ import { siteConfig } from '@/config/site'
 import { services } from '@/config/services'
 import { LanguageToggle } from './LanguageToggle'
 import { MobileMenu } from './MobileMenu'
+import { ServicesDropdown } from './ServicesDropdown'
 
 interface HeaderProps {
   locale: string
@@ -42,26 +43,13 @@ export async function Header({ locale }: HeaderProps) {
             </Link>
 
             {/* Services dropdown */}
-            <div className="relative group">
-              <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-navy hover:text-accent-blue transition-colors rounded hover:bg-navy/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
-                {t('services')}
-                <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-card-hover border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
-                <div className="py-2">
-                  <Link href={`/${locale}/services`} className="block px-4 py-2.5 text-sm font-semibold text-navy hover:bg-navy/5 transition-colors border-b border-gray-100 mb-1">
-                    {t('servicesDropdown')}
-                  </Link>
-                  {services.map((s) => (
-                    <Link key={s.slug} href={`/${locale}/services/${s.slug}`} className="block px-4 py-2 text-sm text-navy/80 hover:bg-navy/5 hover:text-navy transition-colors">
-                      {ts(`${s.slug}.name`)}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <ServicesDropdown
+              label={t('services')}
+              allServicesLabel={t('servicesDropdown')}
+              services={services.map((s) => ({ slug: s.slug, name: ts(`${s.slug}.name`) }))}
+              locale={locale}
+              allServicesHref={`/${locale}/services`}
+            />
 
             <Link href={`/${locale}/service-finder`} className="px-3 py-2 text-sm font-medium text-navy hover:text-accent-blue transition-colors rounded hover:bg-navy/5">
               {t('serviceFinder')}

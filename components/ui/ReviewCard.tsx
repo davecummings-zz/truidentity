@@ -65,7 +65,7 @@ export function ReviewCard({
         &rdquo;
       </blockquote>
 
-      <p className="text-xs text-gray-400 mb-4">{relativePublishTime}</p>
+      <p className="text-xs text-gray-500 mb-4">{relativePublishTime}</p>
 
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -84,7 +84,7 @@ export function ReviewCard({
           href={siteConfig.googleBusinessUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-600 transition-colors flex-shrink-0 ml-2"
+          className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-700 transition-colors flex-shrink-0 ml-2"
           aria-label={postedOnLabel}
         >
           <GoogleGLogo />

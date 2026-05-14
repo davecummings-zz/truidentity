@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { siteConfig } from '@/config/site'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbSchema } from '@/lib/schemas'
 
 interface PrivacyPageProps {
   params: Promise<{ locale: string }>
@@ -13,6 +15,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
     title: t('title'),
     description: t('description'),
     alternates: { canonical: `${siteConfig.siteUrl}/${locale}/privacy-policy` },
+    openGraph: { url: `${siteConfig.siteUrl}/${locale}/privacy-policy`, title: t('title'), description: t('description') },
   }
 }
 
@@ -22,7 +25,9 @@ export default async function PrivacyPolicyPage({ params }: PrivacyPageProps) {
   const sections = t.raw('sections') as { heading: string; content: string }[]
 
   return (
-    <div className="py-12 lg:py-20">
+    <>
+      <JsonLd data={breadcrumbSchema(locale, [{ key: 'privacy-policy', url: `${siteConfig.siteUrl}/${locale}/privacy-policy` }])} />
+      <div className="py-12 lg:py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-extrabold text-navy mb-2">{t('heading')}</h1>
         <p className="text-sm text-gray-500 mb-8">{t('lastUpdated')}</p>
@@ -37,5 +42,6 @@ export default async function PrivacyPolicyPage({ params }: PrivacyPageProps) {
         </div>
       </div>
     </div>
+    </>
   )
 }

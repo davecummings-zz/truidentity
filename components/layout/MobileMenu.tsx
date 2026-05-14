@@ -1,10 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { services } from '@/config/services'
 import { siteConfig } from '@/config/site'
+
+const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false)
@@ -14,19 +16,52 @@ export function MobileMenu() {
   const th = useTranslations('header')
   const tc = useTranslations('common')
   const ts = useTranslations('serviceItems')
+  const drawerRef = useRef<HTMLElement>(null)
+  const triggerRef = useRef<HTMLButtonElement>(null)
 
   const close = () => {
     setOpen(false)
     setServicesOpen(false)
+    triggerRef.current?.focus()
   }
+
+  useEffect(() => {
+    if (!open) return
+
+    // Move focus into the drawer on open
+    const firstFocusable = drawerRef.current?.querySelectorAll<HTMLElement>(FOCUSABLE)[0]
+    firstFocusable?.focus()
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { close(); return }
+      if (e.key !== 'Tab') return
+
+      const focusable = Array.from(drawerRef.current?.querySelectorAll<HTMLElement>(FOCUSABLE) ?? [])
+      if (focusable.length === 0) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus() }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus() }
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open])
 
   return (
     <>
       <button
+        ref={triggerRef}
         onClick={() => setOpen(!open)}
-        className="md:hidden p-2 rounded text-navy hover:bg-navy/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue"
+        className="md:hidden p-2.5 rounded text-navy hover:bg-navy/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue"
         aria-label={open ? th('menuClose') : th('menuOpen')}
         aria-expanded={open}
+        aria-controls="mobile-menu-drawer"
       >
         {open ? (
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -50,12 +85,12 @@ export function MobileMenu() {
           <div className="absolute inset-0 bg-black/40" onClick={close} aria-hidden="true" />
 
           {/* Drawer */}
-          <nav className="absolute top-0 right-0 w-80 max-w-full h-full bg-white shadow-xl flex flex-col overflow-y-auto">
+          <nav id="mobile-menu-drawer" ref={drawerRef} className="absolute top-0 right-0 w-80 max-w-full h-full bg-white shadow-xl flex flex-col overflow-y-auto">
             <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
               <span className="font-semibold text-navy">{tc('menuLabel')}</span>
               <button
                 onClick={close}
-                className="p-2 rounded text-navy hover:bg-navy/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue"
+                className="p-2.5 rounded text-navy hover:bg-navy/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue"
                 aria-label={th('menuClose')}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -67,6 +102,7 @@ export function MobileMenu() {
             {/* Click-to-call */}
             <a
               href={`tel:${siteConfig.phone.replace(/\D/g, '')}`}
+              aria-label={`Call ${siteConfig.phone}`}
               className="flex items-center gap-2 px-5 py-4 bg-accent-orange/10 text-accent-orange font-semibold hover:bg-accent-orange/20 transition-colors"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -105,13 +141,13 @@ export function MobileMenu() {
                 {servicesOpen && (
                   <ul className="ml-3 mt-1 space-y-1">
                     <li>
-                      <Link href={`/${locale}/services`} onClick={close} className="block px-3 py-2 rounded-lg text-sm text-navy/80 hover:bg-navy/5 transition-colors">
+                      <Link href={`/${locale}/services`} onClick={close} className="block px-3 py-2.5 rounded-lg text-sm text-navy/80 hover:bg-navy/5 transition-colors">
                         {t('servicesDropdown')}
                       </Link>
                     </li>
                     {services.map((s) => (
                       <li key={s.slug}>
-                        <Link href={`/${locale}/services/${s.slug}`} onClick={close} className="block px-3 py-2 rounded-lg text-sm text-navy/80 hover:bg-navy/5 transition-colors">
+                        <Link href={`/${locale}/services/${s.slug}`} onClick={close} className="block px-3 py-2.5 rounded-lg text-sm text-navy/80 hover:bg-navy/5 transition-colors">
                           {ts(`${s.slug}.name`)}
                         </Link>
                       </li>
