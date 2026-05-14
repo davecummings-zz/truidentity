@@ -29,7 +29,11 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
     description: siteConfig.description,
     alternates: {
       canonical: locale === 'en' ? siteConfig.siteUrl : `${siteConfig.siteUrl}/${locale}`,
-      languages: { en: siteConfig.siteUrl, es: `${siteConfig.siteUrl}/es` },
+      languages: {
+        'x-default': siteConfig.siteUrl,
+        en: `${siteConfig.siteUrl}/en`,
+        es: `${siteConfig.siteUrl}/es`,
+      },
     },
     openGraph: {
       url: locale === 'en' ? siteConfig.siteUrl : `${siteConfig.siteUrl}/${locale}`,

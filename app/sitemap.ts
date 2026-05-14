@@ -23,8 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const locale of locales) {
     for (const path of staticPaths) {
+      const isEnHomepage = locale === 'en' && path === ''
       entries.push({
-        url: `${base}/${locale}${path}`,
+        url: isEnHomepage ? base : `${base}/${locale}${path}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: path === '' ? 1.0 : 0.8,
