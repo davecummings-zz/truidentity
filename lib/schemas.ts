@@ -52,7 +52,7 @@ export function localBusinessSchema() {
 }
 
 export function serviceSchema(service: Service, locale: string) {
-  return {
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: service.name,
@@ -64,12 +64,15 @@ export function serviceSchema(service: Service, locale: string) {
     },
     areaServed: 'South Texas',
     url: `${siteConfig.siteUrl}/${locale}/services/${service.slug}`,
-    offers: {
-      '@type': 'Offer',
-      price: service.price.replace('$', ''),
-      priceCurrency: 'USD',
-    },
   }
+  if (service.price.startsWith('$')) {
+    schema.offers = {
+      '@type': 'Offer',
+      price: service.price.replace(/[$+]/g, ''),
+      priceCurrency: 'USD',
+    }
+  }
+  return schema
 }
 
 export function faqPageSchema(items: { question: string; answer: string }[]) {

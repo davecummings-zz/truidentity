@@ -11,6 +11,9 @@ import {
   ClipboardList,
   Upload,
   MapPin,
+  ShieldAlert,
+  UserCheck,
+  Building2,
   CalendarDays,
   type LucideIcon,
 } from 'lucide-react'
@@ -24,6 +27,9 @@ const serviceIcons: Record<string, LucideIcon> = {
   'nfa-fingerprinting': ClipboardList,
   'atf-efile-services': Upload,
   'mobile-fingerprinting': MapPin,
+  'criminal-background-check': ShieldAlert,
+  'pre-employment-screening': UserCheck,
+  'tenant-screening': Building2,
 }
 
 function ServiceIcon({ slug, size, containerClass }: { slug: string; size: number; containerClass: string }) {
@@ -35,7 +41,7 @@ function ServiceIcon({ slug, size, containerClass }: { slug: string; size: numbe
   )
 }
 
-type Step = 'purpose' | 'format' | 'international' | 'result' | 'all'
+type Step = 'purpose' | 'format' | 'international' | 'backgroundCheckType' | 'allBackgroundChecks' | 'result' | 'all'
 
 interface State {
   step: Step
@@ -75,13 +81,19 @@ export function ServiceFinder() {
   const purposeOptions = t.raw('steps.purpose.options') as string[]
   const formatOptions = t.raw('steps.format.options') as string[]
   const internationalOptions = t.raw('steps.international.options') as string[]
+  const backgroundCheckOptions = t.raw('steps.backgroundCheckType.options') as string[]
+
+  const backgroundCheckServices = services.filter((s) => s.category === 'background-checks')
+
+  const showBack = state.history.length > 0 && state.step !== 'result' && state.step !== 'all' && state.step !== 'allBackgroundChecks'
+  const showStartOver = state.step !== 'purpose' || state.history.length > 0
 
   return (
     <div className="max-w-2xl mx-auto">
       {/* Progress / controls */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2 text-sm text-gray-500">
-          {state.history.length > 0 && state.step !== 'result' && state.step !== 'all' && (
+          {showBack && (
             <button
               onClick={back}
               className="flex items-center gap-1.5 text-navy font-medium hover:text-accent-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue rounded"
@@ -90,7 +102,7 @@ export function ServiceFinder() {
             </button>
           )}
         </div>
-        {(state.step !== 'purpose' || state.history.length > 0) && (
+        {showStartOver && (
           <button
             onClick={reset}
             className="text-sm text-gray-500 hover:text-navy transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue rounded"
@@ -113,6 +125,7 @@ export function ServiceFinder() {
                     else if (i === 1) push('result', getService('nfa-fingerprinting'))
                     else if (i === 2) push('result', getService('live-scan-fingerprinting'))
                     else if (i === 3) push('international')
+                    else if (i === 4) push('backgroundCheckType')
                     else push('all')
                   }}
                   className="w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 bg-white hover:border-accent-blue hover:bg-accent-blue/5 text-sm font-medium text-navy transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue"
@@ -169,6 +182,30 @@ export function ServiceFinder() {
         </div>
       )}
 
+      {/* Step: Background Check Type */}
+      {state.step === 'backgroundCheckType' && (
+        <div>
+          <h2 className="text-xl font-bold text-navy mb-6">{t('steps.backgroundCheckType.question')}</h2>
+          <ul className="space-y-3">
+            {backgroundCheckOptions.map((option, i) => (
+              <li key={i}>
+                <button
+                  onClick={() => {
+                    if (i === 0) push('result', getService('pre-employment-screening'))
+                    else if (i === 1) push('result', getService('tenant-screening'))
+                    else if (i === 2) push('result', getService('criminal-background-check'))
+                    else push('allBackgroundChecks')
+                  }}
+                  className="w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 bg-white hover:border-accent-blue hover:bg-accent-blue/5 text-sm font-medium text-navy transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue"
+                >
+                  {option}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {/* Result */}
       {state.step === 'result' && state.result && (
         <div className="rounded-2xl border-2 border-accent-blue/40 bg-white p-6 shadow-card">
@@ -182,7 +219,7 @@ export function ServiceFinder() {
 
           <div className="flex items-baseline gap-2 mb-5">
             <span className="text-sm text-gray-500">{t('results.price')}:</span>
-            <span className="text-3xl font-extrabold text-navy">{state.result.price}</span>
+            <span className="text-2xl font-extrabold text-navy">{state.result.price}</span>
             {state.result.priceNote && (
               <span className="text-xs text-gray-500">{state.result.priceNote}</span>
             )}
@@ -203,10 +240,50 @@ export function ServiceFinder() {
               {t('results.learnMore')}
             </Link>
           </div>
+
+          <button
+            onClick={back}
+            className="mt-4 w-full text-center text-sm text-gray-500 hover:text-navy transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue rounded"
+          >
+            ← {t('back')}
+          </button>
         </div>
       )}
 
-      {/* All services */}
+      {/* All background check services */}
+      {state.step === 'allBackgroundChecks' && (
+        <div>
+          <div className="mb-6">
+            <h2 className="text-xl font-bold text-navy">{t('allBackgroundChecks.heading')}</h2>
+            <p className="text-gray-600 text-sm mt-1">{t('allBackgroundChecks.subheading')}</p>
+          </div>
+          <ul className="space-y-3">
+            {backgroundCheckServices.map((s) => (
+              <li key={s.slug}>
+                <Link
+                  href={`/${locale}/services/${s.slug}`}
+                  className="flex items-center gap-4 px-5 py-4 rounded-xl border-2 border-gray-200 bg-white hover:border-accent-blue hover:bg-accent-blue/5 transition-colors"
+                >
+                  <ServiceIcon slug={s.slug} size={18} containerClass="w-9 h-9 rounded-lg bg-accent-blue/10 flex items-center justify-center flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="text-sm font-bold text-navy">{ts(`${s.slug}.name`)}</p>
+                    <p className="text-xs text-gray-500 truncate">{ts(`${s.slug}.shortDescription`)}</p>
+                  </div>
+                  <span className="ml-auto text-sm font-medium text-gray-500 flex-shrink-0">{tc('callUs')}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <button
+            onClick={back}
+            className="mt-5 flex items-center gap-1.5 text-sm text-navy font-medium hover:text-accent-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue rounded"
+          >
+            ← {t('back')}
+          </button>
+        </div>
+      )}
+
+      {/* All fingerprinting services */}
       {state.step === 'all' && (
         <div>
           <div className="mb-6">

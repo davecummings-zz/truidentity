@@ -1,7 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { siteConfig } from '@/config/site'
-import { TruidentityLogo } from '@/components/ui/TruidentityLogo'
 
 interface FooterProps {
   locale: string
@@ -35,7 +35,13 @@ export async function Footer({ locale }: FooterProps) {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href={`/${locale}`} className="inline-block mb-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white rounded">
-              <TruidentityLogo className="h-9 w-auto" variant="white" />
+              <Image
+                src="/images/logo-w.png"
+                alt="TruIdentity Screening Solutions"
+                height={40}
+                width={93}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-4">{t('tagline')}</p>
             {siteConfig.googleBusinessUrl !== 'GOOGLE_BUSINESS_URL' && (

@@ -9,6 +9,9 @@ import {
   ClipboardList,
   Upload,
   MapPin,
+  ShieldAlert,
+  UserCheck,
+  Building2,
 } from 'lucide-react'
 import type { LucideProps } from 'lucide-react'
 import type { FC } from 'react'
@@ -25,6 +28,9 @@ const serviceIcons: Record<string, FC<LucideProps>> = {
   'nfa-fingerprinting': ClipboardList,
   'atf-efile-services': Upload,
   'mobile-fingerprinting': MapPin,
+  'criminal-background-check': ShieldAlert,
+  'pre-employment-screening': UserCheck,
+  'tenant-screening': Building2,
 }
 
 export async function ServicesGrid({ locale }: ServicesGridProps) {

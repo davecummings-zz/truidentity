@@ -34,6 +34,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     creator: siteConfig.twitterHandle,
   },
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/images/logo-b.png',
+  },
 }
 
 interface LocaleLayoutProps {

@@ -12,6 +12,7 @@ export interface Service {
   whatToBring: string[]
   whatToExpect: string
   relatedSlugs: string[]
+  category: 'fingerprinting' | 'background-checks'
 }
 
 export const services: Service[] = [
@@ -19,13 +20,15 @@ export const services: Service[] = [
     slug: 'fbi-background-checks',
     name: 'FBI Background Checks',
     shortDescription:
-      'Official FBI Identity History Summary — results delivered in as little as 48 hours.',
-    price: '$49',
+      'Official FBI Identity History Summary — results delivered in as little as 24 hours.',
+    price: '$90',
+    priceNote: 'Non-U.S. Citizens (Email + Hard Copy): $75',
     popular: true,
     emoji: '🔍',
-    trustLine: '48-hour results. No-rejection guarantee. Delivered directly from the FBI.',
+    category: 'fingerprinting',
+    trustLine: '24-hour results. No-rejection guarantee. Delivered directly from the FBI.',
     whatItIs:
-      'An FBI Background Check — officially called an Identity History Summary — is an official record of your criminal history as maintained by the FBI. Required for many employment positions, professional licenses, volunteer roles, and personal record requests. Results are returned directly from the FBI, typically within 48 hours of submission through our authorized channeler.',
+      'An FBI Background Check — officially called an Identity History Summary — is an official record of your criminal history as maintained by the FBI. Required for many employment positions, professional licenses, volunteer roles, and personal record requests. Results are returned directly from the FBI, typically within 24 hours of submission.',
     whoNeeds: [
       'Job applicants for positions requiring a federal background check',
       'Healthcare, education, and finance professionals seeking licensure',
@@ -39,7 +42,7 @@ export const services: Service[] = [
       'Completed FD-258 fingerprint card if your agency provided one (we also stock them on-site)',
     ],
     whatToExpect:
-      'The fingerprinting process takes about 10 minutes. Results are returned directly from the FBI — most arrive within 48 hours. If your fingerprints are rejected for quality reasons, we reprint them at no charge.',
+      'The fingerprinting process takes about 10 minutes. Results are returned directly from the FBI — most arrive within 24 hours. If your fingerprints are rejected for quality reasons, we reprint them at no charge.',
     relatedSlugs: ['live-scan-fingerprinting', 'fbi-apostille', 'ink-fingerprinting'],
   },
   {
@@ -49,6 +52,7 @@ export const services: Service[] = [
       'FBI background check authenticated for international use — required for work visas, residency, and immigration.',
     price: '$220',
     emoji: '🌐',
+    category: 'fingerprinting',
     trustLine: 'Full-service — fingerprinting, FBI processing, and apostille authentication handled for you.',
     whatItIs:
       'An FBI Apostille is an FBI Identity History Summary that has been authenticated with an apostille certificate, making it legally valid in countries that are members of the Hague Apostille Convention. Required for international employment, immigration applications, permanent residency, and international adoption. We handle the complete process — fingerprinting, FBI submission, and apostille certification — in a single appointment.',
@@ -75,6 +79,7 @@ export const services: Service[] = [
       'Traditional ink-rolled FD-258 fingerprint cards — completed same day, ready to mail.',
     price: '$49',
     emoji: '✋',
+    category: 'fingerprinting',
     trustLine: 'Completed cards in hand same day — no waiting, no mailing delays on our end.',
     whatItIs:
       'Ink fingerprinting uses traditional ink to roll your fingerprints onto standard FD-258 fingerprint cards. Many federal agencies, out-of-state licensing boards, and certain background check providers still require physical ink cards rather than electronic submission. Cards are prepared and ready for you to mail same day.',
@@ -96,17 +101,17 @@ export const services: Service[] = [
     slug: 'live-scan-fingerprinting',
     name: 'Live Scan Fingerprinting',
     shortDescription:
-      'Electronic fingerprint capture transmitted directly to the FBI or TX DPS — no ink, results in 24–72 hours.',
+      'Digital fingerprint capture transmitted directly to the FBI — no ink, results in 24–72 hours.',
     price: '$49',
     emoji: '📡',
-    trustLine: 'No ink. No cards. Results transmitted directly to your agency — typically within 24–72 hours.',
+    category: 'fingerprinting',
+    trustLine: 'No ink. No cards. Results transmitted directly to the FBI — typically within 24–72 hours.',
     whatItIs:
-      'Live Scan captures your fingerprints electronically using a high-resolution digital scanner and transmits them directly to the requesting agency — no ink, no physical card, no mailing. This is the required method for most Texas state licensing boards, teachers, childcare workers, healthcare professionals, and adoption applicants in Texas.',
+      'Live Scan captures your fingerprints electronically using a high-resolution digital scanner and transmits them directly to the FBI — no ink, no physical card, no mailing. Required for teachers, childcare workers, healthcare professionals, and adoption applicants. Note: Identigo holds an exclusive contract with TX DPS — TruIdentity submits Live Scan directly to the FBI.',
     whoNeeds: [
       'Teachers and school district employees (TEA, SBEC)',
       'Childcare and daycare workers',
       'Healthcare professionals seeking Texas licensure',
-      'Texas state license applicants through TX DPS',
       'Adoption applicants and foster care providers',
     ],
     whatToBring: [
@@ -124,7 +129,9 @@ export const services: Service[] = [
     shortDescription:
       'Two FD-258 fingerprint cards for ATF Form 4 or Form 1 NFA transfers — completed in 10 minutes.',
     price: '$49',
+    priceNote: 'EFT File (electronic submission): $75',
     emoji: '🔒',
+    category: 'fingerprinting',
     trustLine: 'Correctly completed FD-258 cards ready for your Form 4 or Form 1 — done right the first time.',
     whatItIs:
       'NFA (National Firearms Act) Fingerprinting produces the two completed FD-258 fingerprint card sets required by the ATF when purchasing or transferring NFA-regulated items — suppressors, short-barreled rifles (SBRs), short-barreled shotguns (SBSs), and machine guns. Correctly completed cards are critical; errors delay your approval by months.',
@@ -151,6 +158,7 @@ export const services: Service[] = [
       'Electronic NFA application through the ATF eForms system — weeks faster than paper filing.',
     price: '$75',
     emoji: '💻',
+    category: 'fingerprinting',
     trustLine: 'We guide you through every field — approvals in weeks, not months.',
     whatItIs:
       'ATF eFile Services guide you through submitting your NFA application electronically through the ATF eForms system. Electronic submissions are processed significantly faster than paper — often approved in weeks rather than months. We handle the fingerprinting, walk through every field of the form with you, and submit your completed application.',
@@ -176,9 +184,10 @@ export const services: Service[] = [
     name: 'Mobile Fingerprinting',
     shortDescription:
       'Professional fingerprinting at your location — offices, schools, and facilities throughout South Texas.',
-    price: '$75+',
-    priceNote: 'Starting price. Travel fee may apply based on distance from McAllen.',
+    price: '$49',
+    priceNote: 'Per person (ink cards). Travel fee may apply based on distance from McAllen.',
     emoji: '🚗',
+    category: 'fingerprinting',
     trustLine: 'We come to you — anywhere in South Texas, all equipment included.',
     whatItIs:
       'Mobile fingerprinting brings professional-grade fingerprinting equipment directly to your office, school, clinic, or facility — no travel required for your staff or group. Ideal for employers onboarding multiple employees, school districts, healthcare organizations, nonprofits, and government agencies throughout South Texas.',
@@ -197,6 +206,86 @@ export const services: Service[] = [
     whatToExpect:
       'Contact us in advance to confirm your group\'s specific needs, location, and scheduling. We bring all necessary equipment and handle everything on-site — Live Scan, ink cards, or both. Minimum group size may apply. Travel fee is based on distance from our McAllen location.',
     relatedSlugs: ['live-scan-fingerprinting', 'fbi-background-checks', 'ink-fingerprinting'],
+  },
+  {
+    slug: 'criminal-background-check',
+    name: 'Criminal Background Check',
+    shortDescription:
+      'Accurate criminal history report for individuals and organizations — contact us for current pricing.',
+    price: 'Contact for pricing',
+    priceNote: '(956) 670-6144',
+    emoji: '🔎',
+    category: 'background-checks',
+    trustLine: 'Contact us for pricing — (956) 670-6144',
+    whatItIs:
+      'A Criminal Background Check searches public criminal records to identify any prior convictions, arrests, or charges. Commonly required by employers, landlords, and organizations to verify an individual\'s criminal history.',
+    whoNeeds: [
+      'Individuals needing a personal criminal record check',
+      'Employers screening job applicants',
+      'Organizations requiring documented criminal history reviews',
+      'Landlords and property managers',
+    ],
+    whatToBring: [
+      'Valid government-issued photo ID',
+      'Social Security Number',
+    ],
+    whatToExpect:
+      'Contact us at (956) 670-6144 for current pricing and turnaround times. We\'ll guide you through the process and confirm which type of background check best meets your needs.',
+    relatedSlugs: ['pre-employment-screening', 'tenant-screening', 'fbi-background-checks'],
+  },
+  {
+    slug: 'pre-employment-screening',
+    name: 'Pre-Employment Screening',
+    shortDescription:
+      'Comprehensive background screening for employers — contact us for current pricing.',
+    price: 'Contact for pricing',
+    priceNote: '(956) 670-6144',
+    emoji: '💼',
+    category: 'background-checks',
+    trustLine: 'Contact us for pricing — (956) 670-6144',
+    whatItIs:
+      'Pre-Employment Screening provides employers with a thorough background check on job applicants — covering criminal history and more — to help make confident, informed hiring decisions.',
+    whoNeeds: [
+      'Employers hiring new staff requiring background checks',
+      'HR departments managing onboarding compliance',
+      'Businesses in regulated industries (healthcare, education, finance)',
+      'Staffing agencies and temp firms',
+    ],
+    whatToBring: [
+      'Valid government-issued photo ID',
+      'Social Security Number',
+      'Applicant\'s signed authorization (provided by employer)',
+    ],
+    whatToExpect:
+      'Contact us at (956) 670-6144 for current pricing and turnaround times. We work with employers to determine the right screening package for their industry and hiring requirements.',
+    relatedSlugs: ['criminal-background-check', 'tenant-screening', 'fbi-background-checks'],
+  },
+  {
+    slug: 'tenant-screening',
+    name: 'Tenant Screening',
+    shortDescription:
+      'Criminal background check for landlords and property managers — contact us for current pricing.',
+    price: 'Contact for pricing',
+    priceNote: '(956) 670-6144',
+    emoji: '🏠',
+    category: 'background-checks',
+    trustLine: 'Contact us for pricing — (956) 670-6144',
+    whatItIs:
+      'Tenant Screening provides landlords and property managers with a criminal background check on prospective tenants, helping protect your property and other residents.',
+    whoNeeds: [
+      'Landlords screening prospective tenants',
+      'Property management companies',
+      'Homeowners renting individual units',
+      'HOAs and residential community managers',
+    ],
+    whatToBring: [
+      'Valid government-issued photo ID',
+      'Social Security Number',
+      'Tenant\'s signed authorization',
+    ],
+    whatToExpect:
+      'Contact us at (956) 670-6144 for current pricing and turnaround times. We\'ll confirm what information is needed and walk you through the process.',
+    relatedSlugs: ['criminal-background-check', 'pre-employment-screening', 'fbi-background-checks'],
   },
 ]
 

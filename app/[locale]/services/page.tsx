@@ -9,10 +9,12 @@ import {
   ClipboardList,
   Upload,
   MapPin,
+  ShieldAlert,
+  UserCheck,
+  Building2,
   type LucideIcon,
 } from 'lucide-react'
 import { services } from '@/config/services'
-import { PricingCard } from '@/components/ui/PricingCard'
 import { PriceEstimator } from '@/components/ui/PriceEstimator'
 import { siteConfig } from '@/config/site'
 
@@ -24,6 +26,9 @@ const serviceIcons: Record<string, LucideIcon> = {
   'nfa-fingerprinting': ClipboardList,
   'atf-efile-services': Upload,
   'mobile-fingerprinting': MapPin,
+  'criminal-background-check': ShieldAlert,
+  'pre-employment-screening': UserCheck,
+  'tenant-screening': Building2,
 }
 
 interface ServicesPageProps {
@@ -46,6 +51,44 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
   const t = await getTranslations({ locale, namespace: 'services' })
   const tc = await getTranslations({ locale, namespace: 'common' })
   const ts = await getTranslations({ locale, namespace: 'serviceItems' })
+
+  const fingerprintingServices = services.filter(s => s.category === 'fingerprinting')
+  const backgroundCheckServices = services.filter(s => s.category === 'background-checks')
+
+  const renderServiceCard = (service: typeof services[0]) => {
+    const Icon = serviceIcons[service.slug]
+    return (
+      <div key={service.slug} className="flex flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-card hover:shadow-card-hover transition-shadow">
+        <div className="flex items-start gap-3 mb-3">
+          <div className="w-10 h-10 rounded-xl bg-accent-blue/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+            {Icon && <Icon size={20} className="text-accent-blue" />}
+          </div>
+          <div>
+            <h2 className="text-base font-bold text-navy leading-tight">{ts(`${service.slug}.name`)}</h2>
+            <span className="text-lg font-extrabold text-accent-blue">{service.price}</span>
+            {service.popular && (
+              <span className="ml-2 inline-flex text-xs font-bold text-accent-orange">★ {tc('mostPopular')}</span>
+            )}
+          </div>
+        </div>
+        <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-4">{ts(`${service.slug}.shortDescription`)}</p>
+        <div className="flex gap-2">
+          <Link
+            href={`/${locale}/services/${service.slug}`}
+            className="flex-1 text-center text-xs font-semibold border border-navy text-navy rounded-lg py-2 hover:bg-navy hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"
+          >
+            {tc('learnMore')}
+          </Link>
+          <Link
+            href={`/${locale}/book`}
+            className="flex-1 text-center text-xs font-semibold bg-navy text-white rounded-lg py-2 hover:bg-navy-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"
+          >
+            {tc('bookNow')}
+          </Link>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="py-16 lg:py-24">
@@ -76,41 +119,22 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
             <PriceEstimator services={services} />
           </aside>
 
-          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-            {services.map((service) => {
-              const Icon = serviceIcons[service.slug]
-              return (
-              <div key={service.slug} className="flex flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-card hover:shadow-card-hover transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-accent-blue/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
-                    {Icon && <Icon size={20} className="text-accent-blue" />}
-                  </div>
-                  <div>
-                    <h2 className="text-base font-bold text-navy leading-tight">{ts(`${service.slug}.name`)}</h2>
-                    <span className="text-lg font-extrabold text-accent-blue">{service.price}</span>
-                    {service.popular && (
-                      <span className="ml-2 inline-flex text-xs font-bold text-accent-orange">★ {tc('mostPopular')}</span>
-                    )}
-                  </div>
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-4">{ts(`${service.slug}.shortDescription`)}</p>
-                <div className="flex gap-2">
-                  <Link
-                    href={`/${locale}/services/${service.slug}`}
-                    className="flex-1 text-center text-xs font-semibold border border-navy text-navy rounded-lg py-2 hover:bg-navy hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"
-                  >
-                    {tc('learnMore')}
-                  </Link>
-                  <Link
-                    href={`/${locale}/book`}
-                    className="flex-1 text-center text-xs font-semibold bg-navy text-white rounded-lg py-2 hover:bg-navy-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"
-                  >
-                    {tc('bookNow')}
-                  </Link>
-                </div>
+          <div className="lg:col-span-3 space-y-10">
+            {/* Fingerprinting Services */}
+            <div>
+              <h2 className="text-xl font-bold text-navy mb-5">{t('categories.fingerprinting')}</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+                {fingerprintingServices.map(renderServiceCard)}
               </div>
-              )
-            })}
+            </div>
+
+            {/* Background Checks */}
+            <div>
+              <h2 className="text-xl font-bold text-navy mb-5">{t('categories.backgroundChecks')}</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+                {backgroundCheckServices.map(renderServiceCard)}
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -22,10 +22,10 @@ export const siteConfig = {
   noWalkIns: true,
   siteUrl: 'https://truidentity956.com',
   description:
-    'FBI Background Checks with 48-hour results, Live Scan, ATF eFile, NFA Fingerprinting, and Mobile Fingerprinting — serving McAllen and the Rio Grande Valley. Appointment-only, bilingual service.',
+    'FBI Background Checks with 24-hour results, Live Scan, ATF eFile, NFA Fingerprinting, and Mobile Fingerprinting — serving McAllen and the Rio Grande Valley. Appointment-only, bilingual service.',
   locale: 'en_US',
   twitterHandle: '@truidentity956',
-  ogImage: '/og-image.png',
+  ogImage: '/images/logo-b.png',
 }
 
 export type SiteConfig = typeof siteConfig

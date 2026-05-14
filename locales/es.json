@@ -48,11 +48,10 @@
   },
   "home": {
     "hero": {
-      "headline": "Sus Huellas Listas Hoy — Resultados en 48 Horas",
-      "subheadline": "Antecedentes del FBI, Live Scan, ATF eFile y más. Atendemos a McAllen y todo el Valle del Río Grande — citas disponibles el mismo día.",
+      "headline": "Sus Huellas Listas Hoy — Resultados en 24 Horas",
+      "subheadline": "Antecedentes del FBI, Live Scan, ATF eFile y más. Atendemos a McAllen y todo el Valle del Río Grande — citas disponibles el mismo día de lunes a viernes.",
       "ctaBook": "Reservar Cita",
-      "ctaFinder": "Encontrar Mi Servicio",
-      "trustBadge": "Agente Autorizado del FBI · Sur de Texas"
+      "ctaFinder": "Encontrar Mi Servicio"
     },
     "noWalkInsBanner": {
       "text": "Solo con cita — para que lo atendamos sin esperas al llegar.",
@@ -80,7 +79,7 @@
       },
       "step2": {
         "title": "Reserve en Línea",
-        "description": "Elija el horario que le convenga. Hay citas disponibles de lunes a sábado — muchas veces hay lugar el mismo día."
+        "description": "Elija el horario que le convenga. Hay citas disponibles de lunes a sábado — citas el mismo día disponibles de lunes a viernes."
       },
       "step3": {
         "title": "Llegue y Listo",
@@ -102,20 +101,20 @@
     },
     "cta": {
       "heading": "¿Listo para Tramitarlo?",
-      "subheading": "Hay citas disponibles el mismo día. Reserve en línea en minutos.",
+      "subheading": "Hay citas disponibles el mismo día de lunes a viernes. Reserve en línea en minutos.",
       "button": "Reservar Cita"
     }
   },
   "about": {
     "meta": {
       "title": "Nosotros | TruIdentity — Huellas en McAllen, TX",
-      "description": "TruIdentity es el servicio de huellas digitales de confianza en McAllen — resultados del FBI en 48 horas, garantía sin rechazo y personal bilingüe."
+      "description": "TruIdentity es el servicio de huellas digitales de confianza en McAllen — resultados del FBI en 24 horas, garantía sin rechazo, personal bilingüe y citas el mismo día de lunes a viernes."
     },
     "heading": "Las Huellas Dactilares en las que el Sur de Texas Confía",
     "subheading": "Rápido, preciso y bilingüe — sirviendo a McAllen y el Valle del Río Grande.",
     "story": {
       "heading": "Nuestra Historia",
-      "body1": "TruIdentity Screening Solutions fue fundada en 2024 por Bill Hawkins, un nativo del sur de Texas que vio lo frustrante que podía ser el proceso de huellas dactilares — formularios confusos, largas esperas y rechazos que retrasaban a los solicitantes por semanas. El objetivo era simple: hacer que las huellas dactilares profesionales fueran rápidas, precisas y sin estrés para todos en el Valle del Río Grande.",
+      "body1": "TruIdentity Screening Solutions fue fundada en 2024 por Bill Hawkins, un exoficial de las fuerzas del orden de Texas con amplia experiencia investigativa, decidido a hacer que las huellas dactilares profesionales fueran rápidas, precisas y sin estrés para todos en el Valle del Río Grande.",
       "body2": "Solo en nuestro primer año, hemos ganado 56 reseñas de cinco estrellas de clientes en todo el Valle — enfermeras, maestros, dueños de armas, padres adoptivos y personas en búsqueda de empleo que necesitaban que todo saliera bien a la primera. Ese historial habla por sí solo.",
       "body3": "Hoy, TruIdentity maneja todo, desde verificaciones de antecedentes del FBI y envíos de ATF eFile hasta Live Scans para distritos escolares y huellas dactilares móviles para empresas en todo el Valle. Completamente bilingüe en inglés y español — porque todos en el sur de Texas merecen un camino claro hacia adelante."
     },
@@ -129,8 +128,8 @@
       "items": [
         {
           "icon": "clock",
-          "heading": "Resultados del FBI en 48 Horas",
-          "body": "La mayoría de los resultados de antecedentes del FBI llegan en 48 horas — no las semanas que le darían en otro lugar."
+          "heading": "Resultados del FBI en 24 Horas",
+          "body": "La mayoría de los resultados de antecedentes del FBI llegan en 24 horas — no las semanas que le darían en otro lugar."
         },
         {
           "icon": "shield-check",
@@ -140,7 +139,7 @@
         {
           "icon": "zap",
           "heading": "Citas el Mismo Día",
-          "body": "Hay horarios disponibles de lunes a sábado. Muchas veces hay citas el mismo día — reserve en línea cuando guste."
+          "body": "Hay horarios disponibles de lunes a sábado. Citas el mismo día disponibles de lunes a viernes — reserve en línea cuando guste."
         },
         {
           "icon": "languages",
@@ -165,9 +164,7 @@
     "certifications": {
       "heading": "Certificados y Autorizados",
       "items": [
-        "Agente Autorizado del FBI (FBI Channeler)",
         "Agente Autorizado ATF eFile",
-        "Proveedor Aprobado de Live Scan por Texas DPS",
         "Sirviendo al Sur de Texas desde 2024"
       ]
     },
@@ -180,12 +177,16 @@
   "services": {
     "meta": {
       "title": "Servicios de Huellas en McAllen, TX | TruIdentity",
-      "description": "Antecedentes del FBI en 48 horas, Live Scan, Huellas de Tinta, NFA, ATF eFile, Apostilla del FBI y Huellas Móviles en McAllen, TX."
+      "description": "Antecedentes del FBI en 24 horas, Live Scan, Huellas de Tinta, NFA, ATF eFile, Apostilla del FBI y Huellas Móviles en McAllen, TX."
     },
     "heading": "Servicios de Huellas Digitales",
     "subheading": "Todo lo que su agencia requiere — resultados profesionales, precios claros, disponibilidad el mismo día.",
     "notSure": "¿No sabe qué servicio necesita?",
     "useFinder": "Use el Buscador de Servicios Gratuito",
+    "categories": {
+      "fingerprinting": "Servicios de Huellas Digitales",
+      "backgroundChecks": "Verificaciones de Antecedentes"
+    },
     "estimator": {
       "heading": "Consulta Rápida de Precios",
       "selectLabel": "Seleccione un servicio",
@@ -207,7 +208,7 @@
   "book": {
     "meta": {
       "title": "Reservar Cita de Huellas | TruIdentity McAllen",
-      "description": "Programe su cita de huellas en McAllen — hay lugar el mismo día. Antecedentes FBI, Live Scan, NFA, ATF eFile y más."
+      "description": "Programe su cita de huellas en McAllen — hay lugar el mismo día de lunes a viernes. Antecedentes FBI, Live Scan, NFA, ATF eFile y más."
     },
     "heading": "Reserve Su Cita",
     "subheading": "Hay horarios disponibles de lunes a sábado. La mayoría de las citas toman 15 minutos o menos.",
@@ -285,7 +286,7 @@
     "items": [
       {
         "question": "¿Cuánto tardan en llegar los resultados de antecedentes del FBI?",
-        "answer": "La mayoría de los resultados del FBI llegan en 48 horas — mucho más rápido que las 2 a 4 semanas que citan muchos otros proveedores. Una vez que sus huellas se transmiten, el FBI se encarga del proceso. Nuestro estatus de agente autorizado significa que los envíos llegan al FBI el mismo día."
+        "answer": "La mayoría de los resultados del FBI llegan en 24 horas — mucho más rápido que las 2 a 4 semanas que citan muchos otros proveedores. Una vez que sus huellas se transmiten, el FBI se encarga del proceso."
       },
       {
         "question": "¿Qué pasa si el FBI rechaza mis huellas?",
@@ -297,15 +298,15 @@
       },
       {
         "question": "¿Aceptan entradas sin cita?",
-        "answer": "No — solo atendemos con cita previa. Esto significa que cuando llega, lo atendemos de inmediato, sin sala de espera ni sorpresas. Reservar tarda menos de 2 minutos en línea, y muchas veces hay citas disponibles el mismo día."
+        "answer": "No — solo atendemos con cita previa. Esto significa que cuando llega, lo atendemos de inmediato, sin sala de espera ni sorpresas. Reservar tarda menos de 2 minutos en línea, y muchas veces hay citas disponibles el mismo día de lunes a viernes."
       },
       {
         "question": "¿Cuánto tiempo toma la cita?",
-        "answer": "El proceso de huellas en sí toma unos 10 minutos. Calcule entre 15 y 20 minutos en total incluyendo el registro. Para sesiones de ATF eFile, calcule entre 30 y 45 minutos ya que llenamos todo el formulario de eForms juntos."
+        "answer": "El proceso de huellas en sí toma unos 10 minutos. Calcule entre 15 y 20 minutos en total incluyendo el registro."
       },
       {
         "question": "¿Qué es Live Scan y quién lo necesita?",
-        "answer": "Live Scan captura las huellas electrónicamente y las transmite directamente al FBI o a TX DPS — sin tinta, sin tarjeta física. Es requerido para maestros, empleados escolares, trabajadores de guardería, profesionales de la salud y la mayoría de los que solicitan una licencia estatal en Texas. Su empleador o junta de licencias le dará un número ORI y confirmará que se requiere Live Scan."
+        "answer": "Live Scan captura las huellas electrónicamente y las transmite directamente — sin tinta, sin tarjeta física. Es requerido para maestros, empleados escolares, trabajadores de guardería y profesionales de la salud. Su empleador o junta de licencias que requiera Live Scan especificará el canal de envío. Nota: Identigo tiene un contrato exclusivo con TX DPS — TruIdentity envía Live Scan directamente al FBI."
       },
       {
         "question": "¿Cuál es la diferencia entre Live Scan y las huellas de tinta?",
@@ -330,6 +331,10 @@
       {
         "question": "¿Qué formas de pago aceptan?",
         "answer": "Aceptamos efectivo, tarjetas de crédito y débito principales (Visa, Mastercard, American Express, Discover), Venmo y Zelle. El pago se cobra al momento del servicio."
+      },
+      {
+        "question": "¿Ofrecen verificaciones de antecedentes penales?",
+        "answer": "Sí — TruIdentity ofrece Verificaciones de Antecedentes Penales, Evaluación Previa al Empleo y Evaluación de Inquilinos. Contáctenos al (956) 670-6144 para conocer los precios actuales y los tiempos de entrega."
       }
     ]
   },
@@ -354,6 +359,7 @@
           "Arma de fuego o artículo NFA (supresor, SBR, SBS o ametralladora)",
           "Docencia, guardería, salud o una licencia estatal de Texas",
           "Uso internacional — visa, residencia, trabajo en el extranjero o inmigración",
+          "Necesito verificación de antecedentes para empleo, vivienda u otro fin",
           "No estoy seguro todavía"
         ]
       },
@@ -371,6 +377,15 @@
           "Una apostilla en el reporte del FBI (requerida para residencia, visas y migración)",
           "Solo una verificación estándar del FBI — sin apostilla"
         ]
+      },
+      "backgroundCheckType": {
+        "question": "¿Qué tipo de verificación de antecedentes necesita?",
+        "options": [
+          "Verificación de antecedentes laborales",
+          "Verificación para inquilino o arrendamiento",
+          "Verificación de antecedentes penales",
+          "No estoy seguro"
+        ]
       }
     },
     "results": {
@@ -383,6 +398,10 @@
     "allServices": {
       "heading": "Ver Todos los Servicios",
       "subheading": "¿No está seguro? Revise todo lo que ofrecemos — o llámenos y le ayudamos."
+    },
+    "allBackgroundChecks": {
+      "heading": "Servicios de Verificación de Antecedentes",
+      "subheading": "¿No está seguro cuál necesita? Revise los tres — o llámenos y le ayudamos."
     }
   },
   "privacy": {
@@ -419,9 +438,9 @@
   "serviceItems": {
     "fbi-background-checks": {
       "name": "Verificación de Antecedentes del FBI",
-      "shortDescription": "Resumen oficial del historial del FBI — resultados en tan solo 48 horas.",
-      "trustLine": "Resultados en 48 horas. Garantía sin rechazo. Entregados directamente del FBI.",
-      "whatItIs": "Una Verificación de Antecedentes del FBI — oficialmente llamada Resumen de Historial de Identidad — es un registro oficial de su historial criminal según lo mantiene el FBI. Es requerida para muchos puestos de trabajo, licencias profesionales, roles de voluntariado y solicitudes de record personal. Los resultados se devuelven directamente del FBI, generalmente en 48 horas después del envío a través de nuestro canal autorizado.",
+      "shortDescription": "Resumen oficial del historial del FBI — resultados en tan solo 24 horas.",
+      "trustLine": "Resultados en 24 horas. Garantía sin rechazo. Entregados directamente del FBI.",
+      "whatItIs": "Una Verificación de Antecedentes del FBI — oficialmente llamada Resumen de Historial de Identidad — es un registro oficial de su historial criminal según lo mantiene el FBI. Es requerida para muchos puestos de trabajo, licencias profesionales, roles de voluntariado y solicitudes de record personal. Los resultados se devuelven directamente del FBI, generalmente en 24 horas después del envío.",
       "whoNeeds": [
         "Solicitantes de empleo que requieren una verificación federal",
         "Profesionales de salud, educación y finanzas que buscan licencias",
@@ -434,7 +453,7 @@
         "Número de Seguro Social",
         "Tarjeta de huellas FD-258 si su agencia le proporcionó una (también tenemos disponibles en el local)"
       ],
-      "whatToExpect": "El proceso de toma de huellas toma unos 10 minutos. Los resultados se devuelven directamente del FBI — la mayoría llega en 48 horas. Si sus huellas son rechazadas por cuestiones de calidad, las tomamos de nuevo sin costo adicional.",
+      "whatToExpect": "El proceso de toma de huellas toma unos 10 minutos. Los resultados se devuelven directamente del FBI — la mayoría llega en 24 horas. Si sus huellas son rechazadas por cuestiones de calidad, las tomamos de nuevo sin costo adicional.",
       "pricingBullets": [
         "Solicitantes de empleo que requieren verificación federal",
         "Profesionales de salud, educación y finanzas",
@@ -489,14 +508,13 @@
     },
     "live-scan-fingerprinting": {
       "name": "Huellas Dactilares Live Scan",
-      "shortDescription": "Captura electrónica transmitida al FBI o TX DPS — sin tinta, resultados en 24–72 horas.",
-      "trustLine": "Sin tinta. Sin tarjetas. Resultados transmitidos directamente a su agencia — generalmente en 24 a 72 horas.",
-      "whatItIs": "Live Scan captura sus huellas dactilares electrónicamente con un escáner digital de alta resolución y las transmite directamente a la agencia solicitante — sin tinta, sin tarjeta física, sin envío por correo. Este es el método requerido para la mayoría de las juntas de licencias del estado de Texas, maestros, trabajadores de guardería, profesionales de la salud y solicitantes de adopción en Texas.",
+      "shortDescription": "Captura digital de huellas transmitida directamente al FBI — sin tinta, resultados en 24–72 horas.",
+      "trustLine": "Sin tinta. Sin tarjetas. Resultados transmitidos directamente al FBI — generalmente en 24 a 72 horas.",
+      "whatItIs": "Live Scan captura sus huellas dactilares electrónicamente con un escáner digital de alta resolución y las transmite directamente al FBI — sin tinta, sin tarjeta física, sin envío por correo. Requerido para maestros, trabajadores de guardería, profesionales de la salud y solicitantes de adopción. Nota: Identigo tiene un contrato exclusivo con TX DPS — TruIdentity envía Live Scan directamente al FBI.",
       "whoNeeds": [
         "Maestros y empleados de distritos escolares (TEA, SBEC)",
         "Trabajadores de guarderías y centros de cuidado infantil",
         "Profesionales de la salud que buscan licencia en Texas",
-        "Solicitantes de licencia estatal de Texas a través de TX DPS",
         "Solicitantes de adopción y padres de crianza"
       ],
       "whatToBring": [
@@ -508,7 +526,7 @@
       "pricingBullets": [
         "Maestros y empleados de distritos escolares",
         "Trabajadores de guarderías y profesionales de la salud",
-        "Solicitantes de licencia estatal de Texas (TX DPS)"
+        "Solicitantes de adopción y padres de crianza"
       ]
     },
     "nfa-fingerprinting": {
@@ -582,6 +600,74 @@
         "Empresas con múltiples empleados nuevos",
         "Escuelas e instituciones educativas",
         "Organizaciones de salud y sin fines de lucro"
+      ]
+    },
+    "criminal-background-check": {
+      "name": "Verificación de Antecedentes Penales",
+      "shortDescription": "Reporte preciso de antecedentes penales para personas y organizaciones — contáctenos para precios.",
+      "trustLine": "Contáctenos para más información — (956) 670-6144",
+      "whatItIs": "Una Verificación de Antecedentes Penales busca registros criminales públicos para identificar condenas, arrestos o cargos previos. Comúnmente requerida por empleadores, propietarios y organizaciones para verificar el historial criminal de una persona.",
+      "whoNeeds": [
+        "Personas que necesitan verificar su propio historial criminal",
+        "Empleadores que evalúan candidatos laborales",
+        "Organizaciones que requieren revisiones documentadas de historial criminal",
+        "Propietarios y administradores de propiedades"
+      ],
+      "whatToBring": [
+        "Identificación oficial con foto vigente",
+        "Número de Seguro Social"
+      ],
+      "whatToExpect": "Contáctenos al (956) 670-6144 para conocer los precios actuales y tiempos de entrega. Le orientaremos en el proceso y confirmaremos qué tipo de verificación cumple mejor con sus necesidades.",
+      "pricingBullets": [
+        "Empleadores que evalúan candidatos",
+        "Organizaciones que requieren revisiones de historial",
+        "Propietarios y administradores de propiedades"
+      ]
+    },
+    "pre-employment-screening": {
+      "name": "Evaluación Previa al Empleo",
+      "shortDescription": "Evaluación completa de antecedentes para empleadores — contáctenos para precios.",
+      "trustLine": "Contáctenos para más información — (956) 670-6144",
+      "whatItIs": "La Evaluación Previa al Empleo proporciona a los empleadores una verificación exhaustiva de antecedentes de los candidatos laborales — incluyendo historial criminal — para tomar decisiones de contratación informadas y seguras.",
+      "whoNeeds": [
+        "Empleadores que contratan nuevo personal con requisitos de verificación",
+        "Departamentos de Recursos Humanos que gestionan el cumplimiento de incorporación",
+        "Empresas en industrias reguladas (salud, educación, finanzas)",
+        "Agencias de empleo temporal"
+      ],
+      "whatToBring": [
+        "Identificación oficial con foto vigente",
+        "Número de Seguro Social",
+        "Autorización firmada del solicitante (proporcionada por el empleador)"
+      ],
+      "whatToExpect": "Contáctenos al (956) 670-6144 para conocer los precios actuales y tiempos de entrega. Trabajamos con empleadores para determinar el paquete de evaluación adecuado según su industria y requisitos de contratación.",
+      "pricingBullets": [
+        "Empleadores que contratan nuevo personal",
+        "Departamentos de RR. HH. que gestionan el cumplimiento",
+        "Empleadores en salud, educación y finanzas"
+      ]
+    },
+    "tenant-screening": {
+      "name": "Evaluación de Inquilinos",
+      "shortDescription": "Verificación de antecedentes penales para propietarios y administradores — contáctenos para precios.",
+      "trustLine": "Contáctenos para más información — (956) 670-6144",
+      "whatItIs": "La Evaluación de Inquilinos proporciona a propietarios y administradores de propiedades una verificación de antecedentes penales de posibles inquilinos, ayudando a proteger su propiedad y a otros residentes.",
+      "whoNeeds": [
+        "Propietarios que evalúan posibles inquilinos",
+        "Empresas de administración de propiedades",
+        "Propietarios que rentan unidades individuales",
+        "HOA y administradores de comunidades residenciales"
+      ],
+      "whatToBring": [
+        "Identificación oficial con foto vigente",
+        "Número de Seguro Social",
+        "Autorización firmada del inquilino"
+      ],
+      "whatToExpect": "Contáctenos al (956) 670-6144 para conocer los precios actuales y tiempos de entrega. Le confirmaremos qué información se necesita y le guiaremos en el proceso.",
+      "pricingBullets": [
+        "Propietarios y administradores de propiedades",
+        "Empresas de administración de propiedades",
+        "HOA y comunidades residenciales"
       ]
     }
   },

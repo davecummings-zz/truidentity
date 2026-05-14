@@ -11,6 +11,9 @@ import {
   Upload,
   MapPin,
   CalendarDays,
+  ShieldAlert,
+  UserCheck,
+  Building2,
   type LucideIcon,
 } from 'lucide-react'
 import { services, getServiceBySlug, getRelatedServices } from '@/config/services'
@@ -26,6 +29,9 @@ const serviceIcons: Record<string, LucideIcon> = {
   'nfa-fingerprinting': ClipboardList,
   'atf-efile-services': Upload,
   'mobile-fingerprinting': MapPin,
+  'criminal-background-check': ShieldAlert,
+  'pre-employment-screening': UserCheck,
+  'tenant-screening': Building2,
 }
 
 interface ServicePageProps {

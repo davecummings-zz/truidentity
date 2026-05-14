@@ -1,10 +1,10 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { siteConfig } from '@/config/site'
 import { services } from '@/config/services'
 import { LanguageToggle } from './LanguageToggle'
 import { MobileMenu } from './MobileMenu'
-import { TruidentityLogo } from '@/components/ui/TruidentityLogo'
 
 interface HeaderProps {
   locale: string
@@ -21,9 +21,15 @@ export async function Header({ locale }: HeaderProps) {
         <div className="flex items-center justify-between h-16 lg:h-20">
 
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex-shrink-0 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue rounded">
-            <TruidentityLogo className="h-12 w-auto" />
-            <span className="sr-only">{th('logoAlt')}</span>
+          <Link href={`/${locale}`} className="flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue rounded">
+            <Image
+              src="/images/logo-b.png"
+              alt={th('logoAlt')}
+              height={48}
+              width={114}
+              className="h-12 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
