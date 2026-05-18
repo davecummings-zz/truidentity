@@ -18,8 +18,17 @@ import {
 } from 'lucide-react'
 import { services, getServiceBySlug, getRelatedServices } from '@/config/services'
 import { JsonLd } from '@/components/seo/JsonLd'
-import { serviceSchema, breadcrumbSchema } from '@/lib/schemas'
+import { serviceSchema, breadcrumbSchema, faqPageSchema } from '@/lib/schemas'
 import { siteConfig } from '@/config/site'
+import { PackageCards } from '@/components/ui/PackageCards'
+import { Accordion } from '@/components/ui/Accordion'
+
+// FAQ item indices (into faq.items[]) shown on each background-check page
+const SERVICE_FAQ_INDICES: Record<string, number[]> = {
+  'criminal-background-check': [13, 14, 15, 16, 17, 19, 20],
+  'pre-employment-screening':  [13, 17, 19, 20, 14],
+  'tenant-screening':          [21, 18, 14],
+}
 
 const serviceIcons: Record<string, LucideIcon> = {
   'fbi-background-checks': ShieldCheck,
@@ -70,12 +79,27 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const tc = await getTranslations({ locale, namespace: 'common' })
   const tn = await getTranslations({ locale, namespace: 'nav' })
   const ts = await getTranslations({ locale, namespace: 'serviceItems' })
+  const tf = await getTranslations({ locale, namespace: 'faq' })
   const related = getRelatedServices(service.relatedSlugs)
   const Icon: LucideIcon = serviceIcons[service.slug] ?? ShieldCheck
 
   const name = ts(`${slug}.name`)
   const whoNeeds = ts.raw(`${slug}.whoNeeds`) as string[]
   const whatToBring = ts.raw(`${slug}.whatToBring`) as string[]
+  const packages = slug === 'criminal-background-check'
+    ? ts.raw(`${slug}.packages`) as { name: string; price: string; includes: string[] }[]
+    : null
+  const packageIncludes = (slug === 'tenant-screening' || slug === 'pre-employment-screening')
+    ? ts.raw(`${slug}.packageIncludes`) as string[]
+    : null
+  const creditReportNote = slug === 'tenant-screening'
+    ? ts(`${slug}.creditReportNote`)
+    : null
+  const faqIndices = SERVICE_FAQ_INDICES[slug] ?? []
+  const serviceFaqItems = faqIndices.map((i) => ({
+    question: tf(`items.${i}.question`),
+    answer: tf(`items.${i}.answer`),
+  }))
 
   return (
     <>
@@ -85,6 +109,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           { key: 'services', url: `${siteConfig.siteUrl}/${locale}/services` },
           { name, url: `${siteConfig.siteUrl}/${locale}/services/${slug}` },
         ]),
+        ...(serviceFaqItems.length > 0 ? [faqPageSchema(serviceFaqItems)] : []),
       ]} />
 
       <div className="py-12 lg:py-20">
@@ -126,6 +151,34 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 <p className="text-gray-600 leading-relaxed">{ts(`${slug}.whatItIs`)}</p>
               </section>
 
+              {packages && (
+                <PackageCards
+                  heading={t('choosePackage')}
+                  bookLabel={t('bookPackage')}
+                  packages={packages}
+                  locale={locale}
+                />
+              )}
+
+              {packageIncludes && (
+                <section aria-labelledby="whats-included">
+                  <h2 id="whats-included" className="text-xl font-bold text-navy mb-3">{t('whatsIncluded')}</h2>
+                  <ul className="space-y-2">
+                    {packageIncludes.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
+                        <svg className="w-4 h-4 text-accent-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  {creditReportNote && (
+                    <p className="mt-3 text-xs text-gray-500">{creditReportNote}</p>
+                  )}
+                </section>
+              )}
+
               <section aria-labelledby="who-needs">
                 <h2 id="who-needs" className="text-xl font-bold text-navy mb-3">{t('whoNeeds')}</h2>
                 <ul className="space-y-2">
@@ -156,6 +209,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 <h2 id="what-to-expect" className="text-xl font-bold text-navy mb-3">{t('whatToExpect')}</h2>
                 <p className="text-gray-600 leading-relaxed">{ts(`${slug}.whatToExpect`)}</p>
               </section>
+
+              {serviceFaqItems.length > 0 && (
+                <section aria-labelledby="service-faq-heading">
+                  <h2 id="service-faq-heading" className="text-xl font-bold text-navy mb-4">{t('frequentlyAskedQuestions')}</h2>
+                  <Accordion items={serviceFaqItems} />
+                </section>
+              )}
 
               {/* Related */}
               {related.length > 0 && (
@@ -197,13 +257,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 {service.priceNote && (
                   <p className="text-xs text-gray-500 mb-4">{service.priceNote}</p>
                 )}
-                <Link
-                  href={`/${locale}/book`}
-                  className="flex items-center justify-center gap-2 w-full px-5 py-3.5 bg-navy text-white font-bold rounded-xl hover:bg-navy-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 mb-3"
-                >
-                  <CalendarDays size={18} aria-hidden="true" />
-                  {t('bookCta')}
-                </Link>
+                {slug !== 'criminal-background-check' && (
+                  <Link
+                    href={`/${locale}/book`}
+                    className="flex items-center justify-center gap-2 w-full px-5 py-3.5 bg-navy text-white font-bold rounded-xl hover:bg-navy-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 mb-3"
+                  >
+                    <CalendarDays size={18} aria-hidden="true" />
+                    {t('bookCta')}
+                  </Link>
+                )}
                 <p className="text-xs text-gray-500 text-center">
                   {siteConfig.noWalkIns && tc('noWalkIns')}
                 </p>

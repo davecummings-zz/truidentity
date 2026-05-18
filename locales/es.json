@@ -195,7 +195,11 @@
       "pricing": "Precio",
       "relatedServices": "Servicios Relacionados",
       "bookCta": "Reservar Este Servicio",
-      "inSouthTexas": "en el Sur de Texas"
+      "inSouthTexas": "en el Sur de Texas",
+      "choosePackage": "Elija Su Paquete",
+      "bookPackage": "Reservar Este Paquete",
+      "whatsIncluded": "Qué Incluye",
+      "frequentlyAskedQuestions": "Preguntas Frecuentes"
     }
   },
   "book": {
@@ -327,7 +331,43 @@
       },
       {
         "question": "¿Ofrecen verificaciones de antecedentes penales?",
-        "answer": "Sí — TruIdentity ofrece Verificaciones de Antecedentes Penales, Evaluación Previa al Empleo y Evaluación de Inquilinos. Contáctenos al (956) 670-6144 para conocer los precios actuales y los tiempos de entrega."
+        "answer": "Sí — TruIdentity ofrece paquetes de verificación de antecedentes penales desde $38. El Mini-Snapshot ($38) incluye Rastreo de Número de Seguro Social, verificación de antecedentes penales en un condado y búsqueda nacional de delincuentes sexuales. El Basic-Snapshot ($55) agrega historial criminal estatal, búsqueda nacional multi-jurisdiccional y historial de vehículo de motor. Llámenos al (956) 670-6144 para elegir el paquete adecuado."
+      },
+      {
+        "question": "¿Qué es una verificación de antecedentes penales?",
+        "answer": "Al realizar una investigación de antecedentes previa, el historial criminal tiene la mayor importancia. Estas búsquedas se dividen en dos categorías principales: registros de arrestos y registros judiciales. Cada uno tiene fortalezas y debilidades, por lo que es importante evaluar lo que se quiere lograr para determinar cuál es la mejor opción para su caso."
+      },
+      {
+        "question": "¿Cuánto tiempo toma obtener los resultados de una verificación de antecedentes penales?",
+        "answer": "La mayoría de las búsquedas de registros criminales se pueden completar en unos pocos días a una semana, aunque ciertos factores pueden a veces llevar a un tiempo de entrega más largo."
+      },
+      {
+        "question": "¿Qué aparece en una verificación de antecedentes penales?",
+        "answer": "El propósito principal de una verificación de antecedentes penales es buscar registros de condenas por delitos graves y delitos menores, así como cualquier caso pendiente en los tribunales o historial de encarcelamiento como adulto."
+      },
+      {
+        "question": "¿Qué aparece en una verificación de antecedentes penales federal?",
+        "answer": "La información devuelta incluirá el nombre del demandado, número de caso, tipo de caso y cualquier detalle de caso disponible."
+      },
+      {
+        "question": "¿Qué aparece en una verificación de Historial de Vehículo de Motor (MVR)?",
+        "answer": "Una verificación MVR identifica el nombre del solicitante, número de licencia, fecha de vencimiento, estado de la licencia, tipo(s) de licencia, cualquier restricción, una lista completa de infracciones de tránsito, suspensiones y autorizaciones. Los reportes MVR son especialmente útiles porque algunos estados no incluyen las condenas por DUI en los registros judiciales penales, lo que hace del MVR el único recurso disponible para los empleadores que revisan el historial de manejo."
+      },
+      {
+        "question": "¿Qué información devuelve una verificación de delincuentes sexuales en Texas?",
+        "answer": "Una verificación de delincuentes sexuales en Texas devuelve: nombre y cualquier alias conocido, características físicas incluyendo rasgos distintivos, dirección actual de domicilio, fecha y lugar de la condena, y naturaleza del delito."
+      },
+      {
+        "question": "¿Cuáles son los beneficios de un Rastreo de Número de Seguro Social?",
+        "answer": "Los rastreos de NSS son excelentes herramientas de investigación para empleadores que contratan nuevo personal y para verificar identidad. La información proviene de un tercero neutral y proporciona un historial de nombres y direcciones que se puede contrastar al realizar verificaciones de antecedentes penales. Es una de las formas más sencillas de verificar los antecedentes de un solicitante."
+      },
+      {
+        "question": "¿Qué es una Verificación de Lista de Vigilancia?",
+        "answer": "Una Verificación de Lista de Vigilancia busca en una base de datos con información sobre seguridad nacional y aplicación de la ley, específicamente sobre personas razonablemente sospechosas o conocidas por participar en actividades terroristas. También se usa como término general para varias listas de vigilancia rastreadas por agencias de la ley, incluyendo la Lista OFAC y la Lista de Vigilancia Global de Terroristas."
+      },
+      {
+        "question": "¿Qué es una búsqueda de desalojos?",
+        "answer": "Una búsqueda de desalojos verifica los registros públicos del tribunal para identificar demandas de desalojo pasadas presentadas contra un arrendatario. Revela presentaciones, sentencias de posesión y sentencias monetarias, ayudando a los propietarios a evaluar el riesgo. Estos registros generalmente cubren 7 años y muestran si un inquilino fue desalojado con causa. Una búsqueda de desalojos devuelve: números de caso, fechas de presentación, resultados (desestimado, resuelto o sentencia a favor del propietario) y honorarios impagados."
       }
     ]
   },
@@ -597,8 +637,8 @@
     },
     "criminal-background-check": {
       "name": "Verificación de Antecedentes Penales",
-      "shortDescription": "Reporte preciso de antecedentes penales para personas y organizaciones — contáctenos para precios.",
-      "trustLine": "Contáctenos para más información — (956) 670-6144",
+      "shortDescription": "Paquetes de verificación de antecedentes penales desde $38 — Mini-Snapshot, Basic-Snapshot y paquetes personalizados disponibles.",
+      "trustLine": "Mini-Snapshot $38 · Basic-Snapshot $55",
       "whatItIs": "Una Verificación de Antecedentes Penales busca registros criminales públicos — incluyendo registros judiciales del condado, bases de datos estatales y registros nacionales — para identificar condenas, arrestos, cargos previos o registros en el registro de delincuentes sexuales. El alcance de la búsqueda depende de lo que requiera quien la solicita (empleador, propietario u organización). Los resultados pueden incluir antecedentes de delitos graves y menores a nivel local, estatal y federal. Las verificaciones de antecedentes penales son una de las herramientas más comunes que utilizan empleadores, administradores de propiedades y organizaciones para tomar decisiones informadas antes de ofrecer empleo, contratos de arrendamiento o roles de voluntariado. TruIdentity ofrece verificaciones de antecedentes penales para personas, empleadores, propietarios y organizaciones en McAllen y el Sur de Texas.",
       "whoNeeds": [
         "Personas que necesitan verificar su propio historial criminal",
@@ -612,16 +652,37 @@
       ],
       "whatToExpect": "Llámenos al (956) 670-6144 antes de su cita para confirmar el precio y tiempo de entrega — ambos varían según el alcance de la búsqueda. La persona sujeta a la verificación debe presentar una identificación oficial con foto vigente y su Número de Seguro Social. Cuando la ley lo exija, también debe firmar un formulario de autorización conforme a la FCRA proporcionado por el empleador u organización solicitante. La mayoría de las verificaciones penales estándar se entregan en 1 a 3 días hábiles. Le orientaremos en cada paso y confirmaremos qué documentos necesita antes de su llegada.",
       "pricingBullets": [
-        "Empleadores que evalúan candidatos",
-        "Organizaciones que requieren revisiones de historial",
-        "Propietarios y administradores de propiedades"
+        "Mini-Snapshot — $38 (Rastreo de NSS, Verificación 1 Condado, Delincuentes Sexuales)",
+        "Basic-Snapshot — $55 (Historial Criminal Nacional, Estatal, Vehículo de Motor)",
+        "Paquetes personalizados disponibles — contáctenos"
+      ],
+      "packages": [
+        {
+          "name": "Mini-Snapshot",
+          "price": "$38",
+          "includes": [
+            "Rastreo de Número de Seguro Social",
+            "Verificación de Antecedentes Penales (1 Condado)",
+            "Búsqueda Nacional de Delincuentes Sexuales"
+          ]
+        },
+        {
+          "name": "Basic-Snapshot",
+          "price": "$55",
+          "includes": [
+            "Historial Criminal Nacional Multi-Jurisdiccional (incluye Rastreo de NSS, Lista OFAC y Lista de Vigilancia Global de Terroristas)",
+            "Verificación de Antecedentes Penales (Estatal)",
+            "Búsqueda Nacional de Delincuentes Sexuales",
+            "Historial de Vehículo de Motor"
+          ]
+        }
       ]
     },
     "pre-employment-screening": {
       "name": "Evaluación Previa al Empleo",
-      "shortDescription": "Evaluación completa de antecedentes para empleadores — contáctenos para precios.",
-      "trustLine": "Contáctenos para más información — (956) 670-6144",
-      "whatItIs": "La Evaluación Previa al Empleo proporciona a los empleadores una verificación integral de antecedentes de los candidatos laborales — incluyendo historial criminal y, según el paquete, otras verificaciones como historial laboral o de identidad. La verificación de antecedentes antes de contratar es práctica estándar en industrias reguladas como salud, educación, cuidado infantil, finanzas, transporte y contratos gubernamentales. Bajo la Ley de Informes Crediticios Justos (FCRA) y las leyes de Texas aplicables, las verificaciones de antecedentes requieren autorización escrita del candidato antes de realizarse. TruIdentity proporciona el componente de verificación de antecedentes; el empleador es responsable de facilitar el formulario de autorización y seguir los procedimientos legales correspondientes. Atendemos a empleadores de todos los tamaños en McAllen y el Sur de Texas.",
+      "shortDescription": "Evaluación previa al empleo completa — $90. Incluye historial criminal, verificación educativa y credenciales profesionales.",
+      "trustLine": "$90 tarifa fija — evaluación integral para empleadores en el Sur de Texas.",
+      "whatItIs": "La Evaluación Previa al Empleo proporciona a los empleadores una verificación integral de antecedentes de los candidatos laborales — incluyendo historial criminal, verificación educativa y credenciales profesionales. Este paquete de $90 incluye: Historial Criminal Nacional Multi-Jurisdiccional (con Rastreo de Número de Seguro Social, Lista OFAC y Lista de Vigilancia Global de Terroristas), Verificación de Antecedentes Penales (Estatal), Búsqueda Nacional de Delincuentes Sexuales, Historial de Vehículo de Motor, Verificación de Educación (Preparatoria y Nivel Superior) y Verificación de Licencias Profesionales y Credenciales. La verificación de antecedentes antes de contratar es práctica estándar en industrias reguladas como salud, educación, cuidado infantil y finanzas. La FCRA y las leyes de Texas requieren autorización escrita del candidato antes de realizar la verificación.",
       "whoNeeds": [
         "Empleadores que contratan nuevo personal con requisitos de verificación",
         "Departamentos de Recursos Humanos que gestionan el cumplimiento de incorporación",
@@ -635,16 +696,24 @@
       ],
       "whatToExpect": "Llámenos al (956) 670-6144 antes de agendar para hablar sobre su industria y el tipo de evaluación requerida — el precio y el tiempo de entrega varían según el paquete. Cada candidato debe traer una identificación oficial con foto vigente, su Número de Seguro Social y un formulario de autorización firmado conforme a la FCRA proporcionado por su organización. La mayoría de las verificaciones penales se entregan en 1 a 3 días hábiles. Empleadores con alta rotación de personal también pueden preguntar por nuestro servicio de toma de huellas móvil, que lleva equipo profesional a su instalación en cualquier parte del Sur de Texas.",
       "pricingBullets": [
-        "Empleadores que contratan nuevo personal",
-        "Departamentos de RR. HH. que gestionan el cumplimiento",
-        "Empleadores en salud, educación y finanzas"
+        "Historial Criminal Nacional Multi-Jurisdiccional",
+        "Verificación Penal Estatal + Búsqueda Nacional de Delincuentes Sexuales",
+        "Verificación de Educación + Licencias y Credenciales Profesionales"
+      ],
+      "packageIncludes": [
+        "Historial Criminal Nacional Multi-Jurisdiccional (incluye Rastreo de Número de Seguro Social, Lista OFAC y Lista de Vigilancia Global de Terroristas)",
+        "Verificación de Antecedentes Penales (Estatal)",
+        "Búsqueda Nacional de Delincuentes Sexuales",
+        "Historial de Vehículo de Motor",
+        "Verificación de Educación (Preparatoria y Nivel Superior)",
+        "Verificación de Licencias Profesionales y Credenciales"
       ]
     },
     "tenant-screening": {
       "name": "Evaluación de Inquilinos",
-      "shortDescription": "Verificación de antecedentes penales para propietarios y administradores — contáctenos para precios.",
-      "trustLine": "Contáctenos para más información — (956) 670-6144",
-      "whatItIs": "La Evaluación de Inquilinos proporciona a propietarios y administradores de propiedades una verificación de antecedentes penales de posibles inquilinos, ayudando a proteger su propiedad, a los residentes existentes y a su negocio de renta de riesgos evitables. Una verificación de antecedentes penales revela cualquier condena, arresto o cargo previo que el posible inquilino pueda tener en su historial. La ley de Texas permite a los propietarios usar el historial criminal como factor en las decisiones de arrendamiento, siempre que los criterios se apliquen de manera consistente y conforme a las regulaciones de vivienda justa. La evaluación de inquilinos generalmente se usa junto con verificaciones de crédito e historial de arrendamiento como parte de un proceso integral de revisión de solicitantes. TruIdentity ofrece verificaciones de antecedentes para propietarios y administradores en McAllen y el Sur de Texas.",
+      "shortDescription": "Evaluación de inquilinos desde $35. Incluye verificación penal, búsqueda de desalojos y búsqueda de delincuentes sexuales.",
+      "trustLine": "$35 — evaluación rápida de inquilinos para propietarios y administradores en el Sur de Texas.",
+      "whatItIs": "La Evaluación de Inquilinos proporciona a propietarios y administradores de propiedades una verificación integral de antecedentes de posibles inquilinos por $35. Este paquete incluye: Verificación de Antecedentes Penales (Estatal), Búsqueda de Desalojos y Búsqueda Nacional de Delincuentes Sexuales. El Reporte de Crédito está disponible bajo solicitud con cargo adicional. La evaluación de inquilinos ayuda a proteger su propiedad, a los residentes existentes y a su negocio de renta de riesgos evitables. La ley de Texas permite a los propietarios usar el historial criminal como factor en las decisiones de arrendamiento, siempre que los criterios se apliquen de manera consistente y conforme a las regulaciones de vivienda justa.",
       "whoNeeds": [
         "Propietarios que evalúan posibles inquilinos",
         "Empresas de administración de propiedades",
@@ -658,10 +727,16 @@
       ],
       "whatToExpect": "Llámenos al (956) 670-6144 para confirmar el precio y el tiempo de entrega antes de agendar — ambos varían según el alcance de la búsqueda. El posible inquilino debe presentar una identificación oficial con foto vigente, su Número de Seguro Social y firmar un formulario de autorización antes de realizar la verificación. Los propietarios deben facilitar un formulario de autorización conforme a la FCRA; podemos orientarle sobre lo necesario durante su llamada de consulta. La mayoría de las verificaciones se entregan en 1 a 3 días hábiles. Administradores de propiedades o propietarios con necesidades frecuentes de evaluación pueden contactarnos para hablar sobre opciones de volumen.",
       "pricingBullets": [
-        "Propietarios y administradores de propiedades",
-        "Empresas de administración de propiedades",
-        "HOA y comunidades residenciales"
-      ]
+        "Verificación de Antecedentes Penales (Estatal)",
+        "Búsqueda de Desalojos + Búsqueda Nacional de Delincuentes Sexuales",
+        "Reporte de crédito disponible bajo solicitud (cargo adicional)"
+      ],
+      "packageIncludes": [
+        "Verificación de Antecedentes Penales (Estatal)",
+        "Búsqueda de Desalojos",
+        "Búsqueda Nacional de Delincuentes Sexuales"
+      ],
+      "creditReportNote": "* Reporte de crédito disponible bajo solicitud — cargo adicional requerido"
     }
   },
   "terms": {

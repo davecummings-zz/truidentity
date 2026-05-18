@@ -213,12 +213,12 @@ export const services: Service[] = [
     slug: 'criminal-background-check',
     name: 'Criminal Background Check',
     shortDescription:
-      'Accurate criminal history report for individuals and organizations — contact us for current pricing.',
-    price: 'Contact for pricing',
-    priceNote: siteConfig.phone,
+      'Criminal background check packages starting at $38 — Mini-Snapshot, Basic-Snapshot, and custom packages available.',
+    price: 'From $38',
+    priceNote: 'Two packages available — see below',
     emoji: '🔎',
     category: 'background-checks',
-    trustLine: `Contact us for pricing — ${siteConfig.phone}`,
+    trustLine: 'Mini-Snapshot $38 · Basic-Snapshot $55',
     whatItIs:
       'A Criminal Background Check searches public criminal records to identify any prior convictions, arrests, or charges. Commonly required by employers, landlords, and organizations to verify an individual\'s criminal history.',
     whoNeeds: [
@@ -232,19 +232,18 @@ export const services: Service[] = [
       'Social Security Number',
     ],
     whatToExpect:
-      `Contact us at ${siteConfig.phone} for current pricing and turnaround times. We'll guide you through the process and confirm which type of background check best meets your needs.`,
+      `Call us at ${siteConfig.phone} to choose the right package for your needs. The subject must provide a valid government-issued photo ID and Social Security Number, and sign an FCRA-compliant authorization form. Most standard checks are returned within 1–3 business days.`,
     relatedSlugs: ['pre-employment-screening', 'tenant-screening', 'fbi-background-checks'],
   },
   {
     slug: 'pre-employment-screening',
     name: 'Pre-Employment Screening',
     shortDescription:
-      'Comprehensive background screening for employers — contact us for current pricing.',
-    price: 'Contact for pricing',
-    priceNote: siteConfig.phone,
+      'Comprehensive pre-employment screening — $90. Covers criminal history, education verification, and professional credentials.',
+    price: '$90',
     emoji: '💼',
     category: 'background-checks',
-    trustLine: `Contact us for pricing — ${siteConfig.phone}`,
+    trustLine: '$90 flat rate — comprehensive screening for employers throughout South Texas.',
     whatItIs:
       'Pre-Employment Screening provides employers with a thorough background check on job applicants — covering criminal history and more — to help make confident, informed hiring decisions.',
     whoNeeds: [
@@ -259,19 +258,18 @@ export const services: Service[] = [
       'Applicant\'s signed authorization (provided by employer)',
     ],
     whatToExpect:
-      `Contact us at ${siteConfig.phone} for current pricing and turnaround times. We work with employers to determine the right screening package for their industry and hiring requirements.`,
+      'Call us before scheduling to discuss your industry and the type of screening required. Each applicant must bring a valid government-issued photo ID, Social Security Number, and a signed FCRA-compliant authorization form from your organization. Most criminal background check components are returned within 1–3 business days.',
     relatedSlugs: ['criminal-background-check', 'tenant-screening', 'fbi-background-checks'],
   },
   {
     slug: 'tenant-screening',
     name: 'Tenant Screening',
     shortDescription:
-      'Criminal background check for landlords and property managers — contact us for current pricing.',
-    price: 'Contact for pricing',
-    priceNote: siteConfig.phone,
+      'Tenant screening starting at $35. Criminal record check, eviction search, and sex offender search included.',
+    price: '$35',
     emoji: '🏠',
     category: 'background-checks',
-    trustLine: `Contact us for pricing — ${siteConfig.phone}`,
+    trustLine: '$35 — fast tenant screening for landlords and property managers in South Texas.',
     whatItIs:
       'Tenant Screening provides landlords and property managers with a criminal background check on prospective tenants, helping protect your property and other residents.',
     whoNeeds: [
@@ -286,7 +284,7 @@ export const services: Service[] = [
       'Tenant\'s signed authorization',
     ],
     whatToExpect:
-      `Contact us at ${siteConfig.phone} for current pricing and turnaround times. We'll confirm what information is needed and walk you through the process.`,
+      'The prospective tenant must provide a valid government-issued photo ID, Social Security Number, and sign an FCRA-compliant authorization form before the check can run. Most tenant screening reports are returned within 1–3 business days.',
     relatedSlugs: ['criminal-background-check', 'pre-employment-screening', 'fbi-background-checks'],
   },
 ]

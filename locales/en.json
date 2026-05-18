@@ -195,7 +195,11 @@
       "pricing": "Pricing",
       "relatedServices": "Related Services",
       "bookCta": "Book This Service",
-      "inSouthTexas": "in South Texas"
+      "inSouthTexas": "in South Texas",
+      "choosePackage": "Choose Your Package",
+      "bookPackage": "Book This Package",
+      "whatsIncluded": "What's Included",
+      "frequentlyAskedQuestions": "Frequently Asked Questions"
     }
   },
   "book": {
@@ -327,7 +331,43 @@
       },
       {
         "question": "Do you offer Criminal Background Checks?",
-        "answer": "Yes — TruIdentity offers Criminal Background Checks, Pre-Employment Screening, and Tenant Screening. Contact us at (956) 670-6144 for current pricing and turnaround times."
+        "answer": "Yes — TruIdentity offers criminal background check packages starting at $38. The Mini-Snapshot ($38) includes SSN Trace, a 1-county criminal record check, and nationwide sex offender search. The Basic-Snapshot ($55) adds statewide criminal history, multi-jurisdictional nationwide search, and motor vehicle record. Call us at (956) 670-6144 to choose the right package."
+      },
+      {
+        "question": "What is a criminal background check?",
+        "answer": "When conducting a pre-screen background investigation, criminal history is of utmost importance. These searches fall into two main categories: arrest records and court records. Each has strengths and weaknesses, so it's important to evaluate what you're trying to achieve to determine which is best for your application."
+      },
+      {
+        "question": "How long does it take to get criminal background check results?",
+        "answer": "Most criminal record searches can be completed within a few days to a week, though complicating factors can sometimes lead to a longer turnaround time."
+      },
+      {
+        "question": "What shows up on a criminal background check?",
+        "answer": "The primary purpose of a criminal background check is to search for records of felony and misdemeanor criminal convictions, as well as any pending cases in the courts or histories of incarceration as an adult."
+      },
+      {
+        "question": "What shows up in a federal criminal background check?",
+        "answer": "The information returned will consist of the defendant's name, case number, case type, and any available case details."
+      },
+      {
+        "question": "What shows up on an MVR (Motor Vehicle Record) check?",
+        "answer": "An MVR check identifies the applicant's name, license number, license expiration date, license status, license type(s), any restrictions, a full list of driving violations, suspensions, and any endorsements. MVR reports are especially useful because some states do not include DUI convictions in criminal court records — making the MVR the only resource available for employers reviewing driving history."
+      },
+      {
+        "question": "What information is returned from a sex offender check in Texas?",
+        "answer": "A Texas sex offender check returns: name and any known aliases, physical characteristics including distinguishing features, current home address, date and location of conviction, and nature of the offense."
+      },
+      {
+        "question": "What are the benefits of an SSN Trace?",
+        "answer": "SSN traces are excellent research tools for employers hiring new staff and for verifying identity. The information comes from a neutral third party and provides a history of names and addresses that can be cross-referenced when performing criminal background checks. It is one of the simplest ways to verify an applicant's background."
+      },
+      {
+        "question": "What is a Watch List check?",
+        "answer": "A Watch List check searches a database containing information about national security and law enforcement issues — specifically regarding individuals reasonably suspected or known to be engaged in terrorist activities. It is also used as a catch-all term for a number of different watch lists tracked by law enforcement agencies, including the OFAC and Global Terrorist Watch List."
+      },
+      {
+        "question": "What is an eviction search?",
+        "answer": "An eviction search checks public court records to identify past eviction lawsuits filed against a renter. It reveals filings, judgments for possession, and monetary judgments — helping landlords evaluate risk. These records typically cover 7 years and show if a tenant was removed for cause. An eviction search returns: case numbers, filing dates, outcomes (dismissed, settled, or judgment for the landlord), and unpaid fees."
       }
     ]
   },
@@ -597,8 +637,8 @@
     },
     "criminal-background-check": {
       "name": "Criminal Background Check",
-      "shortDescription": "Accurate criminal history report for individuals and organizations — contact us for current pricing.",
-      "trustLine": "Contact us for pricing — (956) 670-6144",
+      "shortDescription": "Criminal background check packages starting at $38 — Mini-Snapshot, Basic-Snapshot, and custom packages available.",
+      "trustLine": "Mini-Snapshot $38 · Basic-Snapshot $55",
       "whatItIs": "A Criminal Background Check searches public criminal records — including county court records, statewide criminal databases, and national registries — to identify any prior convictions, arrests, charges, or sex offender registrations. The scope of the search depends on what the requesting party requires. Results can include felony and misdemeanor records at the county, state, and federal level. Criminal background checks are one of the most common tools used by employers, property managers, and organizations to make safe, informed decisions before extending offers of employment, rental agreements, or volunteer roles. TruIdentity offers criminal background checks for individuals, employers, landlords, and organizations throughout McAllen and South Texas.",
       "whoNeeds": [
         "Individuals needing a personal criminal record check",
@@ -612,16 +652,37 @@
       ],
       "whatToExpect": "Call us at (956) 670-6144 before your appointment to confirm pricing and turnaround time — both vary depending on the scope of search required. During the process, the subject of the check must provide a valid government-issued photo ID and Social Security Number. Where legally required, a FCRA-compliant authorization form — provided by the requesting employer or organization — must also be signed before the search can run. Most standard criminal background checks are returned within 1–3 business days. We'll walk you through every step and confirm which documents are needed before you arrive.",
       "pricingBullets": [
-        "Employers screening job applicants",
-        "Organizations requiring criminal history reviews",
-        "Landlords and property managers"
+        "Mini-Snapshot — $38 (SSN Trace, 1-County Criminal, Sex Offender)",
+        "Basic-Snapshot — $55 (Nationwide Criminal History, Statewide, Motor Vehicle)",
+        "Custom packages available — contact us"
+      ],
+      "packages": [
+        {
+          "name": "Mini-Snapshot",
+          "price": "$38",
+          "includes": [
+            "SSN Trace",
+            "Criminal Record Check (1 County)",
+            "Nationwide Sex Offender Search"
+          ]
+        },
+        {
+          "name": "Basic-Snapshot",
+          "price": "$55",
+          "includes": [
+            "Multi-Jurisdictional Nationwide Criminal History (includes SSN Trace, OFAC, and Global Terrorist Watch List)",
+            "Criminal Record Check (Statewide)",
+            "Nationwide Sex Offender Search",
+            "Motor Vehicle Record"
+          ]
+        }
       ]
     },
     "pre-employment-screening": {
       "name": "Pre-Employment Screening",
-      "shortDescription": "Comprehensive background screening for employers — contact us for current pricing.",
-      "trustLine": "Contact us for pricing — (956) 670-6144",
-      "whatItIs": "Pre-Employment Screening provides employers with a comprehensive background check on job applicants — covering criminal history and, depending on the package, additional checks such as employment or identity verification. Background screening before hiring is standard practice in regulated industries including healthcare, education, childcare, finance, transportation, and government contracting. Under the Fair Credit Reporting Act (FCRA) and applicable Texas state law, background checks require written authorization from the applicant before they can be run. TruIdentity provides the background check component; the employer is responsible for providing a compliant authorization form and following adverse action procedures if a check affects a hiring decision. We serve employers of all sizes throughout McAllen and South Texas.",
+      "shortDescription": "Comprehensive pre-employment screening — $90. Covers criminal history, education verification, and professional credentials.",
+      "trustLine": "$90 flat rate — comprehensive screening for employers throughout South Texas.",
+      "whatItIs": "Pre-Employment Screening provides employers with a comprehensive background check on job applicants — covering criminal history, education verification, and professional credentials. This $90 package includes: Multi-Jurisdictional Nationwide Criminal History (with SSN Trace, OFAC, and Global Terrorist Watch List), Criminal Record Check (Statewide), Nationwide Sex Offender Search, Motor Vehicle History, Education Verification (High School and Post-Secondary), and Professional License and Credential Verification. Background screening before hiring is standard practice in regulated industries including healthcare, education, childcare, finance, and transportation. Under FCRA and applicable Texas law, background checks require written authorization from the applicant before they can be run.",
       "whoNeeds": [
         "Employers hiring new staff requiring background checks",
         "HR departments managing onboarding compliance",
@@ -635,16 +696,24 @@
       ],
       "whatToExpect": "Call us at (956) 670-6144 before scheduling to discuss your industry and the type of screening required — pricing and turnaround time vary by package. Each applicant must bring a valid government-issued photo ID and Social Security Number, plus a signed FCRA-compliant authorization form from your organization. Most criminal background check components are returned within 1–3 business days. Employers with high-volume onboarding needs can also ask about our mobile fingerprinting service, which brings professional equipment directly to your facility anywhere in South Texas.",
       "pricingBullets": [
-        "Employers hiring new staff",
-        "HR departments managing compliance",
-        "Healthcare, education, and finance employers"
+        "Multi-Jurisdictional Nationwide Criminal History",
+        "Criminal Record Check (Statewide) + Nationwide Sex Offender Search",
+        "Education Verification + Professional License and Credential Check"
+      ],
+      "packageIncludes": [
+        "Multi-Jurisdictional Nationwide Criminal History (includes SSN Trace, OFAC, and Global Terrorist Watch List)",
+        "Criminal Record Check (Statewide)",
+        "Nationwide Sex Offender Search",
+        "Motor Vehicle History",
+        "Education Verification (High School and Post-Secondary)",
+        "Professional License and Credential Verification"
       ]
     },
     "tenant-screening": {
       "name": "Tenant Screening",
-      "shortDescription": "Criminal background check for landlords and property managers — contact us for current pricing.",
-      "trustLine": "Contact us for pricing — (956) 670-6144",
-      "whatItIs": "Tenant Screening provides landlords and property managers with a criminal background check on prospective tenants, helping protect your property, existing residents, and rental business from avoidable risk. A criminal background check reveals any prior convictions, arrests, or charges that a prospective tenant may have on record. Texas law permits landlords to use criminal history as a factor in rental decisions, provided that criteria are applied consistently and in compliance with applicable fair housing regulations. Tenant screening is typically used alongside credit checks and rental history verification as part of a comprehensive applicant review process. TruIdentity provides tenant background check services for landlords and property managers throughout McAllen and South Texas.",
+      "shortDescription": "Tenant screening starting at $35. Criminal record check, eviction search, and sex offender search included.",
+      "trustLine": "$35 — fast tenant screening for landlords and property managers in South Texas.",
+      "whatItIs": "Tenant Screening provides landlords and property managers with a comprehensive background check on prospective tenants for $35. This package includes: Criminal Record Check (Statewide), Eviction Search, and Nationwide Sex Offender Search. A Credit Report is available upon request for an additional fee. Tenant screening helps protect your property, existing residents, and rental business from avoidable risk. Texas law permits landlords to use criminal history as a factor in rental decisions, provided that criteria are applied consistently and in compliance with applicable fair housing regulations.",
       "whoNeeds": [
         "Landlords screening prospective tenants",
         "Property management companies",
@@ -658,10 +727,16 @@
       ],
       "whatToExpect": "Call us at (956) 670-6144 to confirm pricing and turnaround before scheduling — both vary based on the scope of search required. The prospective tenant must provide a valid government-issued photo ID and Social Security Number, and sign an authorization form before the check can run. Landlords should provide a FCRA-compliant authorization form for the tenant to sign; we can advise on what's needed during your inquiry call. Most tenant screening background checks are returned within 1–3 business days. Property managers or landlords with frequent screening needs are encouraged to contact us to discuss volume options.",
       "pricingBullets": [
-        "Landlords and property managers",
-        "Property management companies",
-        "HOAs and residential communities"
-      ]
+        "Criminal Record Check (Statewide)",
+        "Eviction Search + Nationwide Sex Offender Search",
+        "Credit Report available upon request (additional fee)"
+      ],
+      "packageIncludes": [
+        "Criminal Record Check (Statewide)",
+        "Eviction Search",
+        "Nationwide Sex Offender Search"
+      ],
+      "creditReportNote": "* Credit Report available upon request — additional fee required"
     }
   },
   "terms": {

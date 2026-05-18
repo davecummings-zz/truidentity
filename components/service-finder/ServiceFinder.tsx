@@ -269,7 +269,7 @@ export function ServiceFinder() {
                     <p className="text-sm font-bold text-navy">{ts(`${s.slug}.name`)}</p>
                     <p className="text-xs text-gray-500 truncate">{ts(`${s.slug}.shortDescription`)}</p>
                   </div>
-                  <span className="ml-auto text-sm font-medium text-gray-500 flex-shrink-0">{tc('callUs')}</span>
+                  <span className="ml-auto text-sm font-medium text-gray-500 flex-shrink-0">{s.price}</span>
                 </Link>
               </li>
             ))}
