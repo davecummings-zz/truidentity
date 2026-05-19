@@ -128,7 +128,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
           <div className="lg:col-span-3 space-y-10">
             {/* Fingerprinting Services */}
             <div>
-              <h2 className="text-xl font-bold text-navy mb-5">{t('categories.fingerprinting')}</h2>
+              <h2 id="fingerprinting" className="text-xl font-bold text-navy mb-5">{t('categories.fingerprinting')}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
                 {fingerprintingServices.map(renderServiceCard)}
               </div>
@@ -136,7 +136,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
 
             {/* Background Checks */}
             <div>
-              <h2 className="text-xl font-bold text-navy mb-5">{t('categories.backgroundChecks')}</h2>
+              <h2 id="background-checks" className="text-xl font-bold text-navy mb-5">{t('categories.backgroundChecks')}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
                 {backgroundCheckServices.map(renderServiceCard)}
               </div>

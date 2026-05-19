@@ -22,7 +22,7 @@ export const siteConfig = {
   noWalkIns: true,
   siteUrl: 'https://truidentity956.com',
   description:
-    'FBI Background Checks, Live Scan, NFA, ATF eFile, and Mobile Fingerprinting in McAllen, TX. 24-hour results, bilingual staff, appointment-only.',
+    'FBI Background Checks, Criminal Background Checks, Live Scan, NFA, ATF eFile, and Mobile Fingerprinting in McAllen, TX. 24-hour results, bilingual staff, appointment-only.',
   locale: 'en_US',
   twitterHandle: '@truidentity956',
   ogImage: '/images/logo-b.png',

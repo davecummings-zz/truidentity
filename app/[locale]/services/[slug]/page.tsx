@@ -22,6 +22,7 @@ import { serviceSchema, breadcrumbSchema, faqPageSchema } from '@/lib/schemas'
 import { siteConfig } from '@/config/site'
 import { PackageCards } from '@/components/ui/PackageCards'
 import { Accordion } from '@/components/ui/Accordion'
+import { ServicePageHero } from '@/components/ui/ServicePageHero'
 
 // FAQ item indices (into faq.items[]) shown on each background-check page
 const SERVICE_FAQ_INDICES: Record<string, number[]> = {
@@ -77,7 +78,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   const t = await getTranslations({ locale, namespace: 'services.serviceDetail' })
   const tc = await getTranslations({ locale, namespace: 'common' })
-  const tn = await getTranslations({ locale, namespace: 'nav' })
   const ts = await getTranslations({ locale, namespace: 'serviceItems' })
   const tf = await getTranslations({ locale, namespace: 'faq' })
   const related = getRelatedServices(service.relatedSlugs)
@@ -100,6 +100,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
     question: tf(`items.${i}.question`),
     answer: tf(`items.${i}.answer`),
   }))
+  const supportedForms = slug === 'ink-fingerprinting'
+    ? ts.raw(`${slug}.supportedForms`) as string[]
+    : null
 
   return (
     <>
@@ -112,30 +115,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
         ...(serviceFaqItems.length > 0 ? [faqPageSchema(serviceFaqItems)] : []),
       ]} />
 
+      <ServicePageHero
+        serviceName={name}
+        tagline={ts(`${slug}.shortDescription`)}
+        icon={Icon}
+        locale={locale}
+      />
+
       <div className="py-12 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
-            <Link href={`/${locale}`} className="hover:text-navy transition-colors">{tn('home')}</Link>
-            <span aria-hidden="true">›</span>
-            <Link href={`/${locale}/services`} className="hover:text-navy transition-colors">{tn('services')}</Link>
-            <span aria-hidden="true">›</span>
-            <span className="text-navy font-medium" aria-current="page">{name}</span>
-          </nav>
-
-          {/* Header */}
-          <div className="flex items-start gap-4 mb-6">
-            <div className="w-16 h-16 rounded-2xl bg-accent-blue/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
-              <Icon size={32} className="text-accent-blue" />
-            </div>
-            <div>
-              <h1 className="text-3xl lg:text-4xl font-extrabold text-navy leading-tight">
-                {name} <span className="text-accent-blue">{t('inSouthTexas')}</span>
-              </h1>
-              <p className="text-gray-600 mt-2 text-lg">{ts(`${slug}.shortDescription`)}</p>
-            </div>
-          </div>
 
           {/* Trust line */}
           <div className="mb-8 px-4 py-3 rounded-xl bg-accent-blue/5 border border-accent-blue/20">
@@ -204,6 +192,24 @@ export default async function ServicePage({ params }: ServicePageProps) {
                   ))}
                 </ul>
               </section>
+
+              {supportedForms && (
+                <section aria-labelledby="supported-forms">
+                  <h2 id="supported-forms" className="text-xl font-bold text-navy mb-3">
+                    {ts(`${slug}.supportedFormsHeading`)}
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {supportedForms.map((form) => (
+                      <div key={form} className="flex items-center gap-2 text-sm text-gray-600">
+                        <svg className="w-4 h-4 text-accent-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {form}
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               <section aria-labelledby="what-to-expect">
                 <h2 id="what-to-expect" className="text-xl font-bold text-navy mb-3">{t('whatToExpect')}</h2>

@@ -18,6 +18,32 @@ export interface Service {
 }
 
 export const services: Service[] = [
+  // ── Fingerprinting ──────────────────────────────────────────────────────────
+  {
+    slug: 'ink-fingerprinting',
+    name: 'Ink Fingerprinting',
+    shortDescription:
+      'Traditional ink-rolled FD-258 fingerprint cards — completed same day, ready to mail.',
+    price: '$49',
+    emoji: '✋',
+    category: 'fingerprinting',
+    trustLine: 'Completed cards in hand same day — no waiting, no mailing delays on our end.',
+    whatItIs:
+      'Ink fingerprinting uses traditional ink to roll your fingerprints onto standard FD-258 fingerprint cards. Many federal agencies, out-of-state licensing boards, and certain background check providers still require physical ink cards rather than electronic submission. Cards are prepared and ready for you to mail same day.',
+    whoNeeds: [
+      'Federal agency applicants required to submit physical fingerprint cards',
+      'Out-of-state licensing board applicants (notary, process server, real estate, etc.)',
+      'Anyone whose agency specifically requires FD-258 ink cards',
+      'Individuals who have received rejected electronic submissions and need a physical backup',
+    ],
+    whatToBring: [
+      'Valid government-issued photo ID',
+      'Fingerprint card if your requesting agency provided one (we also stock standard FD-258 cards)',
+    ],
+    whatToExpect:
+      'The process takes about 10 minutes. You leave with completed, legible fingerprint cards — ready to mail to your requesting agency. No delays on our end.',
+    relatedSlugs: ['live-scan-fingerprinting', 'fbi-background-checks'],
+  },
   {
     slug: 'fbi-background-checks',
     name: 'FBI Background Checks',
@@ -46,84 +72,6 @@ export const services: Service[] = [
     whatToExpect:
       'The fingerprinting process takes about 10 minutes. Results are returned directly from the FBI — most arrive within 24 hours. If your fingerprints are rejected for quality reasons, we reprint them at no charge.',
     relatedSlugs: ['live-scan-fingerprinting', 'fbi-apostille', 'ink-fingerprinting'],
-  },
-  {
-    slug: 'fbi-apostille',
-    name: 'FBI Apostille',
-    shortDescription:
-      'FBI background check authenticated for international use — required for work visas, residency, and immigration.',
-    price: '$220',
-    emoji: '🌐',
-    category: 'fingerprinting',
-    trustLine: 'Full-service — fingerprinting, FBI processing, and apostille authentication handled for you.',
-    whatItIs:
-      'An FBI Apostille is an FBI Identity History Summary that has been authenticated with an apostille certificate, making it legally valid in countries that are members of the Hague Apostille Convention. Required for international employment, immigration applications, permanent residency, and international adoption. We handle the complete process — fingerprinting, FBI submission, and apostille certification — in a single appointment.',
-    whoNeeds: [
-      'Individuals applying for international work visas',
-      'Those seeking permanent residency or citizenship abroad',
-      'International adoption applicants',
-      'Expats and foreign nationals requiring a U.S. background check for immigration',
-      'Anyone whose destination country requires a Hague Convention apostille',
-    ],
-    whatToBring: [
-      'Valid government-issued photo ID',
-      'Social Security Number',
-      'Destination country name and any specific instructions from the requesting foreign authority',
-    ],
-    whatToExpect:
-      'One appointment covers everything — fingerprinting, FBI background check submission, and coordination of the apostille authentication process. Total turnaround is typically 8–12 weeks, determined by FBI and U.S. Department of State processing times.',
-    relatedSlugs: ['fbi-background-checks', 'live-scan-fingerprinting'],
-  },
-  {
-    slug: 'ink-fingerprinting',
-    name: 'Ink Fingerprinting',
-    shortDescription:
-      'Traditional ink-rolled FD-258 fingerprint cards — completed same day, ready to mail.',
-    price: '$49',
-    emoji: '✋',
-    category: 'fingerprinting',
-    trustLine: 'Completed cards in hand same day — no waiting, no mailing delays on our end.',
-    whatItIs:
-      'Ink fingerprinting uses traditional ink to roll your fingerprints onto standard FD-258 fingerprint cards. Many federal agencies, out-of-state licensing boards, and certain background check providers still require physical ink cards rather than electronic submission. Cards are prepared and ready for you to mail same day.',
-    whoNeeds: [
-      'Federal agency applicants required to submit physical fingerprint cards',
-      'Out-of-state licensing board applicants (notary, process server, real estate, etc.)',
-      'Anyone whose agency specifically requires FD-258 ink cards',
-      'Individuals who have received rejected electronic submissions and need a physical backup',
-    ],
-    whatToBring: [
-      'Valid government-issued photo ID',
-      'Fingerprint card if your requesting agency provided one (we also stock standard FD-258 cards)',
-    ],
-    whatToExpect:
-      'The process takes about 10 minutes. You leave with completed, legible fingerprint cards — ready to mail to your requesting agency. No delays on our end.',
-    relatedSlugs: ['live-scan-fingerprinting', 'fbi-background-checks'],
-  },
-  {
-    slug: 'live-scan-fingerprinting',
-    name: 'Live Scan Fingerprinting',
-    shortDescription:
-      'Digital fingerprint capture transmitted directly to the FBI — no ink, results in 24–72 hours.',
-    price: '$49',
-    emoji: '📡',
-    category: 'fingerprinting',
-    trustLine: 'No ink. No cards. Results transmitted directly to the FBI — typically within 24–72 hours.',
-    whatItIs:
-      'Live Scan captures your fingerprints electronically using a high-resolution digital scanner and transmits them directly to the FBI — no ink, no physical card, no mailing. Required for teachers, childcare workers, healthcare professionals, and adoption applicants. Note: Identigo holds an exclusive contract with TX DPS — TruIdentity submits Live Scan directly to the FBI.',
-    whoNeeds: [
-      'Teachers and school district employees (TEA, SBEC)',
-      'Childcare and daycare workers',
-      'Healthcare professionals seeking Texas licensure',
-      'Adoption applicants and foster care providers',
-    ],
-    whatToBring: [
-      'Valid government-issued photo ID',
-      'ORI (Originating Agency Identifier) number — provided by your employer or licensing board',
-      'Completed request form from your agency, if applicable',
-    ],
-    whatToExpect:
-      'Electronic capture takes about 10 minutes. Results are transmitted directly to your requesting agency — typically within 24–72 hours. You do not need to mail anything. Bring your ORI number; without it we cannot complete your Live Scan submission.',
-    relatedSlugs: ['fbi-background-checks', 'ink-fingerprinting'],
   },
   {
     slug: 'nfa-fingerprinting',
@@ -158,7 +106,7 @@ export const services: Service[] = [
     name: 'ATF eFile Services',
     shortDescription:
       'Electronic NFA application through the ATF eForms system — weeks faster than paper filing.',
-    price: '$75',
+    price: '$100',
     emoji: '💻',
     category: 'fingerprinting',
     trustLine: 'We guide you through every field — approvals in weeks, not months.',
@@ -210,6 +158,60 @@ export const services: Service[] = [
     relatedSlugs: ['live-scan-fingerprinting', 'fbi-background-checks', 'ink-fingerprinting'],
   },
   {
+    slug: 'live-scan-fingerprinting',
+    name: 'Live Scan Fingerprinting',
+    shortDescription:
+      'Digital fingerprint capture transmitted directly to the FBI — no ink, results in 24–72 hours.',
+    price: '$49',
+    emoji: '📡',
+    category: 'fingerprinting',
+    trustLine: 'No ink. No cards. Results transmitted directly to the FBI — typically within 24–72 hours.',
+    whatItIs:
+      'Live Scan captures your fingerprints electronically using a high-resolution digital scanner and transmits them directly to the FBI — no ink, no physical card, no mailing. Required for teachers, childcare workers, healthcare professionals, and adoption applicants. Note: Identigo holds an exclusive contract with TX DPS — TruIdentity submits Live Scan directly to the FBI.',
+    whoNeeds: [
+      'Teachers and school district employees (TEA, SBEC)',
+      'Childcare and daycare workers',
+      'Healthcare professionals seeking Texas licensure',
+      'Adoption applicants and foster care providers',
+    ],
+    whatToBring: [
+      'Valid government-issued photo ID',
+      'ORI (Originating Agency Identifier) number — provided by your employer or licensing board',
+      'Completed request form from your agency, if applicable',
+    ],
+    whatToExpect:
+      'Electronic capture takes about 10 minutes. Results are transmitted directly to your requesting agency — typically within 24–72 hours. You do not need to mail anything. Bring your ORI number; without it we cannot complete your Live Scan submission.',
+    relatedSlugs: ['fbi-background-checks', 'ink-fingerprinting'],
+  },
+
+  // ── Background Checks ────────────────────────────────────────────────────────
+  {
+    slug: 'pre-employment-screening',
+    name: 'Pre-Employment Screening',
+    shortDescription:
+      'Comprehensive pre-employment screening — $90. Covers criminal history, education verification, and professional credentials.',
+    price: '$90',
+    emoji: '💼',
+    category: 'background-checks',
+    trustLine: '$90 flat rate — comprehensive screening for employers throughout South Texas.',
+    whatItIs:
+      'Pre-Employment Screening provides employers with a thorough background check on job applicants — covering criminal history and more — to help make confident, informed hiring decisions.',
+    whoNeeds: [
+      'Employers hiring new staff requiring background checks',
+      'HR departments managing onboarding compliance',
+      'Businesses in regulated industries (healthcare, education, finance)',
+      'Staffing agencies and temp firms',
+    ],
+    whatToBring: [
+      'Valid government-issued photo ID',
+      'Social Security Number',
+      'Applicant\'s signed authorization (provided by employer)',
+    ],
+    whatToExpect:
+      'Call us before scheduling to discuss your industry and the type of screening required. Each applicant must bring a valid government-issued photo ID, Social Security Number, and a signed FCRA-compliant authorization form from your organization. Most criminal background check components are returned within 1–3 business days.',
+    relatedSlugs: ['criminal-background-check', 'tenant-screening', 'fbi-background-checks'],
+  },
+  {
     slug: 'criminal-background-check',
     name: 'Criminal Background Check',
     shortDescription:
@@ -236,30 +238,31 @@ export const services: Service[] = [
     relatedSlugs: ['pre-employment-screening', 'tenant-screening', 'fbi-background-checks'],
   },
   {
-    slug: 'pre-employment-screening',
-    name: 'Pre-Employment Screening',
+    slug: 'fbi-apostille',
+    name: 'FBI Apostille',
     shortDescription:
-      'Comprehensive pre-employment screening — $90. Covers criminal history, education verification, and professional credentials.',
-    price: '$90',
-    emoji: '💼',
+      'FBI background check authenticated for international use — required for work visas, residency, and immigration.',
+    price: '$220',
+    emoji: '🌐',
     category: 'background-checks',
-    trustLine: '$90 flat rate — comprehensive screening for employers throughout South Texas.',
+    trustLine: 'Full-service — fingerprinting, FBI processing, and apostille authentication handled for you.',
     whatItIs:
-      'Pre-Employment Screening provides employers with a thorough background check on job applicants — covering criminal history and more — to help make confident, informed hiring decisions.',
+      'An FBI Apostille is an FBI Identity History Summary that has been authenticated with an apostille certificate, making it legally valid in countries that are members of the Hague Apostille Convention. Required for international employment, immigration applications, permanent residency, and international adoption. We handle the complete process — fingerprinting, FBI submission, and apostille certification — in a single appointment.',
     whoNeeds: [
-      'Employers hiring new staff requiring background checks',
-      'HR departments managing onboarding compliance',
-      'Businesses in regulated industries (healthcare, education, finance)',
-      'Staffing agencies and temp firms',
+      'Individuals applying for international work visas',
+      'Those seeking permanent residency or citizenship abroad',
+      'International adoption applicants',
+      'Expats and foreign nationals requiring a U.S. background check for immigration',
+      'Anyone whose destination country requires a Hague Convention apostille',
     ],
     whatToBring: [
       'Valid government-issued photo ID',
       'Social Security Number',
-      'Applicant\'s signed authorization (provided by employer)',
+      'Destination country name and any specific instructions from the requesting foreign authority',
     ],
     whatToExpect:
-      'Call us before scheduling to discuss your industry and the type of screening required. Each applicant must bring a valid government-issued photo ID, Social Security Number, and a signed FCRA-compliant authorization form from your organization. Most criminal background check components are returned within 1–3 business days.',
-    relatedSlugs: ['criminal-background-check', 'tenant-screening', 'fbi-background-checks'],
+      'One appointment covers everything — fingerprinting, FBI background check submission, and coordination of the apostille authentication process. Total turnaround is typically 8–12 weeks, determined by FBI and U.S. Department of State processing times.',
+    relatedSlugs: ['fbi-background-checks', 'live-scan-fingerprinting'],
   },
   {
     slug: 'tenant-screening',

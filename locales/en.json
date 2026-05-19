@@ -34,7 +34,9 @@
     "languageToggle": "Español",
     "menuOpen": "Open navigation menu",
     "menuClose": "Close navigation menu",
-    "logoAlt": "TruIdentity Screening Solutions"
+    "logoAlt": "TruIdentity Screening Solutions",
+    "fingerprintingGroup": "Fingerprinting",
+    "backgroundChecksGroup": "Background Checks"
   },
   "footer": {
     "tagline": "Fast, accurate fingerprinting for South Texas — FBI Background Checks, Live Scan, ATF eFile, and more.",
@@ -49,7 +51,7 @@
   "home": {
     "hero": {
       "headline": "Your Fingerprinting Done Right — Results in 24 Hours",
-      "subheadline": "TruIdentity Screening Solutions offers FBI Background Checks, Live Scan, ATF eFile, and more in McAllen and the entire Rio Grande Valley — same-day appointments available Monday–Friday.",
+      "subheadline": "TruIdentity Screening Solutions offers FBI Background Checks, Criminal Background Checks, Live Scan, ATF eFile, and more in McAllen and the entire Rio Grande Valley — same-day appointments available Monday–Friday.",
       "ctaBook": "Book Your Appointment",
       "ctaFinder": "Find My Service"
     },
@@ -60,11 +62,33 @@
     "services": {
       "heading": "Every Fingerprinting Service You Need",
       "subheading": "From FBI background checks to NFA transfers and mobile fingerprinting — one appointment in McAllen covers it all.",
+      "fingerprintingTitle": "Fingerprinting Services",
+      "backgroundChecksTitle": "Background Checks",
       "finderCta": {
         "heading": "Not sure which service you need?",
         "subtext": "Answer a few quick questions and we'll point you to the right one.",
         "button": "Find My Service"
       }
+    },
+    "orgsWeServe": {
+      "heading": "Organizations We Serve",
+      "subheading": "Serving individuals, employers, and organizations throughout South Texas",
+      "items": [
+        "Medical Field / Out of State Licensing",
+        "Volunteer Organizations",
+        "Employment Applications",
+        "Immigration",
+        "Government Contractors",
+        "Insurance Licensing",
+        "Background Check Services",
+        "Banking and Financial Licensing",
+        "Electronic & Ink Fingerprinting",
+        "Businesses",
+        "Individuals",
+        "ATF Requirements",
+        "FFL Gun Dealers",
+        "Legal — Judges and Lawyers"
+      ]
     },
     "pricing": {
       "heading": "Simple, Transparent Pricing",
@@ -537,6 +561,16 @@
         "Federal agency applicants requiring physical cards",
         "Out-of-state licensing board applicants",
         "Notary, process server, and real estate applicants"
+      ],
+      "supportedFormsHeading": "Ink Fingerprinting Is Available On These Forms",
+      "supportedForms": [
+        "FD-258 (FBI Cards)",
+        "FINRA Cards",
+        "NFA",
+        "SF-87",
+        "State Specific Cards",
+        "Any court related fingerprint forms",
+        "Any country specific fingerprint forms"
       ]
     },
     "live-scan-fingerprinting": {
@@ -592,10 +626,12 @@
       "trustLine": "We guide you through every field — approvals in weeks, not months.",
       "whatItIs": "ATF eFile Services guide you through submitting your NFA application electronically through the ATF eForms system. Electronic submissions are processed significantly faster than paper — often approved in weeks rather than months. We handle the fingerprinting, walk through every field of the form with you, and submit your completed application.",
       "whoNeeds": [
-        "Anyone filing ATF Form 4 (Tax Paid Transfer) for a suppressor, SBR, SBS, or machine gun",
-        "Individuals filing ATF Form 1 (Make and Register)",
-        "Trust, corporation, or individual applicants seeking faster approval",
-        "First-time NFA buyers who want guided assistance"
+        "Gun Shops",
+        "FFL Dealers",
+        "Form 4 Filers",
+        "NFA Firearms Purchasers",
+        "Gun Store Owners",
+        "Anyone requiring ATF eFile submission"
       ],
       "whatToBring": [
         "Valid government-issued photo ID",

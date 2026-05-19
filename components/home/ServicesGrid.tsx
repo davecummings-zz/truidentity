@@ -38,6 +38,23 @@ export async function ServicesGrid({ locale }: ServicesGridProps) {
   const tc = await getTranslations({ locale, namespace: 'common' })
   const ts = await getTranslations({ locale, namespace: 'serviceItems' })
 
+  const fingerprintingServices = services.filter((s) => s.category === 'fingerprinting')
+  const backgroundCheckServices = services.filter((s) => s.category === 'background-checks')
+
+  const renderCard = (service: typeof services[0]) => {
+    const Icon = serviceIcons[service.slug]
+    return (
+      <ServiceCard
+        key={service.slug}
+        icon={Icon ? <Icon size={32} className="text-accent-blue" aria-hidden="true" /> : null}
+        name={ts(`${service.slug}.name`)}
+        description={ts(`${service.slug}.shortDescription`)}
+        href={`/${locale}/services/${service.slug}`}
+        learnMoreLabel={tc('learnMore')}
+      />
+    )
+  }
+
   return (
     <section className="py-16 lg:py-24 bg-gray-50" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,20 +67,20 @@ export async function ServicesGrid({ locale }: ServicesGridProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((service) => {
-            const Icon = serviceIcons[service.slug]
-            return (
-              <ServiceCard
-                key={service.slug}
-                icon={Icon ? <Icon size={32} className="text-accent-blue" aria-hidden="true" /> : null}
-                name={ts(`${service.slug}.name`)}
-                description={ts(`${service.slug}.shortDescription`)}
-                href={`/${locale}/services/${service.slug}`}
-                learnMoreLabel={tc('learnMore')}
-              />
-            )
-          })}
+        {/* Fingerprinting */}
+        <div className="mb-12">
+          <h3 className="text-xl font-bold text-navy mb-5">{t('fingerprintingTitle')}</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {fingerprintingServices.map(renderCard)}
+          </div>
+        </div>
+
+        {/* Background Checks */}
+        <div className="pt-8 border-t border-gray-200">
+          <h3 className="text-xl font-bold text-navy mb-5">{t('backgroundChecksTitle')}</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {backgroundCheckServices.map(renderCard)}
+          </div>
         </div>
       </div>
     </section>

@@ -8,21 +8,19 @@ interface ServiceItem {
   name: string
 }
 
-interface ServicesDropdownProps {
+export interface ServiceGroup {
   label: string
-  allServicesLabel: string
-  services: ServiceItem[]
-  locale: string
-  allServicesHref: string
+  href: string
+  items: ServiceItem[]
 }
 
-export function ServicesDropdown({
-  label,
-  allServicesLabel,
-  services,
-  locale,
-  allServicesHref,
-}: ServicesDropdownProps) {
+interface ServicesDropdownProps {
+  label: string
+  groups: ServiceGroup[]
+  locale: string
+}
+
+export function ServicesDropdown({ label, groups, locale }: ServicesDropdownProps) {
   const [open, setOpen] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -68,24 +66,29 @@ export function ServicesDropdown({
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-card-hover border border-gray-100 z-50">
+        <div className="absolute top-full left-0 mt-1 w-72 bg-white rounded-xl shadow-card-hover border border-gray-100 z-50">
           <div className="py-2">
-            <Link
-              href={allServicesHref}
-              onClick={() => setOpen(false)}
-              className="block px-4 py-2.5 text-sm font-semibold text-navy hover:bg-navy/5 transition-colors border-b border-gray-100 mb-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent-blue rounded-t-xl"
-            >
-              {allServicesLabel}
-            </Link>
-            {services.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/${locale}/services/${s.slug}`}
-                onClick={() => setOpen(false)}
-                className="block px-4 py-2 text-sm text-navy/80 hover:bg-navy/5 hover:text-navy transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent-blue"
-              >
-                {s.name}
-              </Link>
+            {groups.map((group, gi) => (
+              <div key={group.href}>
+                {gi > 0 && <hr className="my-2 border-gray-100" />}
+                <Link
+                  href={group.href}
+                  onClick={() => setOpen(false)}
+                  className="block px-4 py-2 text-sm font-semibold text-navy border-b border-navy/20 pb-2 mb-1 hover:text-accent-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent-blue"
+                >
+                  {group.label}
+                </Link>
+                {group.items.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/${locale}/services/${s.slug}`}
+                    onClick={() => setOpen(false)}
+                    className="block px-4 py-2 text-sm text-navy/80 hover:bg-navy/5 hover:text-navy transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent-blue"
+                  >
+                    {s.name}
+                  </Link>
+                ))}
+              </div>
             ))}
           </div>
         </div>

@@ -9,6 +9,7 @@ import { HowItWorks } from '@/components/home/HowItWorks'
 import { ReviewsSection } from '@/components/home/ReviewsSection'
 import { FaqTeaser } from '@/components/home/FaqTeaser'
 import { BottomCTA } from '@/components/home/BottomCTA'
+import { OrgsWeServe } from '@/components/home/OrgsWeServe'
 import { siteConfig } from '@/config/site'
 import { fetchGoogleReviews } from '@/lib/reviews'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -53,6 +54,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <NoWalkInsBanner locale={locale} />
       <ServicesGrid locale={locale} />
       <ServiceFinderCTA locale={locale} />
+      <OrgsWeServe locale={locale} />
       <PricingSection locale={locale} />
       <HowItWorks locale={locale} />
       <ReviewsSection

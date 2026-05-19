@@ -34,7 +34,9 @@
     "languageToggle": "English",
     "menuOpen": "Abrir menú de navegación",
     "menuClose": "Cerrar menú de navegación",
-    "logoAlt": "TruIdentity Screening Solutions"
+    "logoAlt": "TruIdentity Screening Solutions",
+    "fingerprintingGroup": "Huellas Dactilares",
+    "backgroundChecksGroup": "Verificaciones de Antecedentes"
   },
   "footer": {
     "tagline": "Huellas digitales rápidas y precisas para el Sur de Texas — Antecedentes del FBI, Live Scan, ATF eFile y más.",
@@ -49,7 +51,7 @@
   "home": {
     "hero": {
       "headline": "Sus Huellas Listas Hoy — Resultados en 24 Horas",
-      "subheadline": "TruIdentity Screening Solutions ofrece antecedentes del FBI, Live Scan, ATF eFile y más en McAllen y todo el Valle del Río Grande — citas disponibles el mismo día de lunes a viernes.",
+      "subheadline": "TruIdentity Screening Solutions ofrece Antecedentes del FBI, Verificaciones de Antecedentes Penales, Live Scan, ATF eFile y más en McAllen y todo el Valle del Río Grande — citas disponibles el mismo día de lunes a viernes.",
       "ctaBook": "Reservar Cita",
       "ctaFinder": "Encontrar Mi Servicio"
     },
@@ -60,11 +62,33 @@
     "services": {
       "heading": "Todo el Servicio de Huellas que Necesita",
       "subheading": "Desde antecedentes del FBI hasta transferencias NFA y huellas móviles — una sola cita en McAllen lo cubre todo.",
+      "fingerprintingTitle": "Servicios de Huellas Dactilares",
+      "backgroundChecksTitle": "Verificaciones de Antecedentes",
       "finderCta": {
         "heading": "¿No sabe qué servicio necesita?",
         "subtext": "Responda unas preguntas rápidas y le orientamos al servicio correcto.",
         "button": "Encontrar Mi Servicio"
       }
+    },
+    "orgsWeServe": {
+      "heading": "Organizaciones a las que Servimos",
+      "subheading": "Atendemos a personas, empleadores y organizaciones en todo el Sur de Texas",
+      "items": [
+        "Campo Médico / Licencias Fuera del Estado",
+        "Organizaciones de Voluntarios",
+        "Solicitudes de Empleo",
+        "Inmigración",
+        "Contratistas Gubernamentales",
+        "Licencias de Seguros",
+        "Servicios de Verificación de Antecedentes",
+        "Banca y Licencias Financieras",
+        "Huellas Electrónicas y en Tinta",
+        "Empresas",
+        "Personas",
+        "Requisitos ATF",
+        "Distribuidores de Armas FFL",
+        "Legal — Jueces y Abogados"
+      ]
     },
     "pricing": {
       "heading": "Precios Claros, Sin Sorpresas",
@@ -537,6 +561,16 @@
         "Solicitantes de agencias federales que requieren tarjetas físicas",
         "Solicitantes de juntas de licencias fuera de Texas",
         "Solicitantes de notaría, proceso legal y bienes raíces"
+      ],
+      "supportedFormsHeading": "Las Huellas en Tinta Están Disponibles en Estos Formularios",
+      "supportedForms": [
+        "Tarjetas FD-258 (FBI)",
+        "Tarjetas FINRA",
+        "NFA",
+        "SF-87",
+        "Tarjetas específicas del estado",
+        "Cualquier formulario de huellas relacionado con tribunales",
+        "Cualquier formulario de huellas específico de cada país"
       ]
     },
     "live-scan-fingerprinting": {
@@ -592,10 +626,12 @@
       "trustLine": "Le guiamos en cada campo — aprobaciones en semanas, no meses.",
       "whatItIs": "Los Servicios ATF eFile le guían en el proceso de enviar su solicitud NFA electrónicamente a través del sistema ATF eForms. Los envíos electrónicos se procesan significativamente más rápido que el papel — muchas veces se aprueban en semanas en lugar de meses. Nos encargamos de la toma de huellas, lo guiamos en cada campo del formulario y enviamos su solicitud completa.",
       "whoNeeds": [
-        "Cualquier persona que llene el Formulario ATF 4 (Transferencia con Impuesto Pagado) para supresor, SBR, SBS o ametralladora",
-        "Personas que llenan el Formulario ATF 1 (Fabricación y Registro)",
-        "Solicitantes individuales, de fideicomiso o corporativos que buscan aprobación más rápida",
-        "Compradores NFA por primera vez que desean asistencia personalizada"
+        "Tiendas de armas",
+        "Distribuidores FFL",
+        "Solicitantes del Formulario 4",
+        "Compradores de armas de fuego NFA",
+        "Propietarios de tiendas de armas",
+        "Cualquier persona que requiera presentación ATF eFile"
       ],
       "whatToBring": [
         "Identificación oficial con foto vigente",

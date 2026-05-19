@@ -10,7 +10,8 @@ const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false)
-  const [servicesOpen, setServicesOpen] = useState(false)
+  const [fingerprintingOpen, setFingerprintingOpen] = useState(false)
+  const [backgroundChecksOpen, setBackgroundChecksOpen] = useState(false)
   const locale = useLocale()
   const t = useTranslations('nav')
   const th = useTranslations('header')
@@ -19,16 +20,19 @@ export function MobileMenu() {
   const drawerRef = useRef<HTMLElement>(null)
   const triggerRef = useRef<HTMLButtonElement>(null)
 
+  const fingerprintingServices = services.filter((s) => s.category === 'fingerprinting')
+  const backgroundCheckServices = services.filter((s) => s.category === 'background-checks')
+
   const close = () => {
     setOpen(false)
-    setServicesOpen(false)
+    setFingerprintingOpen(false)
+    setBackgroundChecksOpen(false)
     triggerRef.current?.focus()
   }
 
   useEffect(() => {
     if (!open) return
 
-    // Move focus into the drawer on open
     const firstFocusable = drawerRef.current?.querySelectorAll<HTMLElement>(FOCUSABLE)[0]
     firstFocusable?.focus()
 
@@ -123,29 +127,52 @@ export function MobileMenu() {
                 </Link>
               </li>
 
-              {/* Services accordion */}
+              {/* Fingerprinting group */}
               <li>
                 <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
+                  onClick={() => setFingerprintingOpen(!fingerprintingOpen)}
                   className="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-navy font-medium hover:bg-navy/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue"
-                  aria-expanded={servicesOpen}
+                  aria-expanded={fingerprintingOpen}
                 >
-                  <span>{t('services')}</span>
+                  <span>{th('fingerprintingGroup')}</span>
                   <svg
-                    className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 transition-transform ${fingerprintingOpen ? 'rotate-180' : ''}`}
                     fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {servicesOpen && (
+                {fingerprintingOpen && (
                   <ul className="ml-3 mt-1 space-y-1">
-                    <li>
-                      <Link href={`/${locale}/services`} onClick={close} className="block px-3 py-2.5 rounded-lg text-sm text-navy/80 hover:bg-navy/5 transition-colors">
-                        {t('servicesDropdown')}
-                      </Link>
-                    </li>
-                    {services.map((s) => (
+                    {fingerprintingServices.map((s) => (
+                      <li key={s.slug}>
+                        <Link href={`/${locale}/services/${s.slug}`} onClick={close} className="block px-3 py-2.5 rounded-lg text-sm text-navy/80 hover:bg-navy/5 transition-colors">
+                          {ts(`${s.slug}.name`)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+
+              {/* Background Checks group */}
+              <li>
+                <button
+                  onClick={() => setBackgroundChecksOpen(!backgroundChecksOpen)}
+                  className="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-navy font-medium hover:bg-navy/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue"
+                  aria-expanded={backgroundChecksOpen}
+                >
+                  <span>{th('backgroundChecksGroup')}</span>
+                  <svg
+                    className={`w-4 h-4 transition-transform ${backgroundChecksOpen ? 'rotate-180' : ''}`}
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {backgroundChecksOpen && (
+                  <ul className="ml-3 mt-1 space-y-1">
+                    {backgroundCheckServices.map((s) => (
                       <li key={s.slug}>
                         <Link href={`/${locale}/services/${s.slug}`} onClick={close} className="block px-3 py-2.5 rounded-lg text-sm text-navy/80 hover:bg-navy/5 transition-colors">
                           {ts(`${s.slug}.name`)}

@@ -45,10 +45,23 @@ export async function Header({ locale }: HeaderProps) {
             {/* Services dropdown */}
             <ServicesDropdown
               label={t('services')}
-              allServicesLabel={t('servicesDropdown')}
-              services={services.map((s) => ({ slug: s.slug, name: ts(`${s.slug}.name`) }))}
               locale={locale}
-              allServicesHref={`/${locale}/services`}
+              groups={[
+                {
+                  label: th('fingerprintingGroup'),
+                  href: `/${locale}/services`,
+                  items: services
+                    .filter((s) => s.category === 'fingerprinting')
+                    .map((s) => ({ slug: s.slug, name: ts(`${s.slug}.name`) })),
+                },
+                {
+                  label: th('backgroundChecksGroup'),
+                  href: `/${locale}/services#background-checks`,
+                  items: services
+                    .filter((s) => s.category === 'background-checks')
+                    .map((s) => ({ slug: s.slug, name: ts(`${s.slug}.name`) })),
+                },
+              ]}
             />
 
             <Link href={`/${locale}/service-finder`} className="px-3 py-2 text-sm font-medium text-navy hover:text-accent-blue transition-colors rounded hover:bg-navy/5">
