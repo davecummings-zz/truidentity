@@ -64,6 +64,9 @@
       "subheading": "Desde antecedentes del FBI hasta transferencias NFA y huellas móviles — una sola cita en McAllen lo cubre todo.",
       "fingerprintingTitle": "Servicios de Huellas Dactilares",
       "backgroundChecksTitle": "Verificaciones de Antecedentes",
+      "viewAllPricing": "Ver Todos los Precios",
+      "hidePricing": "Ocultar Precios",
+      "seePricing": "Ver Precio",
       "finderCta": {
         "heading": "¿No sabe qué servicio necesita?",
         "subtext": "Responda unas preguntas rápidas y le orientamos al servicio correcto.",
@@ -512,9 +515,9 @@
       ],
       "whatToExpect": "El proceso de toma de huellas toma unos 10 minutos. Los resultados se devuelven directamente del FBI — la mayoría llega en 24 horas. Si sus huellas son rechazadas por cuestiones de calidad, las tomamos de nuevo sin costo adicional.",
       "pricingBullets": [
-        "Solicitantes de empleo que requieren verificación federal",
-        "Profesionales de salud, educación y finanzas",
-        "Organizaciones sin fines de lucro con requisitos de verificación"
+        "Entrega por correo · resultados en 24 horas",
+        "Garantía sin rechazo",
+        "No ciudadanos EE.UU. $75"
       ]
     },
     "fbi-apostille": {
@@ -536,9 +539,9 @@
       ],
       "whatToExpect": "Una cita cubre todo — toma de huellas, envío de antecedentes al FBI y coordinación del proceso de autenticación de la apostilla. El tiempo total es generalmente de 8 a 12 semanas, determinado por los tiempos de procesamiento del FBI y el Departamento de Estado de EE. UU.",
       "pricingBullets": [
-        "Solicitantes de visa de trabajo internacional",
-        "Personas que buscan residencia o ciudadanía en el extranjero",
-        "Solicitantes de adopción internacional"
+        "Antecedentes FBI + apostilla",
+        "Para uso internacional",
+        "Visa · Inmigración · Residencia"
       ]
     },
     "ink-fingerprinting": {
@@ -558,9 +561,9 @@
       ],
       "whatToExpect": "El proceso toma unos 10 minutos. Se va con tarjetas de huellas completas y legibles — listas para enviar a su agencia solicitante. Sin demoras de nuestra parte.",
       "pricingBullets": [
-        "Solicitantes de agencias federales que requieren tarjetas físicas",
-        "Solicitantes de juntas de licencias fuera de Texas",
-        "Solicitantes de notaría, proceso legal y bienes raíces"
+        "FD-258 · FINRA · NFA · SF-87",
+        "Formularios estatales y judiciales aceptados",
+        "Mismo día Lun–Vie"
       ],
       "supportedFormsHeading": "Las Huellas en Tinta Están Disponibles en Estos Formularios",
       "supportedForms": [
@@ -591,9 +594,9 @@
       ],
       "whatToExpect": "La captura electrónica toma unos 10 minutos. Los resultados se transmiten directamente a su agencia solicitante — generalmente en 24 a 72 horas. No necesita enviar nada por correo. Traiga su número ORI; sin él no podemos completar su envío de Live Scan.",
       "pricingBullets": [
-        "Maestros y empleados de distritos escolares",
-        "Trabajadores de guarderías y profesionales de la salud",
-        "Solicitantes de adopción y padres de crianza"
+        "Envío electrónico al FBI",
+        "Sin tinta requerida",
+        "Para empleadores y juntas de licencias"
       ]
     },
     "nfa-fingerprinting": {
@@ -615,9 +618,9 @@
       ],
       "whatToExpect": "Producimos dos juegos de tarjetas FD-258 completas y legibles según lo requiere la ATF. El proceso toma de 10 a 15 minutos. Las tarjetas están listas de inmediato — entréguelas junto con sus documentos NFA. También pregunte sobre nuestro servicio ATF eFile para una aprobación significativamente más rápida.",
       "pricingBullets": [
-        "Personas comprando supresores o silenciadores",
-        "Solicitantes de rifle de cañón corto (SBR) y escopeta (SBS)",
-        "Solicitantes del Formulario ATF 4 o Formulario 1"
+        "Tarjetas FD-258 correctamente completadas",
+        "Listas para Formulario 4 y Formulario 1",
+        "Mismo día Lun–Vie"
       ]
     },
     "atf-efile-services": {
@@ -642,9 +645,9 @@
       ],
       "whatToExpect": "Tomamos sus huellas, fotografía y firma, y lo guiamos en el proceso completo de envío de ATF eForms — cada campo, cada documento adjunto. Su solicitud se envía antes de que se vaya. Las aprobaciones por eFile generalmente se reciben en semanas. Los envíos en papel pueden tardar muchos meses.",
       "pricingBullets": [
-        "Solicitantes del Formulario ATF 4 que buscan aprobación rápida",
-        "Personas que presentan el Formulario ATF 1",
-        "Solicitantes individuales, de fideicomiso o corporativos"
+        "Creación de archivo EFT",
+        "Enviado a su correo electrónico",
+        "Listo para envío al ATF"
       ]
     },
     "mobile-fingerprinting": {
@@ -666,9 +669,9 @@
       ],
       "whatToExpect": "Contáctenos con anticipación para confirmar las necesidades específicas de su grupo, ubicación y horario. Llevamos todo el equipo necesario y nos encargamos de todo en el lugar — Live Scan, tarjetas de tinta o ambos. Puede aplicar un mínimo de participantes. La tarifa de viaje se basa en la distancia desde nuestra ubicación en McAllen.",
       "pricingBullets": [
-        "Empresas con múltiples empleados nuevos",
-        "Escuelas e instituciones educativas",
-        "Organizaciones de salud y sin fines de lucro"
+        "Vamos a su ubicación",
+        "Área de servicio sur de Texas",
+        "Grupos y empresas bienvenidos"
       ]
     },
     "criminal-background-check": {
@@ -688,9 +691,9 @@
       ],
       "whatToExpect": "Llámenos al (956) 670-6144 antes de su cita para confirmar el precio y tiempo de entrega — ambos varían según el alcance de la búsqueda. La persona sujeta a la verificación debe presentar una identificación oficial con foto vigente y su Número de Seguro Social. Cuando la ley lo exija, también debe firmar un formulario de autorización conforme a la FCRA proporcionado por el empleador u organización solicitante. La mayoría de las verificaciones penales estándar se entregan en 1 a 3 días hábiles. Le orientaremos en cada paso y confirmaremos qué documentos necesita antes de su llegada.",
       "pricingBullets": [
-        "Mini-Snapshot — $38 (Rastreo de NSS, Verificación 1 Condado, Delincuentes Sexuales)",
-        "Basic-Snapshot — $55 (Historial Criminal Nacional, Estatal, Vehículo de Motor)",
-        "Paquetes personalizados disponibles — contáctenos"
+        "Mini-Snapshot $38 · Basic-Snapshot $55",
+        "Rastreo SSN · Criminal · Delincuentes sexuales",
+        "Resultados en días"
       ],
       "packages": [
         {
@@ -732,9 +735,9 @@
       ],
       "whatToExpect": "Llámenos al (956) 670-6144 antes de agendar para hablar sobre su industria y el tipo de evaluación requerida — el precio y el tiempo de entrega varían según el paquete. Cada candidato debe traer una identificación oficial con foto vigente, su Número de Seguro Social y un formulario de autorización firmado conforme a la FCRA proporcionado por su organización. La mayoría de las verificaciones penales se entregan en 1 a 3 días hábiles. Empleadores con alta rotación de personal también pueden preguntar por nuestro servicio de toma de huellas móvil, que lleva equipo profesional a su instalación en cualquier parte del Sur de Texas.",
       "pricingBullets": [
-        "Historial Criminal Nacional Multi-Jurisdiccional",
-        "Verificación Penal Estatal + Búsqueda Nacional de Delincuentes Sexuales",
-        "Verificación de Educación + Licencias y Credenciales Profesionales"
+        "Criminal · Educación · Licencias",
+        "Vehículo · Rastreo SSN",
+        "OFAC y Lista de vigilancia incluidos"
       ],
       "packageIncludes": [
         "Historial Criminal Nacional Multi-Jurisdiccional (incluye Rastreo de Número de Seguro Social, Lista OFAC y Lista de Vigilancia Global de Terroristas)",
@@ -763,9 +766,9 @@
       ],
       "whatToExpect": "Llámenos al (956) 670-6144 para confirmar el precio y el tiempo de entrega antes de agendar — ambos varían según el alcance de la búsqueda. El posible inquilino debe presentar una identificación oficial con foto vigente, su Número de Seguro Social y firmar un formulario de autorización antes de realizar la verificación. Los propietarios deben facilitar un formulario de autorización conforme a la FCRA; podemos orientarle sobre lo necesario durante su llamada de consulta. La mayoría de las verificaciones se entregan en 1 a 3 días hábiles. Administradores de propiedades o propietarios con necesidades frecuentes de evaluación pueden contactarnos para hablar sobre opciones de volumen.",
       "pricingBullets": [
-        "Verificación de Antecedentes Penales (Estatal)",
-        "Búsqueda de Desalojos + Búsqueda Nacional de Delincuentes Sexuales",
-        "Reporte de crédito disponible bajo solicitud (cargo adicional)"
+        "Criminal · Desalojo · Delincuentes sexuales",
+        "Informe de crédito bajo pedido",
+        "Resultados en días"
       ],
       "packageIncludes": [
         "Verificación de Antecedentes Penales (Estatal)",

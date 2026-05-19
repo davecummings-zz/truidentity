@@ -1,3 +1,4 @@
+// TODO: Remove after ServicesPricingGrid is approved in review
 import { getTranslations } from 'next-intl/server'
 import { services } from '@/config/services'
 import { ServiceCard } from '@/components/ui/ServiceCard'

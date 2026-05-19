@@ -2,14 +2,11 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { HeroSection } from '@/components/home/HeroSection'
 import { NoWalkInsBanner } from '@/components/ui/NoWalkInsBanner'
-import { ServicesGrid } from '@/components/home/ServicesGrid'
-import { ServiceFinderCTA } from '@/components/home/ServiceFinderCTA'
-import { PricingSection } from '@/components/home/PricingSection'
+import { ServicesPricingGrid } from '@/components/home/ServicesPricingGrid'
 import { HowItWorks } from '@/components/home/HowItWorks'
 import { ReviewsSection } from '@/components/home/ReviewsSection'
 import { FaqTeaser } from '@/components/home/FaqTeaser'
 import { BottomCTA } from '@/components/home/BottomCTA'
-import { OrgsWeServe } from '@/components/home/OrgsWeServe'
 import { siteConfig } from '@/config/site'
 import { fetchGoogleReviews } from '@/lib/reviews'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -52,10 +49,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <JsonLd data={webSiteSchema()} />
       <HeroSection locale={locale} />
       <NoWalkInsBanner locale={locale} />
-      <ServicesGrid locale={locale} />
-      <ServiceFinderCTA locale={locale} />
-      <OrgsWeServe locale={locale} />
-      <PricingSection locale={locale} />
+      <ServicesPricingGrid />
       <HowItWorks locale={locale} />
       <ReviewsSection
         locale={locale}

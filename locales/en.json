@@ -64,6 +64,9 @@
       "subheading": "From FBI background checks to NFA transfers and mobile fingerprinting — one appointment in McAllen covers it all.",
       "fingerprintingTitle": "Fingerprinting Services",
       "backgroundChecksTitle": "Background Checks",
+      "viewAllPricing": "View All Pricing",
+      "hidePricing": "Hide Pricing",
+      "seePricing": "See Pricing",
       "finderCta": {
         "heading": "Not sure which service you need?",
         "subtext": "Answer a few quick questions and we'll point you to the right one.",
@@ -512,9 +515,9 @@
       ],
       "whatToExpect": "The fingerprinting process takes about 10 minutes. Results are returned directly from the FBI — most arrive within 24 hours. If your fingerprints are rejected for quality reasons, we reprint them at no charge.",
       "pricingBullets": [
-        "Job applicants requiring a federal background check",
-        "Healthcare, education, and finance professionals",
-        "Volunteer organizations and nonprofits"
+        "Email delivery · 24-hour results",
+        "No-rejection guarantee",
+        "Non-U.S. Citizens $75"
       ]
     },
     "fbi-apostille": {
@@ -536,9 +539,9 @@
       ],
       "whatToExpect": "One appointment covers everything — fingerprinting, FBI background check submission, and coordination of the apostille authentication process. Total turnaround is typically 8–12 weeks, determined by FBI and U.S. Department of State processing times.",
       "pricingBullets": [
-        "Individuals applying for international work visas",
-        "Those seeking residency or citizenship abroad",
-        "International adoption applicants"
+        "FBI check + apostille",
+        "For international use",
+        "Visa · Immigration · Residency"
       ]
     },
     "ink-fingerprinting": {
@@ -558,9 +561,9 @@
       ],
       "whatToExpect": "The process takes about 10 minutes. You leave with completed, legible fingerprint cards — ready to mail to your requesting agency. No delays on our end.",
       "pricingBullets": [
-        "Federal agency applicants requiring physical cards",
-        "Out-of-state licensing board applicants",
-        "Notary, process server, and real estate applicants"
+        "FD-258 · FINRA · NFA · SF-87",
+        "State & court forms accepted",
+        "Same-day Mon–Fri"
       ],
       "supportedFormsHeading": "Ink Fingerprinting Is Available On These Forms",
       "supportedForms": [
@@ -591,9 +594,9 @@
       ],
       "whatToExpect": "Electronic capture takes about 10 minutes. Results are transmitted directly to your requesting agency — typically within 24–72 hours. You do not need to mail anything. Bring your ORI number; without it we cannot complete your Live Scan submission.",
       "pricingBullets": [
-        "Teachers and school district employees",
-        "Childcare and healthcare professionals",
-        "Adoption applicants and foster care providers"
+        "Electronic submission to FBI",
+        "No ink required",
+        "For employers & licensing boards"
       ]
     },
     "nfa-fingerprinting": {
@@ -615,9 +618,9 @@
       ],
       "whatToExpect": "We produce two sets of completed, legible FD-258 fingerprint cards as required by the ATF. The process takes 10–15 minutes. Cards are ready immediately — submit them with your NFA paperwork. Also ask about our ATF eFile service for significantly faster approval.",
       "pricingBullets": [
-        "Individuals purchasing suppressors or silencers",
-        "Short-barreled rifle (SBR) and shotgun (SBS) applicants",
-        "ATF Form 4 or Form 1 applicants"
+        "Correctly completed FD-258 cards",
+        "Form 4 & Form 1 ready",
+        "Same-day Mon–Fri"
       ]
     },
     "atf-efile-services": {
@@ -642,9 +645,9 @@
       ],
       "whatToExpect": "We capture your fingerprints, photograph, and signature, then guide you through the complete ATF eForms submission — every field, every attachment. Your application is submitted before you leave. eFile approvals are typically received in weeks. Paper submissions can take many months.",
       "pricingBullets": [
-        "ATF Form 4 applicants seeking faster approval",
-        "ATF Form 1 (Make and Register) applicants",
-        "Trust, corporation, or individual applicants"
+        "EFT file creation",
+        "Delivered to your email",
+        "ATF submission ready"
       ]
     },
     "mobile-fingerprinting": {
@@ -666,9 +669,9 @@
       ],
       "whatToExpect": "Contact us in advance to confirm your group's specific needs, location, and scheduling. We bring all necessary equipment and handle everything on-site — Live Scan, ink cards, or both. Minimum group size may apply. Travel fee is based on distance from our McAllen location.",
       "pricingBullets": [
-        "Employers with multiple new hires requiring fingerprinting",
-        "Schools and educational institutions",
-        "Healthcare facilities and nonprofits"
+        "We come to you",
+        "South Texas service area",
+        "Groups & businesses welcome"
       ]
     },
     "criminal-background-check": {
@@ -688,9 +691,9 @@
       ],
       "whatToExpect": "Call us at (956) 670-6144 before your appointment to confirm pricing and turnaround time — both vary depending on the scope of search required. During the process, the subject of the check must provide a valid government-issued photo ID and Social Security Number. Where legally required, a FCRA-compliant authorization form — provided by the requesting employer or organization — must also be signed before the search can run. Most standard criminal background checks are returned within 1–3 business days. We'll walk you through every step and confirm which documents are needed before you arrive.",
       "pricingBullets": [
-        "Mini-Snapshot — $38 (SSN Trace, 1-County Criminal, Sex Offender)",
-        "Basic-Snapshot — $55 (Nationwide Criminal History, Statewide, Motor Vehicle)",
-        "Custom packages available — contact us"
+        "Mini-Snapshot $38 · Basic-Snapshot $55",
+        "SSN Trace · Criminal · Sex Offender",
+        "Results in days"
       ],
       "packages": [
         {
@@ -732,9 +735,9 @@
       ],
       "whatToExpect": "Call us at (956) 670-6144 before scheduling to discuss your industry and the type of screening required — pricing and turnaround time vary by package. Each applicant must bring a valid government-issued photo ID and Social Security Number, plus a signed FCRA-compliant authorization form from your organization. Most criminal background check components are returned within 1–3 business days. Employers with high-volume onboarding needs can also ask about our mobile fingerprinting service, which brings professional equipment directly to your facility anywhere in South Texas.",
       "pricingBullets": [
-        "Multi-Jurisdictional Nationwide Criminal History",
-        "Criminal Record Check (Statewide) + Nationwide Sex Offender Search",
-        "Education Verification + Professional License and Credential Check"
+        "Criminal · Education · License",
+        "Motor Vehicle · SSN Trace",
+        "OFAC & Watch List included"
       ],
       "packageIncludes": [
         "Multi-Jurisdictional Nationwide Criminal History (includes SSN Trace, OFAC, and Global Terrorist Watch List)",
@@ -763,9 +766,9 @@
       ],
       "whatToExpect": "Call us at (956) 670-6144 to confirm pricing and turnaround before scheduling — both vary based on the scope of search required. The prospective tenant must provide a valid government-issued photo ID and Social Security Number, and sign an authorization form before the check can run. Landlords should provide a FCRA-compliant authorization form for the tenant to sign; we can advise on what's needed during your inquiry call. Most tenant screening background checks are returned within 1–3 business days. Property managers or landlords with frequent screening needs are encouraged to contact us to discuss volume options.",
       "pricingBullets": [
-        "Criminal Record Check (Statewide)",
-        "Eviction Search + Nationwide Sex Offender Search",
-        "Credit Report available upon request (additional fee)"
+        "Criminal · Eviction · Sex Offender",
+        "Credit report on request",
+        "Results in days"
       ],
       "packageIncludes": [
         "Criminal Record Check (Statewide)",

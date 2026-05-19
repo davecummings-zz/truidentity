@@ -15,6 +15,7 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 import { siteConfig } from '@/config/site'
+import { OrgsWeServe } from '@/components/home/OrgsWeServe'
 
 interface AboutPageProps {
   params: Promise<{ locale: string }>
@@ -54,7 +55,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
   return (
     <>
       <JsonLd data={breadcrumbSchema(locale, [{ key: 'about', url: `${siteConfig.siteUrl}/${locale}/about` }])} />
-      <div className="py-16 lg:py-24">
+      <div className="pt-16 lg:pt-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -98,6 +99,12 @@ export default async function AboutPage({ params }: AboutPageProps) {
           </div>
         </section>
 
+      </div>
+      </div>
+
+      <div className="pb-4">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Differentiators */}
         <section className="mb-12" aria-labelledby="diff-heading">
           <h2 id="diff-heading" className="text-2xl font-bold text-navy mb-6">{t('differentiators.heading')}</h2>
@@ -138,8 +145,17 @@ export default async function AboutPage({ params }: AboutPageProps) {
           </div>
         </section>
 
+      </div>
+      </div>
+
+      {/* Organizations We Serve */}
+      <OrgsWeServe locale={locale} />
+
+      <div className="pb-16 lg:pb-24">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* CTA */}
-        <section className="rounded-2xl bg-gradient-to-r from-navy to-accent-blue p-8 text-center" aria-labelledby="about-cta">
+        <section className="mt-12 rounded-2xl bg-gradient-to-r from-navy to-accent-blue p-8 text-center" aria-labelledby="about-cta">
           <h2 id="about-cta" className="text-2xl font-bold text-white mb-2">{t('cta.heading')}</h2>
           <p className="text-white/80 mb-6">{t('cta.text')}</p>
           <Link
