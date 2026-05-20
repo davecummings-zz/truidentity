@@ -58,9 +58,10 @@ export function ServicePricingCard({
         <div className="flex items-center gap-2">
           <Link
             href={`/${locale}/services/${service.slug}`}
+            aria-label={`${tc('learnMore')} — ${name}`}
             className="text-xs font-semibold text-accent-blue hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue rounded"
           >
-            {tc('learnMore')}
+            {tc('learnMore')}<span className="sr-only"> — {name}</span>
           </Link>
           <span className="text-gray-300" aria-hidden="true">|</span>
           <button
