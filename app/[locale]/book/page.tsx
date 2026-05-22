@@ -27,7 +27,8 @@ export default async function BookPage({ params }: BookPageProps) {
   const t = await getTranslations({ locale, namespace: 'book' })
 
   const whatToBringItems = t.raw('whatToBring.items') as string[]
-  const acuityUrl = `https://app.acuityscheduling.com/schedule.php?owner=${siteConfig.acuityOwnerId}`
+  const acuityLocale = locale === 'es' ? 'es' : 'en'
+  const acuityUrl = `https://app.acuityscheduling.com/schedule.php?owner=${siteConfig.acuityOwnerId}&locale=${acuityLocale}`
 
   return (
     <>

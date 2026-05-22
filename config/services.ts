@@ -106,7 +106,7 @@ export const services: Service[] = [
     name: 'ATF eFile Services',
     shortDescription:
       'Electronic NFA application through the ATF eForms system — weeks faster than paper filing.',
-    price: '$100',
+    price: '$75',
     emoji: '💻',
     category: 'fingerprinting',
     trustLine: 'We guide you through every field — approvals in weeks, not months.',
@@ -184,6 +184,34 @@ export const services: Service[] = [
     relatedSlugs: ['fbi-background-checks', 'ink-fingerprinting'],
   },
 
+  {
+    slug: 'fbi-apostille',
+    name: 'FBI Apostille',
+    shortDescription:
+      'FBI background check authenticated for international use — required for work visas, residency, and immigration.',
+    price: '$220',
+    emoji: '🌐',
+    category: 'fingerprinting',
+    trustLine: 'Full-service — fingerprinting, FBI processing, and apostille authentication handled for you.',
+    whatItIs:
+      'An FBI Apostille is an FBI Identity History Summary that has been authenticated with an apostille certificate, making it legally valid in countries that are members of the Hague Apostille Convention. Required for international employment, immigration applications, permanent residency, and international adoption. We handle the complete process — fingerprinting, FBI submission, and apostille certification — in a single appointment.',
+    whoNeeds: [
+      'Individuals applying for international work visas',
+      'Those seeking permanent residency or citizenship abroad',
+      'International adoption applicants',
+      'Expats and foreign nationals requiring a U.S. background check for immigration',
+      'Anyone whose destination country requires a Hague Convention apostille',
+    ],
+    whatToBring: [
+      'Valid government-issued photo ID',
+      'Social Security Number',
+      'Destination country name and any specific instructions from the requesting foreign authority',
+    ],
+    whatToExpect:
+      'One appointment covers everything — fingerprinting, FBI background check submission, and coordination of the apostille authentication process. Total turnaround is generally 5–6 weeks, determined by FBI and U.S. Department of State processing times.',
+    relatedSlugs: ['fbi-background-checks', 'live-scan-fingerprinting'],
+  },
+
   // ── Background Checks ────────────────────────────────────────────────────────
   {
     slug: 'pre-employment-screening',
@@ -236,33 +264,6 @@ export const services: Service[] = [
     whatToExpect:
       `Call us at ${siteConfig.phone} to choose the right package for your needs. The subject must provide a valid government-issued photo ID and Social Security Number, and sign an FCRA-compliant authorization form. Most standard checks are returned within 1–3 business days.`,
     relatedSlugs: ['pre-employment-screening', 'tenant-screening', 'fbi-background-checks'],
-  },
-  {
-    slug: 'fbi-apostille',
-    name: 'FBI Apostille',
-    shortDescription:
-      'FBI background check authenticated for international use — required for work visas, residency, and immigration.',
-    price: '$220',
-    emoji: '🌐',
-    category: 'background-checks',
-    trustLine: 'Full-service — fingerprinting, FBI processing, and apostille authentication handled for you.',
-    whatItIs:
-      'An FBI Apostille is an FBI Identity History Summary that has been authenticated with an apostille certificate, making it legally valid in countries that are members of the Hague Apostille Convention. Required for international employment, immigration applications, permanent residency, and international adoption. We handle the complete process — fingerprinting, FBI submission, and apostille certification — in a single appointment.',
-    whoNeeds: [
-      'Individuals applying for international work visas',
-      'Those seeking permanent residency or citizenship abroad',
-      'International adoption applicants',
-      'Expats and foreign nationals requiring a U.S. background check for immigration',
-      'Anyone whose destination country requires a Hague Convention apostille',
-    ],
-    whatToBring: [
-      'Valid government-issued photo ID',
-      'Social Security Number',
-      'Destination country name and any specific instructions from the requesting foreign authority',
-    ],
-    whatToExpect:
-      'One appointment covers everything — fingerprinting, FBI background check submission, and coordination of the apostille authentication process. Total turnaround is typically 8–12 weeks, determined by FBI and U.S. Department of State processing times.',
-    relatedSlugs: ['fbi-background-checks', 'live-scan-fingerprinting'],
   },
   {
     slug: 'tenant-screening',
