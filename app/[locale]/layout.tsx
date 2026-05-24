@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
+import Script from 'next/script'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { Header } from '@/components/layout/Header'
@@ -74,6 +75,25 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <html lang={locale} className={inter.variable}>
       <body className="min-h-screen flex flex-col font-sans antialiased text-gray-900 bg-white">
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+                ${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID_2
+                  ? `gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID_2}');`
+                  : ''}
+              `}
+            </Script>
+          </>
+        )}
         <JsonLd data={localBusinessSchema()} />
         <a href="#main-content" className="skip-link">{tc('skipToContent')}</a>
         <NextIntlClientProvider messages={messages}>
