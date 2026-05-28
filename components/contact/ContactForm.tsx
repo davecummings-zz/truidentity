@@ -43,20 +43,12 @@ export function ContactForm() {
 
     setStatus('sending')
     try {
-      // Replace with your Formspree endpoint or other form handler
-      const endpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? ''
-      if (endpoint) {
-        const { website: _hp, ...payload } = form
-        const res = await fetch(endpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(payload),
-        })
-        if (!res.ok) throw new Error('Failed')
-      } else {
-        // No endpoint configured — simulate success for development
-        await new Promise((r) => setTimeout(r, 800))
-      }
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error('Failed')
       setStatus('success')
       setForm({ name: '', email: '', phone: '', service: '', message: '', website: '' })
     } catch {

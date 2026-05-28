@@ -116,6 +116,7 @@
     "reviews": {
       "heading": "Lo Que Dicen Nuestros Clientes",
       "subheading": "La confianza de residentes y profesionales del sur de Texas",
+      "originalLanguageNote": "Las reseñas se muestran en el idioma original del autor.",
       "starsAriaLabel": "5 de 5 estrellas de promedio",
       "aggregate": "{count} reseñas en Google",
       "seeAll": "Ver las {count} reseñas en Google →",
@@ -142,7 +143,7 @@
     "story": {
       "heading": "Nuestra Historia",
       "body1": "TruIdentity Screening Solutions fue fundada en 2024 por Bill Hawkins, un exoficial de las fuerzas del orden de Texas con amplia experiencia investigativa, decidido a hacer que las huellas dactilares profesionales fueran rápidas, precisas y sin estrés para todos en el Valle del Río Grande.",
-      "body2": "Hemos ganado más de 56 reseñas de cinco estrellas de clientes en todo el Valle — enfermeras, maestros, dueños de armas, padres adoptivos y personas en búsqueda de empleo que necesitaban que todo saliera bien a la primera. Ese historial habla por sí solo.",
+      "body2": "Hemos ganado más de 58 reseñas de cinco estrellas de clientes en todo el Valle — enfermeras, maestros, dueños de armas, padres adoptivos y personas en búsqueda de empleo que necesitaban que todo saliera bien a la primera. Ese historial habla por sí solo.",
       "body3": "Hoy, TruIdentity maneja todo, desde verificaciones de antecedentes del FBI y envíos de ATF eFile hasta Live Scans para distritos escolares y huellas dactilares móviles para empresas en todo el Valle. Completamente bilingüe en inglés y español — porque todos en el sur de Texas merecen un camino claro hacia adelante."
     },
     "office": {

@@ -17,8 +17,8 @@ export const siteConfig = {
   ],
   acuityOwnerId: '31846135',
   googleMapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d28636.25851314076!2d-98.233461!3d26.211888!3m2!1i1024!2i768!4f13.1!2m1!1s813%20N%20Main%20St%20Office%20Suite%20%23511%20McAllen%2C%20TX%2078501!5e0!3m2!1sen!2sus!4v1777061461985!5m2!1sen!2sus',
-  googlePlaceId: 'PLACE_ID_HERE',
-  googleBusinessUrl: 'GOOGLE_BUSINESS_URL',
+  googlePlaceId: 'ChIJ6WNqhHzCXA8ROJq1_Bh6NOE',
+  googleBusinessUrl: 'https://www.google.com/maps/place/?q=place_id:ChIJ6WNqhHzCXA8ROJq1_Bh6NOE',
   noWalkIns: true,
   siteUrl: 'https://truidentity956.com',
   description:

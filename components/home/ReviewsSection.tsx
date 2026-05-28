@@ -3,10 +3,9 @@ import { ReviewCard } from '@/components/ui/ReviewCard'
 import { siteConfig } from '@/config/site'
 import { type GoogleReview, type GoogleReviewsData } from '@/lib/reviews'
 
-// PLACEHOLDER: Real reviews from Google listing (56 reviews, 5.0 rating).
-// Replace with live Google Places API data when client provides API key.
-// See lib/reviews.ts for the integration — requires GOOGLE_PLACES_API_KEY
-// in environment variables.
+// FALLBACK reviews shown when Google Places API returns no data (API error, no key, or empty response).
+// Live data is pulled via lib/reviews.ts using GOOGLE_PLACES_API_KEY + googlePlaceId in config/site.ts.
+// NOTE: Places API (New) must be enabled in Google Cloud Console and googlePlaceId must be set before live data flows.
 const REAL_REVIEWS: GoogleReview[] = [
   {
     authorName: 'Roland Lee James',
@@ -43,27 +42,6 @@ const REAL_REVIEWS: GoogleReview[] = [
     relativePublishTime: '5 months ago',
     avatarInitials: 'SR',
   },
-  {
-    authorName: 'Vale Rodriguez Q.',
-    rating: 5,
-    text: 'Great experience! Super fast and easy.',
-    relativePublishTime: '1 month ago',
-    avatarInitials: 'VQ',
-  },
-  {
-    authorName: 'Emma Cavazos',
-    rating: 5,
-    text: 'Needed to get fingerprints done for grad school and I received excellent service here.',
-    relativePublishTime: '3 months ago',
-    avatarInitials: 'EC',
-  },
-  {
-    authorName: 'Henry',
-    rating: 5,
-    text: 'Excellent service nice guy could not recommend any more highly for identification verification services.',
-    relativePublishTime: '6 months ago',
-    avatarInitials: 'H',
-  },
 ]
 
 interface ReviewsSectionProps {
@@ -80,7 +58,9 @@ export async function ReviewsSection({
   reviews,
 }: ReviewsSectionProps) {
   const t = await getTranslations({ locale, namespace: 'home.reviews' })
-  const displayReviews = reviews.length > 0 ? reviews : REAL_REVIEWS
+  const displayReviews = (reviews.length > 0 ? reviews : REAL_REVIEWS).slice(0, 5)
+  const topRow = displayReviews.slice(0, 3)
+  const bottomRow = displayReviews.slice(3)
 
   return (
     <section className="py-16 lg:py-24 bg-gray-50" aria-labelledby="reviews-heading">
@@ -111,10 +91,14 @@ export async function ReviewsSection({
             {t('heading')}
           </h2>
           <p className="text-gray-600">{t('subheading')}</p>
+          {locale === 'es' && (
+            <p className="mt-2 text-xs text-gray-400">{t('originalLanguageNote')}</p>
+          )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-          {displayReviews.map((review, i) => (
+        {/* Top row: 3 cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+          {topRow.map((review, i) => (
             <ReviewCard
               key={i}
               {...review}
@@ -123,6 +107,24 @@ export async function ReviewsSection({
             />
           ))}
         </div>
+
+        {/* Bottom row: up to 2 cards, centered */}
+        {bottomRow.length > 0 && (
+          <div className={`grid gap-5 mb-10 mx-auto ${
+            bottomRow.length === 1
+              ? 'grid-cols-1 max-w-md'
+              : 'grid-cols-1 md:grid-cols-2 max-w-3xl'
+          }`}>
+            {bottomRow.map((review, i) => (
+              <ReviewCard
+                key={i + 3}
+                {...review}
+                postedOnLabel={t('postedOn')}
+                readMoreLabel={t('readMore')}
+              />
+            ))}
+          </div>
+        )}
 
         <div className="text-center">
           <a
