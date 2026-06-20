@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     : 'noindex, nofollow',
   openGraph: {
     type: 'website',
+    url: siteConfig.siteUrl,
     siteName: siteConfig.name,
     images: [{
       url: `${siteConfig.siteUrl}/og-image.png`,
