@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
     },
     description: siteConfig.description,
     alternates: {
-      canonical: siteConfig.siteUrl,
+      canonical: `${siteConfig.siteUrl}/${locale}`,
       languages: {
         'x-default': siteConfig.siteUrl,
         en: `${siteConfig.siteUrl}/en`,
