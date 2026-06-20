@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
     title: t('title'),
     description: t('description'),
     alternates: { canonical: `${siteConfig.siteUrl}/${locale}/privacy-policy` },
-    openGraph: { url: `${siteConfig.siteUrl}/${locale}/privacy-policy`, title: t('title'), description: t('description') },
+    openGraph: { url: `${siteConfig.siteUrl}/privacy-policy`, title: t('title'), description: t('description') },
   }
 }
 

@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     title,
     description,
     alternates: { canonical: `${siteConfig.siteUrl}/${locale}/services/${slug}` },
-    openGraph: { url: `${siteConfig.siteUrl}/${locale}/services/${slug}`, title, description },
+    openGraph: { url: `${siteConfig.siteUrl}/services/${slug}`, title, description },
   }
 }
 

@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
       },
     },
     openGraph: {
-      url: `${siteConfig.siteUrl}/${locale}`,
+      url: siteConfig.siteUrl,
       title: `${siteConfig.name} — Professional Fingerprinting in South Texas`,
       description: siteConfig.description,
     },

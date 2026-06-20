@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: AboutPageProps): Promise<Meta
     title: t('title'),
     description: t('description'),
     alternates: { canonical: `${siteConfig.siteUrl}/${locale}/about` },
-    openGraph: { url: `${siteConfig.siteUrl}/${locale}/about`, title: t('title'), description: t('description') },
+    openGraph: { url: `${siteConfig.siteUrl}/about`, title: t('title'), description: t('description') },
   }
 }
 

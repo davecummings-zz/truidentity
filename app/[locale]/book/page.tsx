@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: BookPageProps): Promise<Metad
     title: t('title'),
     description: t('description'),
     alternates: { canonical: `${siteConfig.siteUrl}/${locale}/book` },
-    openGraph: { url: `${siteConfig.siteUrl}/${locale}/book`, title: t('title'), description: t('description') },
+    openGraph: { url: `${siteConfig.siteUrl}/book`, title: t('title'), description: t('description') },
   }
 }
 
