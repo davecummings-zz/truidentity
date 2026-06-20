@@ -20,10 +20,13 @@
   "nav": {
     "home": "Home",
     "about": "About Us",
+    "aboutShort": "About",
     "services": "Services",
     "serviceFinder": "Find My Service",
+    "serviceFinderShort": "Find Service",
     "book": "Book Appointment",
     "faq": "FAQ",
+    "reviews": "Reviews",
     "contact": "Contact",
     "privacyPolicy": "Privacy Policy",
     "terms": "Terms & Conditions",
@@ -812,5 +815,25 @@
         "content": "We reserve the right to update these Terms & Conditions at any time. Continued use of our services constitutes acceptance of the updated terms."
       }
     ]
+  },
+  "reviews": {
+    "meta": {
+      "title": "Customer Reviews | TruIdentity Screening Solutions",
+      "description": "See what South Texas clients say about TruIdentity — 60 five-star Google reviews and counting."
+    },
+    "heading": "What Our Clients Say",
+    "subheading": "Trusted by South Texas residents and professionals",
+    "aggregate": "Google Reviews",
+    "viewOnGoogle": "View on Google →",
+    "writeReview": "Write a Review on Google",
+    "postedOn": "Posted on Google",
+    "readMore": "read more",
+    "originalLanguageNote": "Reviews shown in the author's original language."
+  },
+  "serviceReviews": {
+    "heading": "What Clients Say",
+    "previous": "Previous",
+    "next": "Next",
+    "readMore": "read more"
   }
 }

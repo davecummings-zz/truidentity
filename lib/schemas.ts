@@ -135,6 +135,21 @@ export function webSiteSchema() {
   }
 }
 
+export function aggregateRatingSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': BUSINESS_ID,
+    name: siteConfig.name,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '51',
+      bestRating: '5',
+    },
+  }
+}
+
 export function breadcrumbSchema(
   locale: string,
   crumbs: { key?: string; name?: string; url: string }[],

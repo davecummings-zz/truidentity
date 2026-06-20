@@ -15,10 +15,14 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 import { services } from '@/config/services'
+import { STATIC_REVIEWS, type StaticReview } from '@/lib/static-reviews'
 import { PriceEstimator } from '@/components/ui/PriceEstimator'
+import { ReviewsCarousel } from '@/components/ui/ReviewsCarousel'
 import { siteConfig } from '@/config/site'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { breadcrumbSchema } from '@/lib/schemas'
+
+const CAROUSEL_REVIEW_IDS = ['8', '9', '12', '1', '14', '28', '20', '18', '17']
 
 const serviceIcons: Record<string, LucideIcon> = {
   'fbi-background-checks': ShieldCheck,
@@ -53,6 +57,11 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
   const t = await getTranslations({ locale, namespace: 'services' })
   const tc = await getTranslations({ locale, namespace: 'common' })
   const ts = await getTranslations({ locale, namespace: 'serviceItems' })
+  const tsr = await getTranslations({ locale, namespace: 'serviceReviews' })
+
+  const carouselReviews: StaticReview[] = CAROUSEL_REVIEW_IDS
+    .map((id) => STATIC_REVIEWS.find((r) => r.id === id))
+    .filter(Boolean) as StaticReview[]
 
   const fingerprintingServices = services.filter(s => s.category === 'fingerprinting')
   const backgroundCheckServices = services.filter(s => s.category === 'background-checks')
@@ -145,6 +154,21 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
         </div>
       </div>
     </div>
+
+    {carouselReviews.length > 0 && (
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-navy mb-8">{tsr('heading')}</h2>
+          <ReviewsCarousel
+            reviews={carouselReviews}
+            previousLabel={tsr('previous')}
+            nextLabel={tsr('next')}
+            postedOnLabel=""
+            readMoreLabel={tsr('readMore')}
+          />
+        </div>
+      </div>
+    )}
     </>
   )
 }
