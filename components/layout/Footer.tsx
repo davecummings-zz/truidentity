@@ -19,6 +19,7 @@ export async function Footer({ locale }: FooterProps) {
     { label: tn('serviceFinder'), href: `/${locale}/service-finder` },
     { label: tn('book'), href: `/${locale}/book` },
     { label: tn('faq'), href: `/${locale}/faq` },
+    { label: tn('reviews'), href: `/${locale}/reviews` },
     { label: tn('contact'), href: `/${locale}/contact` },
   ]
 

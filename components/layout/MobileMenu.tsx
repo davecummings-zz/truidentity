@@ -194,6 +194,11 @@ export function MobileMenu() {
                 </Link>
               </li>
               <li>
+                <Link href={`/${locale}/reviews`} onClick={close} className="block px-3 py-2.5 rounded-lg text-navy font-medium hover:bg-navy/5 transition-colors">
+                  {t('reviews')}
+                </Link>
+              </li>
+              <li>
                 <Link href={`/${locale}/contact`} onClick={close} className="block px-3 py-2.5 rounded-lg text-navy font-medium hover:bg-navy/5 transition-colors">
                   {t('contact')}
                 </Link>

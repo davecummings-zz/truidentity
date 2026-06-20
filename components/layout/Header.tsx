@@ -39,7 +39,10 @@ export async function Header({ locale }: HeaderProps) {
               {t('home')}
             </Link>
             <Link href={`/${locale}/about`} className="px-3 py-2 text-sm font-medium text-navy hover:text-accent-blue transition-colors rounded hover:bg-navy/5">
-              {t('about')}
+              {t('aboutShort')}
+            </Link>
+            <Link href={`/${locale}/reviews`} className="px-3 py-2 text-sm font-medium text-navy hover:text-accent-blue transition-colors rounded hover:bg-navy/5">
+              {t('reviews')}
             </Link>
 
             {/* Services dropdown */}
@@ -64,8 +67,8 @@ export async function Header({ locale }: HeaderProps) {
               ]}
             />
 
-            <Link href={`/${locale}/service-finder`} className="px-3 py-2 text-sm font-medium text-navy hover:text-accent-blue transition-colors rounded hover:bg-navy/5">
-              {t('serviceFinder')}
+            <Link href={`/${locale}/service-finder`} className="hidden lg:inline-flex px-3 py-2 text-sm font-medium text-navy hover:text-accent-blue transition-colors rounded hover:bg-navy/5">
+              {t('serviceFinderShort')}
             </Link>
             <Link href={`/${locale}/faq`} className="px-3 py-2 text-sm font-medium text-navy hover:text-accent-blue transition-colors rounded hover:bg-navy/5">
               {t('faq')}
