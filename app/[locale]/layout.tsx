@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  robots: process.env.VERCEL_ENV === 'production'
+    ? 'index, follow'
+    : 'noindex, nofollow',
   openGraph: {
     type: 'website',
     siteName: siteConfig.name,
