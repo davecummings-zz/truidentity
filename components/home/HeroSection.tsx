@@ -19,7 +19,8 @@ export async function HeroSection({ locale }: HeroSectionProps) {
         sizes="100vw"
         className="object-cover object-center z-0"
         priority
-        quality={85}
+        fetchPriority="high"
+        quality={75}
       />
 
       {/* Navy overlay */}
