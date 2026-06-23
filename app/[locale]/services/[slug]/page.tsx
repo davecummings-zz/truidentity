@@ -23,6 +23,17 @@ import { siteConfig } from '@/config/site'
 import { PackageCards } from '@/components/ui/PackageCards'
 import { Accordion } from '@/components/ui/Accordion'
 import { ServicePageHero } from '@/components/ui/ServicePageHero'
+import { ServiceReviews } from '@/components/ui/ServiceReviews'
+
+const SERVICE_REVIEW_IDS: Record<string, string[]> = {
+  'fbi-background-checks':    ['8', '12', '17'],
+  'live-scan-fingerprinting': ['6', '7', '3'],
+  'ink-fingerprinting':       ['1', '9', '14'],
+  'nfa-fingerprinting':       ['4', '16', '22'],
+  'atf-efile-services':       ['28', '2', '5'],
+  'fbi-apostille':            ['20', '30', '29'],
+  'mobile-fingerprinting':    ['18', '23', '12'],
+}
 
 // FAQ item indices (into faq.items[]) shown on each background-check page
 const SERVICE_FAQ_INDICES: Record<string, number[]> = {
@@ -95,6 +106,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const creditReportNote = slug === 'tenant-screening'
     ? ts(`${slug}.creditReportNote`)
     : null
+  const reviewIds = SERVICE_REVIEW_IDS[slug] ?? []
   const faqIndices = SERVICE_FAQ_INDICES[slug] ?? []
   const serviceFaqItems = faqIndices.map((i) => ({
     question: tf(`items.${i}.question`),
@@ -278,6 +290,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
               </div>
             </aside>
           </div>
+
+          {reviewIds.length > 0 && (
+            <ServiceReviews reviewIds={reviewIds} locale={locale} />
+          )}
         </div>
       </div>
     </>

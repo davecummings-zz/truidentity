@@ -20,10 +20,13 @@
   "nav": {
     "home": "Inicio",
     "about": "Nosotros",
+    "aboutShort": "Nosotros",
     "services": "Servicios",
     "serviceFinder": "Encontrar Mi Servicio",
+    "serviceFinderShort": "Encontrar Servicio",
     "book": "Reservar Cita",
     "faq": "Preguntas Frecuentes",
+    "reviews": "Reseñas",
     "contact": "Contacto",
     "privacyPolicy": "Política de Privacidad",
     "terms": "Términos y Condiciones",
@@ -813,5 +816,25 @@
         "content": "Nos reservamos el derecho de actualizar estos Términos y Condiciones en cualquier momento. El uso continuado de nuestros servicios constituye aceptación de los términos actualizados."
       }
     ]
+  },
+  "reviews": {
+    "meta": {
+      "title": "Reseñas de Clientes | TruIdentity Screening Solutions",
+      "description": "Vea lo que dicen los clientes del Sur de Texas sobre TruIdentity — 60 reseñas de cinco estrellas en Google."
+    },
+    "heading": "Lo Que Dicen Nuestros Clientes",
+    "subheading": "La confianza de residentes y profesionales del sur de Texas",
+    "aggregate": "Reseñas en Google",
+    "viewOnGoogle": "Ver en Google →",
+    "writeReview": "Escribir una Reseña en Google",
+    "postedOn": "Publicado en Google",
+    "readMore": "leer más",
+    "originalLanguageNote": "Las reseñas se muestran en el idioma original del autor."
+  },
+  "serviceReviews": {
+    "heading": "Lo Que Dicen los Clientes",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "readMore": "leer más"
   }
 }
