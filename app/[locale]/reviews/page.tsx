@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: ReviewsPageProps): Promise<Me
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: `${siteConfig.siteUrl}/reviews` },
+    alternates: { canonical: `${siteConfig.siteUrl}/${locale}/reviews` },
     openGraph: { url: `${siteConfig.siteUrl}/reviews`, title: t('title'), description: t('description') },
   }
 }
@@ -66,6 +66,7 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/70 hover:text-white transition-colors"
+            aria-label="View TruIdentity reviews on Google"
           >
             {t('viewOnGoogle')}
           </a>

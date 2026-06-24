@@ -57,6 +57,7 @@ export function ReviewCard({
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent-blue font-medium hover:underline"
+              aria-label={`${readMoreLabel} — ${siteConfig.name}`}
             >
               {readMoreLabel}
             </a>
