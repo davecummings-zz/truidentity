@@ -1,7 +1,8 @@
+import Link from 'next/link'
 import { siteConfig } from '@/config/site'
 import { type Review } from '@/types'
 
-const READ_MORE_LIMIT = 300
+const READ_MORE_LIMIT = 200
 
 function GoogleGLogo() {
   return (
@@ -17,6 +18,8 @@ function GoogleGLogo() {
 interface ReviewCardProps extends Review {
   postedOnLabel: string
   readMoreLabel: string
+  readMoreHref?: string
+  showFullText?: boolean
 }
 
 export function ReviewCard({
@@ -27,8 +30,10 @@ export function ReviewCard({
   avatarInitials,
   postedOnLabel,
   readMoreLabel,
+  readMoreHref,
+  showFullText = false,
 }: ReviewCardProps) {
-  const isTruncated = text.length > READ_MORE_LIMIT
+  const isTruncated = !showFullText && text.length > READ_MORE_LIMIT
   const displayText = isTruncated ? text.slice(0, READ_MORE_LIMIT).trimEnd() : text
 
   return (
@@ -52,15 +57,25 @@ export function ReviewCard({
         {isTruncated && (
           <>
             {'… '}
-            <a
-              href={siteConfig.googleBusinessUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent-blue font-medium hover:underline"
-              aria-label={`${readMoreLabel} — ${siteConfig.name}`}
-            >
-              {readMoreLabel}
-            </a>
+            {readMoreHref ? (
+              <Link
+                href={readMoreHref}
+                className="text-accent-blue font-medium hover:underline"
+                aria-label="Read full review on our reviews page"
+              >
+                {readMoreLabel}
+              </Link>
+            ) : (
+              <a
+                href={siteConfig.googleBusinessUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-blue font-medium hover:underline"
+                aria-label={`${readMoreLabel} — ${siteConfig.name}`}
+              >
+                {readMoreLabel}
+              </a>
+            )}
           </>
         )}
         &rdquo;

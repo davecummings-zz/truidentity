@@ -88,6 +88,7 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
                   avatarInitials={review.initials}
                   postedOnLabel={t('postedOn')}
                   readMoreLabel={t('readMore')}
+                  showFullText={true}
                 />
               ))}
             </div>
