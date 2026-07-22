@@ -14,8 +14,18 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: `${siteConfig.siteUrl}/${locale}/privacy-policy` },
-    openGraph: { url: `${siteConfig.siteUrl}/privacy-policy`, title: t('title'), description: t('description') },
+    alternates: {
+      canonical: locale === 'en' ? `${siteConfig.siteUrl}/privacy-policy` : `${siteConfig.siteUrl}/es/privacy-policy`,
+      languages: {
+        en: `${siteConfig.siteUrl}/privacy-policy`,
+        es: `${siteConfig.siteUrl}/es/privacy-policy`,
+      },
+    },
+    openGraph: {
+      url: locale === 'en' ? `${siteConfig.siteUrl}/privacy-policy` : `${siteConfig.siteUrl}/es/privacy-policy`,
+      title: t('title'),
+      description: t('description'),
+    },
   }
 }
 

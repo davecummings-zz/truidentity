@@ -16,8 +16,18 @@ export async function generateMetadata({ params }: ReviewsPageProps): Promise<Me
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: `${siteConfig.siteUrl}/${locale}/reviews` },
-    openGraph: { url: `${siteConfig.siteUrl}/reviews`, title: t('title'), description: t('description') },
+    alternates: {
+      canonical: locale === 'en' ? `${siteConfig.siteUrl}/reviews` : `${siteConfig.siteUrl}/es/reviews`,
+      languages: {
+        en: `${siteConfig.siteUrl}/reviews`,
+        es: `${siteConfig.siteUrl}/es/reviews`,
+      },
+    },
+    openGraph: {
+      url: locale === 'en' ? `${siteConfig.siteUrl}/reviews` : `${siteConfig.siteUrl}/es/reviews`,
+      title: t('title'),
+      description: t('description'),
+    },
   }
 }
 

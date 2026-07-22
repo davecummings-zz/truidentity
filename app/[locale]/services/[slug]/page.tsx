@@ -77,8 +77,18 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   return {
     title,
     description,
-    alternates: { canonical: `${siteConfig.siteUrl}/${locale}/services/${slug}` },
-    openGraph: { url: `${siteConfig.siteUrl}/services/${slug}`, title, description },
+    alternates: {
+      canonical: locale === 'en' ? `${siteConfig.siteUrl}/services/${slug}` : `${siteConfig.siteUrl}/es/services/${slug}`,
+      languages: {
+        en: `${siteConfig.siteUrl}/services/${slug}`,
+        es: `${siteConfig.siteUrl}/es/services/${slug}`,
+      },
+    },
+    openGraph: {
+      url: locale === 'en' ? `${siteConfig.siteUrl}/services/${slug}` : `${siteConfig.siteUrl}/es/services/${slug}`,
+      title,
+      description,
+    },
   }
 }
 

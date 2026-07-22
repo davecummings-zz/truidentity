@@ -17,8 +17,18 @@ export async function generateMetadata({ params }: BookPageProps): Promise<Metad
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: `${siteConfig.siteUrl}/${locale}/book` },
-    openGraph: { url: `${siteConfig.siteUrl}/book`, title: t('title'), description: t('description') },
+    alternates: {
+      canonical: locale === 'en' ? `${siteConfig.siteUrl}/book` : `${siteConfig.siteUrl}/es/book`,
+      languages: {
+        en: `${siteConfig.siteUrl}/book`,
+        es: `${siteConfig.siteUrl}/es/book`,
+      },
+    },
+    openGraph: {
+      url: locale === 'en' ? `${siteConfig.siteUrl}/book` : `${siteConfig.siteUrl}/es/book`,
+      title: t('title'),
+      description: t('description'),
+    },
   }
 }
 

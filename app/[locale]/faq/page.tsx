@@ -17,8 +17,18 @@ export async function generateMetadata({ params }: FaqPageProps): Promise<Metada
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: `${siteConfig.siteUrl}/${locale}/faq` },
-    openGraph: { url: `${siteConfig.siteUrl}/faq`, title: t('title'), description: t('description') },
+    alternates: {
+      canonical: locale === 'en' ? `${siteConfig.siteUrl}/faq` : `${siteConfig.siteUrl}/es/faq`,
+      languages: {
+        en: `${siteConfig.siteUrl}/faq`,
+        es: `${siteConfig.siteUrl}/es/faq`,
+      },
+    },
+    openGraph: {
+      url: locale === 'en' ? `${siteConfig.siteUrl}/faq` : `${siteConfig.siteUrl}/es/faq`,
+      title: t('title'),
+      description: t('description'),
+    },
   }
 }
 

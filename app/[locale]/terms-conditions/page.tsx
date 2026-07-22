@@ -14,8 +14,18 @@ export async function generateMetadata({ params }: TermsPageProps): Promise<Meta
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: `${siteConfig.siteUrl}/${locale}/terms-conditions` },
-    openGraph: { url: `${siteConfig.siteUrl}/terms-conditions`, title: t('title'), description: t('description') },
+    alternates: {
+      canonical: locale === 'en' ? `${siteConfig.siteUrl}/terms-conditions` : `${siteConfig.siteUrl}/es/terms-conditions`,
+      languages: {
+        en: `${siteConfig.siteUrl}/terms-conditions`,
+        es: `${siteConfig.siteUrl}/es/terms-conditions`,
+      },
+    },
+    openGraph: {
+      url: locale === 'en' ? `${siteConfig.siteUrl}/terms-conditions` : `${siteConfig.siteUrl}/es/terms-conditions`,
+      title: t('title'),
+      description: t('description'),
+    },
   }
 }
 
