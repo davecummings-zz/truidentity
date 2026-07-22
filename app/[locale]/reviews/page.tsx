@@ -16,8 +16,18 @@ export async function generateMetadata({ params }: ReviewsPageProps): Promise<Me
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: `${siteConfig.siteUrl}/reviews` },
-    openGraph: { url: `${siteConfig.siteUrl}/reviews`, title: t('title'), description: t('description') },
+    alternates: {
+      canonical: locale === 'en' ? `${siteConfig.siteUrl}/reviews` : `${siteConfig.siteUrl}/es/reviews`,
+      languages: {
+        en: `${siteConfig.siteUrl}/reviews`,
+        es: `${siteConfig.siteUrl}/es/reviews`,
+      },
+    },
+    openGraph: {
+      url: locale === 'en' ? `${siteConfig.siteUrl}/reviews` : `${siteConfig.siteUrl}/es/reviews`,
+      title: t('title'),
+      description: t('description'),
+    },
   }
 }
 
@@ -66,6 +76,7 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/70 hover:text-white transition-colors"
+            aria-label="View TruIdentity reviews on Google"
           >
             {t('viewOnGoogle')}
           </a>
@@ -87,6 +98,7 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
                   avatarInitials={review.initials}
                   postedOnLabel={t('postedOn')}
                   readMoreLabel={t('readMore')}
+                  showFullText={true}
                 />
               ))}
             </div>

@@ -15,8 +15,18 @@ export async function generateMetadata({ params }: ServiceFinderPageProps): Prom
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: `${siteConfig.siteUrl}/${locale}/service-finder` },
-    openGraph: { url: `${siteConfig.siteUrl}/service-finder`, title: t('title'), description: t('description') },
+    alternates: {
+      canonical: locale === 'en' ? `${siteConfig.siteUrl}/service-finder` : `${siteConfig.siteUrl}/es/service-finder`,
+      languages: {
+        en: `${siteConfig.siteUrl}/service-finder`,
+        es: `${siteConfig.siteUrl}/es/service-finder`,
+      },
+    },
+    openGraph: {
+      url: locale === 'en' ? `${siteConfig.siteUrl}/service-finder` : `${siteConfig.siteUrl}/es/service-finder`,
+      title: t('title'),
+      description: t('description'),
+    },
   }
 }
 

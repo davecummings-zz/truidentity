@@ -27,8 +27,18 @@ export async function generateMetadata({ params }: AboutPageProps): Promise<Meta
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: `${siteConfig.siteUrl}/${locale}/about` },
-    openGraph: { url: `${siteConfig.siteUrl}/about`, title: t('title'), description: t('description') },
+    alternates: {
+      canonical: locale === 'en' ? `${siteConfig.siteUrl}/about` : `${siteConfig.siteUrl}/es/about`,
+      languages: {
+        en: `${siteConfig.siteUrl}/about`,
+        es: `${siteConfig.siteUrl}/es/about`,
+      },
+    },
+    openGraph: {
+      url: locale === 'en' ? `${siteConfig.siteUrl}/about` : `${siteConfig.siteUrl}/es/about`,
+      title: t('title'),
+      description: t('description'),
+    },
   }
 }
 

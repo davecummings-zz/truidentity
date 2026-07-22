@@ -17,8 +17,18 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical: `${siteConfig.siteUrl}/${locale}/contact` },
-    openGraph: { url: `${siteConfig.siteUrl}/contact`, title: t('title'), description: t('description') },
+    alternates: {
+      canonical: locale === 'en' ? `${siteConfig.siteUrl}/contact` : `${siteConfig.siteUrl}/es/contact`,
+      languages: {
+        en: `${siteConfig.siteUrl}/contact`,
+        es: `${siteConfig.siteUrl}/es/contact`,
+      },
+    },
+    openGraph: {
+      url: locale === 'en' ? `${siteConfig.siteUrl}/contact` : `${siteConfig.siteUrl}/es/contact`,
+      title: t('title'),
+      description: t('description'),
+    },
   }
 }
 
