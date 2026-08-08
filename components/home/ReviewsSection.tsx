@@ -104,6 +104,7 @@ export async function ReviewsSection({
               {...review}
               postedOnLabel={t('postedOn')}
               readMoreLabel={t('readMore')}
+              readMoreHref={`/${locale}/reviews`}
             />
           ))}
         </div>
@@ -121,6 +122,7 @@ export async function ReviewsSection({
                 {...review}
                 postedOnLabel={t('postedOn')}
                 readMoreLabel={t('readMore')}
+                readMoreHref={`/${locale}/reviews`}
               />
             ))}
           </div>
